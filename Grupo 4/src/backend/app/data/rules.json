@@ -1,0 +1,118 @@
+{
+  "questions": [
+    {
+      "fact": "numero_antenas",
+      "question": "¿Cuántos pares de antenas tiene el organismo?",
+      "options": [
+        {"label": "Sin antenas (0 pares)", "value": 0},
+        {"label": "Un par (1 par)", "value": 1},
+        {"label": "Dos pares (2 pares)", "value": 2}
+      ],
+      "category": "Morfología Básica"
+    },
+    {
+      "fact": "numero_patas",
+      "question": "¿Cuántos pares de patas marchadoras (pereiópodos) posee?",
+      "options": [
+        {"label": "5 pares (Decápodo)", "value": 10},
+        {"label": "7 pares", "value": 14},
+        {"label": "Otro número / Apéndices modificados", "value": -1}
+      ],
+      "category": "Apéndices"
+    },
+    {
+      "fact": "tipo_caparazon",
+      "question": "¿Cómo es la estructura de su caparazón?",
+      "options": [
+        {"label": "Caparazón duro fusionado (Cefalotórax)", "value": "cefalotorax"},
+        {"label": "Caparazón bivalvo (tipo concha)", "value": "bivalvo"},
+        {"label": "Sin caparazón visible", "value": "ausente"}
+      ],
+      "category": "Estructura Corporal"
+    }
+  ],
+  "rules": [
+    {
+      "id": "R1",
+      "name": "Verificación de Subfilo Crustácea",
+      "description": "Si tiene 2 pares de antenas, entonces pertenece al subfilo Crustacea.",
+      "antecedents": [
+        {
+          "fact": "numero_antenas",
+          "operator": "==",
+          "value": 2
+        }
+      ],
+      "consequents": [
+        {
+          "fact": "subfilo",
+          "value": "Crustacea"
+        }
+      ]
+    },
+    {
+      "id": "R2",
+      "name": "Descarte de No Crustáceos",
+      "description": "Si no tiene 2 pares de antenas, entonces no es un crustáceo.",
+      "antecedents": [
+        {
+          "fact": "numero_antenas",
+          "operator": "!=",
+          "value": 2
+        }
+      ],
+      "consequents": [
+        {
+          "fact": "clasificacion",
+          "value": "No Crustáceo"
+        }
+      ]
+    },
+    {
+      "id": "R3",
+      "name": "Identificación de Clase Malacostraca",
+      "description": "Si es del subfilo Crustacea y tiene caparazón tipo cefalotórax, se infiere que pertenece a Malacostraca.",
+      "antecedents": [
+        {
+          "fact": "subfilo",
+          "operator": "==",
+          "value": "Crustacea"
+        },
+        {
+          "fact": "tipo_caparazon",
+          "operator": "==",
+          "value": "cefalotorax"
+        }
+      ],
+      "consequents": [
+        {
+          "fact": "clase",
+          "value": "Malacostraca"
+        }
+      ]
+    },
+    {
+      "id": "R4",
+      "name": "Identificación de Cangrejo Azul",
+      "description": "Si pertenece a Malacostraca y tiene 5 pares de patas marchadoras, entonces es un Cangrejo Azul.",
+      "antecedents": [
+        {
+          "fact": "clase",
+          "operator": "==",
+          "value": "Malacostraca"
+        },
+        {
+          "fact": "numero_patas",
+          "operator": "==",
+          "value": 10
+        }
+      ],
+      "consequents": [
+        {
+          "fact": "especie_detectada",
+          "value": "Callinectes sapidus"
+        }
+      ]
+    }
+  ]
+}

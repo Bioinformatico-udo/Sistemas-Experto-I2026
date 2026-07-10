@@ -1,0 +1,24 @@
+[
+  {
+    "id": "Callinectes sapidus",
+    "name": "Cangrejo Azul (Callinectes sapidus)",
+    "description": "Un crustáceo decápodo nativo de las costas del océano Atlántico. Destaca por sus pinzas de un azul brillante.",
+    "habitat": "Zonas costeras, estuarios y lagunas salobres.",
+    "field_characteristics": [
+      "Caparazón de color verde oliva a gris con espinas laterales pronunciadas.",
+      "Pinzas delanteras con tonalidades de azul cobalto.",
+      "Último par de patas aplanado en forma de pala para nadar."
+    ],
+    "image_url": "/assets/blue_crab.jpg"
+  },
+  {
+    "id": "No Crustáceo",
+    "name": "No Crustáceo",
+    "description": "El espécimen analizado no cumple con los criterios morfológicos del subfilo Crustacea (por ejemplo, carece de dos pares de antenas).",
+    "habitat": "N/A",
+    "field_characteristics": [
+      "Número de antenas diferente a 2 pares."
+    ],
+    "image_url": "/assets/no_crustacean.jpg"
+  }
+]
