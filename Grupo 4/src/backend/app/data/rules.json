@@ -1,118 +1,36 @@
 {
   "questions": [
-    {
-      "fact": "numero_antenas",
-      "question": "¿Cuántos pares de antenas tiene el organismo?",
-      "options": [
-        {"label": "Sin antenas (0 pares)", "value": 0},
-        {"label": "Un par (1 par)", "value": 1},
-        {"label": "Dos pares (2 pares)", "value": 2}
-      ],
-      "category": "Morfología Básica"
-    },
-    {
-      "fact": "numero_patas",
-      "question": "¿Cuántos pares de patas marchadoras (pereiópodos) posee?",
-      "options": [
-        {"label": "5 pares (Decápodo)", "value": 10},
-        {"label": "7 pares", "value": 14},
-        {"label": "Otro número / Apéndices modificados", "value": -1}
-      ],
-      "category": "Apéndices"
-    },
-    {
-      "fact": "tipo_caparazon",
-      "question": "¿Cómo es la estructura de su caparazón?",
-      "options": [
-        {"label": "Caparazón duro fusionado (Cefalotórax)", "value": "cefalotorax"},
-        {"label": "Caparazón bivalvo (tipo concha)", "value": "bivalvo"},
-        {"label": "Sin caparazón visible", "value": "ausente"}
-      ],
-      "category": "Estructura Corporal"
-    }
+    {"fact":"numero_antenas","question":"¿Cuántos pares de antenas tiene el organismo?","options":[{"label":"Sin antenas (0 pares)","value":0},{"label":"Un par (1 par)","value":1},{"label":"Dos pares (2 pares)","value":2}],"category":"Morfología Básica"},
+    {"fact":"segmento_antenal","question":"¿El segmento basal de la antena es corto o largo?","options":[{"label":"Corto","value":"corto"},{"label":"Largo","value":"largo"}],"category":"Antenas"},
+    {"fact":"paredes_caparazon","question":"¿Las paredes posteriores del caparazón son incompletas o enteras?","options":[{"label":"Incompletas","value":"incompletas"},{"label":"Enteras","value":"enteras"}],"category":"Caparazón"},
+    {"fact":"membranas_area_branquial","question":"¿Las membranas en el área branquial son únicas o mosaico de placas?","options":[{"label":"Única","value":"unica"},{"label":"Mosaico","value":"mosaico"}],"category":"Branquias"},
+    {"fact":"superficie_quelipedo","question":"¿La superficie de los quelípedos es lisa, con granos cónicos, granos redondeados o tuberculado?","options":[{"label":"Lisa","value":"lisa"},{"label":"Granulado cónico","value":"cónico"},{"label":"Granulado redondeado","value":"redondeado"},{"label":"Tuberculado","value":"tuberculado"}],"category":"Quelípedos"},
+    {"fact":"tipo_quelipedo_frente","question":"¿Los quelípedos son aplanados o robustos y cuál es la forma del frente?","options":[{"label":"Aplanados – Frente trilobulado","value":"aplanado_trilobulado"},{"label":"Robustos – Frente no prominente","value":"robusto_no"}],"category":"Quelípedos"},
+    {"fact":"piezas_telson","question":"¿Cuántas piezas tiene el telson?","options":[{"label":"5","value":5},{"label":"7","value":7}],"category":"Telson"},
+    {"fact":"forma_frente_carpo","question":"¿Cómo es la forma del frente y el carpo?","options":[{"label":"Frente avanzado","value":"avanzado"},{"label":"Frente recta","value":"recta"},{"label":"Frente triangular","value":"triangular"}],"category":"Frente y Carpo"},
+    {"fact":"dientes_orbitales","question":"¿Existe diente lobuliforme en los ángulos orbitales?","options":[{"label":"Sí","value":true},{"label":"No","value":false}],"category":"Dientes"},
+    {"fact":"dientes_carpo","question":"Número de dientes en el carpo","options":[{"label":"3","value":3},{"label":"4","value":4}],"category":"Dientes"},
+    {"fact":"espinas_posteriores","question":"¿Tiene espínulas posteriores?","options":[{"label":"Sí","value":true},{"label":"No","value":false}],"category":"Espinas"}
   ],
   "rules": [
-    {
-      "id": "R1",
-      "name": "Verificación de Subfilo Crustácea",
-      "description": "Si tiene 2 pares de antenas, entonces pertenece al subfilo Crustacea.",
-      "antecedents": [
-        {
-          "fact": "numero_antenas",
-          "operator": "==",
-          "value": 2
-        }
-      ],
-      "consequents": [
-        {
-          "fact": "subfilo",
-          "value": "Crustacea"
-        }
-      ]
-    },
-    {
-      "id": "R2",
-      "name": "Descarte de No Crustáceos",
-      "description": "Si no tiene 2 pares de antenas, entonces no es un crustáceo.",
-      "antecedents": [
-        {
-          "fact": "numero_antenas",
-          "operator": "!=",
-          "value": 2
-        }
-      ],
-      "consequents": [
-        {
-          "fact": "clasificacion",
-          "value": "No Crustáceo"
-        }
-      ]
-    },
-    {
-      "id": "R3",
-      "name": "Identificación de Clase Malacostraca",
-      "description": "Si es del subfilo Crustacea y tiene caparazón tipo cefalotórax, se infiere que pertenece a Malacostraca.",
-      "antecedents": [
-        {
-          "fact": "subfilo",
-          "operator": "==",
-          "value": "Crustacea"
-        },
-        {
-          "fact": "tipo_caparazon",
-          "operator": "==",
-          "value": "cefalotorax"
-        }
-      ],
-      "consequents": [
-        {
-          "fact": "clase",
-          "value": "Malacostraca"
-        }
-      ]
-    },
-    {
-      "id": "R4",
-      "name": "Identificación de Cangrejo Azul",
-      "description": "Si pertenece a Malacostraca y tiene 5 pares de patas marchadoras, entonces es un Cangrejo Azul.",
-      "antecedents": [
-        {
-          "fact": "clase",
-          "operator": "==",
-          "value": "Malacostraca"
-        },
-        {
-          "fact": "numero_patas",
-          "operator": "==",
-          "value": 10
-        }
-      ],
-      "consequents": [
-        {
-          "fact": "especie_detectada",
-          "value": "Callinectes sapidus"
-        }
-      ]
-    }
+    {"id":"R1","name":"Verificación de Subfilo Crustácea","description":"Si tiene 2 pares de antenas, entonces pertenece al subfilo Crustacea.","antecedents":[{"fact":"numero_antenas","operator":"==","value":2}],"consequents":[{"fact":"subfilo","value":"Crustacea"}]},
+    {"id":"R2","name":"Descarte de No Crustáceos","description":"Si no tiene 2 pares de antenas, entonces no es un crustáceo.","antecedents":[{"fact":"numero_antenas","operator":"!=","value":2}],"consequents":[{"fact":"clasificacion","value":"No Crustáceo"}]},
+    {"id":"R3","name":"Identificación de Familia Porcellanidae - Antena corta","description":"Segmento basal de la antena corto indica Porcellanidae.","antecedents":[{"fact":"segmento_antenal","operator":"==","value":"corto"}],"consequents":[{"fact":"familia","value":"Porcellanidae"}]},
+    {"id":"R4","name":"Paredes del caparazón incompletas -> Neopisosoma","description":"Si paredes del caparazón son incompletas, posible género Neopisosoma.","antecedents":[{"fact":"paredes_caparazon","operator":"==","value":"incompletas"}],"consequents":[{"fact":"genus","value":"Neopisosoma"}]},
+    {"id":"R5","name":"Membrana única -> Neopisosoma cf. neglectum","description":"Membrana única indica Neopisosoma cf. neglectum.","antecedents":[{"fact":"membranas_area_branquial","operator":"==","value":"unica"},{"fact":"genus","operator":"==","value":"Neopisosoma"}],"consequents":[{"fact":"especie_detectada","value":"Neopisosoma cf. neglectum"}]},
+    {"id":"R6","name":"Membrana mosaico + granulado cónico -> Neopisosoma angustifrons","description":"Mosaico y superficie quelípedo cónico indica Neopisosoma angustifrons.","antecedents":[{"fact":"membranas_area_branquial","operator":"==","value":"mosaico"},{"fact":"superficie_quelipedo","operator":"==","value":"cónico"},{"fact":"genus","operator":"==","value":"Neopisosoma"}],"consequents":[{"fact":"especie_detectada","value":"Neopisosoma angustifrons"}]},
+    {"id":"R7","name":"Membrana mosaico + granulado redondeado -> Neopisosoma orientale","description":"Mosaico y superficie quelípedo redondeado indica Neopisosoma orientale.","antecedents":[{"fact":"membranas_area_branquial","operator":"==","value":"mosaico"},{"fact":"superficie_quelipedo","operator":"==","value":"redondeado"},{"fact":"genus","operator":"==","value":"Neopisosoma"}],"consequents":[{"fact":"especie_detectada","value":"Neopisosoma orientale"}]},
+    {"id":"R8","name":"Quelípedos aplanados y frente trilobulado -> Clastotoechus nodosus","description":"Identifica Clastotoechus nodosus.","antecedents":[{"fact":"tipo_quelipedo_frente","operator":"==","value":"aplanado_trilobulado"}],"consequents":[{"fact":"especie_detectada","value":"Clastotoechus nodosus"}]},
+    {"id":"R9","name":"Telson 7 piezas - > Pachycheles serratus","description":"Identifica Pachycheles serratus.","antecedents":[{"fact":"piezas_telson","operator":"==","value":7},{"fact":"genus","operator":"==","value":"Pachycheles"}],"consequents":[{"fact":"especie_detectada","value":"Pachycheles serratus"}]},
+    {"id":"R10","name":"Telson 5 piezas + frente avanzado -> Pachycheles monilifer","description":"Identifica Pachycheles monilifer.","antecedents":[{"fact":"piezas_telson","operator":"==","value":5},{"fact":"forma_frente_carpo","operator":"==","value":"avanzado"}],"consequents":[{"fact":"especie_detectada","value":"Pachycheles monilifer"}]},
+    {"id":"R11","name":"Frente recta + carpo liso -> Pachycheles riseii","description":"Identifica Pachycheles riseii.","antecedents":[{"fact":"forma_frente_carpo","operator":"==","value":"recta"},{"fact":"superficie_quelipedo","operator":"==","value":"lisa"}],"consequents":[{"fact":"especie_detectada","value":"Pachycheles riseii"}]},
+    {"id":"R12","name":"Frente recta + carpo tuberculado -> Pachycheles ackleianus","description":"Identifica Pachycheles ackleianus.","antecedents":[{"fact":"forma_frente_carpo","operator":"==","value":"recta"},{"fact":"superficie_quelipedo","operator":"==","value":"tuberculado"}],"consequents":[{"fact":"especie_detectada","value":"Pachycheles ackleianus"}]},
+    {"id":"R13","name":"Diente lobuliforme + 3 dientes carpo -> Petrolisthes tridentatus","description":"Identifica Petrolisthes tridentatus.","antecedents":[{"fact":"dientes_orbitales","operator":"==","value":true},{"fact":"dientes_carpo","operator":"==","value":3}],"consequents":[{"fact":"especie_detectada","value":"Petrolisthes tridentatus"}]},
+    {"id":"R14","name":"Frente triangular -> Petrolisthes tonsorius","description":"Identifica Petrolisthes tonsorius.","antecedents":[{"fact":"forma_frente_carpo","operator":"==","value":"triangular"}],"consequents":[{"fact":"especie_detectada","value":"Petrolisthes tonsorius"}]},
+    {"id":"R15","name":"Telson 5 piezas -> Petrolisthes jugosus","description":"Identifica Petrolisthes jugosus.","antecedents":[{"fact":"piezas_telson","operator":"==","value":5}],"consequents":[{"fact":"especie_detectada","value":"Petrolisthes jugosus"}]},
+    {"id":"R16","name":"Carpo 3 dientes -> Petrolisthes politus","description":"Identifica Petrolisthes politus.","antecedents":[{"fact":"dientes_carpo","operator":"==","value":3}],"consequents":[{"fact":"especie_detectada","value":"Petrolisthes politus"}]},
+    {"id":"R17","name":"Carpo 4 dientes -> Petrolisthes armatus","description":"Identifica Petrolisthes armatus.","antecedents":[{"fact":"dientes_carpo","operator":"==","value":4}],"consequents":[{"fact":"especie_detectada","value":"Petrolisthes armatus"}]},
+    {"id":"R18","name":"Sin espínulas posteriores -> Porcellana sayana","description":"Identifica Porcellana sayana.","antecedents":[{"fact":"espinas_posteriores","operator":"==","value":false}],"consequents":[{"fact":"especie_detectada","value":"Porcellana sayana"}]},
+    {"id":"R_FALLBACK","name":"Fallback especie no identificada","description":"Si no se ha detectado ninguna especie, asignar especie no identificada.","antecedents":[],"consequents":[{"fact":"especie_detectada","value":"Especie no identificada"}]}
   ]
 }
