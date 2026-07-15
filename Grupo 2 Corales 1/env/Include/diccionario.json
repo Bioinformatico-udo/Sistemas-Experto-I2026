@@ -1,0 +1,401 @@
+{
+   "Acropora palmata": {
+    "descripcion": "Coral pétreo ramificado de gran tamaño, conocido localmente como 'Orejones' o 'Cacho de alce', vital para la estructura somera del arrecife.",
+    "img": "imagenes/Acroporidae/Acropora palmata 1.jpg",
+    "familia": "Acroporidae",
+    "genero": "Acropora",
+    "profundidad_ideal": "Somera (0-5 metros)",
+    "forma": "Ramificado",
+    "complejidad": "Alta",
+    "claves": ["orejones", "cacho de alce", "ramificado", "abanico", "somera"],
+    "estado_actual": "Es una de las especies comunes en Mochima, localizándose principalmente en afloramientos rocosos someros . Se encuentra con mayor frecuencia en la zona de la boca de la bahía, donde las condiciones de intercambio con el mar abierto son más favorables . Su abundancia relativa en el parque se clasifica como abundante .",
+    "morfologia_detalle": "Forma colonias macizas con ramas aplanadas a manera de abanico; sus coralitos presentan proyecciones cilíndricas con paredes perforadas ."
+  },
+  "Acropora cervicornis": {
+    "descripcion": "Coral pétreo ramificado conocido como 'Cacho de venado', caracterizado por un crecimiento arbustivo de ramas cilíndricas.",
+    "img": "imagenes/Acroporidae/Acropora cervicornis 1.jpg",
+    "familia": "Acroporidae",
+    "genero": "Acropora",
+    "profundidad_ideal": "Somera a Media (1-15 metros)",
+    "forma": "Ramificado",
+    "complejidad": "Alta",
+    "claves": ["cacho de venado", "cilíndrico", "arbustivo", "ramificado", "poco común"],
+    "estado_actual": "En el Parque Nacional Mochima se registra como una especie rara. Su desarrollo en esta región está limitado por las condiciones ambientales de la zona, como la surgencia estacional de aguas frías y ricas en nutrientes .",
+    "morfologia_detalle": "Posee ramas cilíndricas largas y divergentes que rara vez se fusionan, dando a la colonia una apariencia arbustiva poco tupida ."
+  },
+
+
+  "Porites porites": {
+    "descripcion": "Coral pétreo ramificado conocido localmente como 'Mano de gato' o 'Cirialito', y comúnmente en el Caribe como 'Dedos de coral'.",
+    "img": "imagenes/Poritidae/Porites porites 1.jfif",
+    "familia": "Poritidae",
+    "genero": "Porites",
+    "profundidad_ideal": "Somera (1-5 metros)",
+    "forma": "Ramificado",
+    "complejidad": "Alta",
+    "claves": ["mano de gato", "dedos de coral", "cirialito", "puntas hinchadas", "ramificado"],
+    "estado_actual": "Es una de las especies abundantes y constructoras comunes en Mochima. Se adapta bien a las condiciones de alta carga de sedimentos y a las bajas temperaturas producidas por la surgencia estacional en la bahía. No obstante, se han reportado parches con mortalidad masiva en algunas localidades del parque.",
+    "morfologia_detalle": "Forma colonias ramificadas con ramas de más de 10 mm de diámetro que terminan en puntas notablemente hinchadas (de ahí sus nombres comunes). Sus coralitos son poco profundos y están al ras de la superficie, sin proyectarse hacia afuera."
+  },
+  "Porites furcata": {
+    "descripcion": "Coral pétreo ramificado, morfológicamente similar a P. porites pero con un patrón de ramificación distinto [6, 8].",
+    "img": "imagenes/Poritidae/Porites furcata 1.jfif",
+    "familia": "Poritidae",
+    "genero": "Porites",
+    "profundidad_ideal": "Somera (1-4 metros)",
+    "forma": "Ramificado",
+    "complejidad": "Alta",
+    "claves": ["ramificado", "puntas bifurcadas", "poco común"],
+    "estado_actual": "En el inventario taxonómico del Parque Nacional Mochima se registra como una especie rara en comparación con otros porítidos.",
+    "morfologia_detalle": "Presenta ramas de más de 10 mm de diámetro que terminan en puntas bifurcadas; al igual que otros miembros del género, sus copas no sobresalen del esqueleto."
+  },
+  "Porites astreoides": {
+    "descripcion": "Coral pétreo masivo o incrustante, fundamental en la estructura del arrecife por su alta resistencia ambiental .",
+    "img": "imagenes/Poritidae/Porites astreoides 1.webp",
+    "familia": "Poritidae",
+    "genero": "Porites",
+    "profundidad_ideal": "Somera a Media (1-15 metros) ",
+    "forma": "Masivo / Incrustante",
+    "complejidad": "Baja",
+    "claves": ["masivo", "incrustante", "poroso", "amarillento", "resistente"],
+    "estado_actual": "Es una especie común en Mochima . Destaca por ser particularmente resistente a la sedimentación y a las variaciones de temperatura causadas por la surgencia estacional en la bahía .",
+    "morfologia_detalle": "Forma colonias masivas, redondeadas o incrustantes de esqueleto muy poroso. Posee coralitos profundos de 1.2 a 1.5 mm de diámetro, con paredes comunes que nunca están separadas ."
+  },
+
+
+
+  "Orbicella annularis": {
+    "descripcion": "Coral pétreo masivo que forma colonias columnares características, un constructor fundamental en los arrecifes del Caribe.",
+    "img": "imagenes/Merulinidae  Montastraeidae/Orbicella annularis 1.jfif",
+    "familia": "Merulinidae",
+    "genero": "Orbicella",
+    "profundidad_ideal": "Media (3-15 metros)",
+    "forma": "Columnar",
+    "complejidad": "Media",
+    "claves": ["columnar", "masivo", "liso", "tejido superior"],
+    "estado_actual": "Es una de las especies abundantes en Mochima. Se localiza preferentemente en las zonas con mejores condiciones de intercambio de agua, como la boca de la bahía.",
+    "morfologia_detalle": "Se identifica por formar colonias compuestas por columnas largas y estrechas; una característica distintiva es que el tejido vivo suele restringirse únicamente a la parte superior de dichas columnas."
+  },
+  "Orbicella faveolata": {
+    "descripcion": "Coral pétreo de gran tamaño que forma colonias masivas o hemisféricas, esencial para la arquitectura del arrecife.",
+    "img": "imagenes/Merulinidae  Montastraeidae/Orbicella faveolata 1.jpg",
+    "familia": "Merulinidae",
+    "genero": "Orbicella",
+    "profundidad_ideal": "Somera a Media (1-15 metros)",
+    "forma": "Masivo / Hemisférico",
+    "complejidad": "Media",
+    "claves": ["hemisférico", "masivo", "montículos", "proyecciones laterales"],
+    "estado_actual": "Registrada como una especie abundante en el inventario del Parque Nacional Mochima. Es un constructor robusto que contribuye significativamente a la estructura de los parches arrecifales de la zona.",
+    "morfologia_detalle": "Presenta colonias masivas o hemisféricas altas con proyecciones laterales en declive, lo que a menudo le da un aspecto de 'faldas' superpuestas."
+  },
+  "Orbicella franksi": {
+    "descripcion": "Coral pétreo masivo caracterizado por su superficie irregular y crecimiento desigual.",
+    "img": "imagenes/Merulinidae  Montastraeidae/Orbicella franksi 1.jpg",
+    "familia": "Merulinidae",
+    "genero": "Orbicella",
+    "profundidad_ideal": "Media a Profunda (5-25 metros)",
+    "forma": "Masivo / Incrustante",
+    "complejidad": "Media",
+    "claves": ["superficie desigual", "irregular", "masivo", "bultos"],
+    "estado_actual": "Especie clasificada como abundante en Mochima. Suele encontrarse en ambientes similares a sus parientes, pero con mayor frecuencia en zonas de pendiente donde su forma irregular es más notoria.",
+    "morfologia_detalle": "Se distingue por poseer una superficie de colonia desigual con bultos; sus coralitos (copas) están distribuidos de forma irregular sobre la superficie, a diferencia de la distribución uniforme en otras Orbicellas."
+  },
+  "Montastraea cavernosa": {
+    "descripcion": "Coral cavernoso robusto, conocido por sus grandes copas prominentes y su alta resistencia ambiental.",
+    "img": "imagenes/Merulinidae  Montastraeidae/Montastraea cavernosa 1.jpg",
+    "familia": "Montastraeidae",
+    "genero": "Montastraea",
+    "profundidad_ideal": "Media a Profunda (hasta 40 metros)",
+    "forma": "Masivo",
+    "complejidad": "Media",
+    "claves": ["cavernoso", "copas grandes", "circular", "resistente", "constructor"],
+    "estado_actual": "Es uno de los constructores dominantes en el Parque Nacional Mochima. Destaca por ser particularmente resistente a las variaciones de temperatura causadas por la surgencia y a los niveles de sedimentación de la bahía.",
+    "morfologia_detalle": "Se identifica por sus coralitos siempre circulares y grandes, con un diámetro de al menos 6 mm, que sobresalen marcadamente de la superficie; el cenostelo (espacio entre copas) es liso y no granular."
+  },
+
+
+  "Pseudodiploria strigosa": {
+    "descripcion": "Coral cerebro masivo, principal constructor de los arrecifes en la bahía de Mochima.",
+    "img": "imagenes/Mussidae/Pseudodiploria strigosa 1.jpg",
+    "familia": "Mussidae",
+    "genero": "Pseudodiploria",
+    "profundidad_ideal": "Somera a Media (2-10 metros)",
+    "forma": "Masivo / Meandroide",
+    "complejidad": "Media",
+    "claves": ["cerebro", "múcura", "valles sinuosos", "somera"],
+    "estado_actual": "Es la especie de coral cerebro más abundante y dominante en Mochima. Se adapta bien a las aguas de la bahía, aunque es sensible a la sedimentación excesiva.",
+    "morfologia_detalle": "Presenta valles largos y sinuosos de menos de 0.5 cm de ancho; las paredes entre los valles son redondeadas o aplanadas y generalmente no tienen un surco superior."
+  },
+  "Pseudodiploria clivosa": {
+    "descripcion": "Coral cerebro de forma irregular o incrustante, común en zonas de bajo movimiento de agua.",
+    "img": "imagenes/Mussidae/Pseudodiploria clivosa 1.jpg",
+    "familia": "Mussidae",
+    "genero": "Pseudodiploria",
+    "profundidad_ideal": "Somera (1-8 metros)",
+    "forma": "Masivo / Costroso",
+    "complejidad": "Media",
+    "claves": ["cerebro", "crestas afiladas", "incrustante"],
+    "estado_actual": "Registrado como común en el inventario de Mochima. Suele formar colonias menos esféricas que P. strigosa, adaptándose a afloramientos rocosos.",
+    "morfologia_detalle": "Se identifica porque las paredes entre sus valles tienen crestas afiladas sin surco y posee más de 20 escleroseptos por centímetro."
+  },
+  "Diploria labyrinthiformis": {
+    "descripcion": "Coral cerebro característico por sus valles dobles, conocido como coral laberinto.",
+    "img": "imagenes/Mussidae/Diploria labyrinthiformis 1.jfif",
+    "familia": "Mussidae",
+    "genero": "Diploria",
+    "profundidad_ideal": "Media (3-15 metros)",
+    "forma": "Masivo / Hemisférico",
+    "complejidad": "Media",
+    "claves": ["cerebro", "surco ancho", "laberinto", "múcura"],
+    "estado_actual": "Presente en Mochima, aunque es menos frecuente que Pseudodiploria strigosa. Es un constructor sólido de la estructura arrecifal.",
+    "morfologia_detalle": "Se distingue fácilmente por tener un surco o canal muy marcado y profundo en la parte superior de las paredes que separan los valles."
+  },
+  "Colpophyllia natans": {
+    "descripcion": "Coral cerebro de gran tamaño, uno de los constructores más masivos e importantes de la zona.",
+    "img": "imagenes/Mussidae/Colpophyllia natans 1.jfif",
+    "familia": "Mussidae",
+    "genero": "Colpophyllia",
+    "profundidad_ideal": "Somera a Media (1-15 metros)",
+    "forma": "Masivo / Globular",
+    "complejidad": "Media",
+    "claves": ["cerebro gigante", "valles profundos", "láminas dentadas"],
+    "estado_actual": "Es una de las especies dominantes en Mochima. Sus colonias pueden alcanzar grandes dimensiones, contribuyendo significativamente a la cobertura de coral vivo.",
+    "morfologia_detalle": "Posee valles muy pronunciados con paredes altas. En el suelo de los valles se observan láminas verticales dentadas bien definidas."
+  },
+  "Favia fragum": {
+    "descripcion": "Pequeño coral pétreo conocido como 'Coral de pelota', común en ambientes muy someros.",
+    "img": "imagenes/Mussidae/Favia fragum 1.jfif",
+    "familia": "Mussidae",
+    "genero": "Favia",
+    "profundidad_ideal": "Muy Somera (0-5 metros)",
+    "forma": "Masivo / Pequeño",
+    "complejidad": "Baja",
+    "claves": ["pelota", "copas ovales", "somera", "amarillento"],
+    "estado_actual": "Especie abundante en Mochima. Debido a su pequeño tamaño y resistencia, sobrevive bien en zonas de rompiente y sobre rocas muy superficiales.",
+    "morfologia_detalle": "Forma colonias pequeñas y redondas. Sus copas (coralitos) son ovales o circulares, miden de 4.5 a 6.5 mm y están muy apiñadas entre sí."
+  },
+  "Manicina areolata": {
+    "descripcion": "Coral pétreo pequeño que suele habitar en zonas arenosas o cerca de praderas de Thalassia.",
+    "img": "imagenes/Mussidae/Manicina areolata 1.jfif",
+    "familia": "Mussidae",
+    "genero": "Manicina",
+    "profundidad_ideal": "Somera (1-5 metros)",
+    "forma": "Masivo / Libre",
+    "complejidad": "Baja",
+    "claves": ["surco central", "pequeño", "arenas", "thalassia"],
+    "estado_actual": "Común en el Parque Nacional Mochima. A menudo se encuentra 'suelto' sobre fondos blandos o semienterrado en sedimentos cerca de las orillas.",
+    "morfologia_detalle": "Es un coral pequeño que presenta un valle central continuo del cual parten valles laterales cortos."
+  },
+  "Scolymia cubensis": {
+    "descripcion": "Coral solitario de forma circular, conocido por su aspecto de disco carnoso.",
+    "img": "imagenes/Mussidae/Scolymia cubensis 1.jfif",
+    "familia": "Mussidae",
+    "genero": "Scolymia",
+    "profundidad_ideal": "Media a Profunda (10-30 metros)",
+    "forma": "Solitario / Discoidal",
+    "complejidad": "Baja",
+    "claves": ["solitario", "disco", "dientes finos", "profundo"],
+    "estado_actual": "Registrado como común en Mochima. Se localiza principalmente en paredes rocosas y zonas de pendiente con menor iluminación.",
+    "morfologia_detalle": "Consiste en un solo pólipo grande y solitario. Se identifica por sus escleroseptos finamente dentados, con más de 5 dientes largos y delgados por centímetro."
+  },
+  "Scolymia lacera": {
+    "descripcion": "Coral solitario de gran tamaño, muy similar visualmente a S. cubensis.",
+    "img": "imagenes/Mussidae/Scolymia lacera 1.jfif",
+    "familia": "Mussidae",
+    "genero": "Scolymia",
+    "profundidad_ideal": "Media a Profunda (15-40 metros)",
+    "forma": "Solitario / Discoidal",
+    "complejidad": "Baja",
+    "claves": ["solitario", "disco", "dientes toscos", "profundo"],
+    "estado_actual": "Presente en Mochima, generalmente en ambientes de mayor profundidad o sombra que S. cubensis.",
+    "morfologia_detalle": "Coral solitario cuyos escleroseptos están toscamente dentados, presentando menos de 5 dientes de forma triangular por cada centímetro."
+  },
+  "Mussa angulosa": {
+    "descripcion": "Coral pétreo ramificado de pólipos grandes y carnosos, con cálices prominentes y dentados.",
+    "img": "imagenes/Mussidae/Mussa angulosa 1.jfif",
+    "familia": "Mussidae",
+    "genero": "Mussa",
+    "profundidad_ideal": "Media a Profunda (10-30 metros)",
+    "forma": "Ramificado",
+    "complejidad": "Media",
+    "claves": ["ramificado", "copas grandes", "dentado", "carnoso"],
+    "estado_actual": "Se registra como una especie común en el inventario del Parque Nacional Mochima. Aporta a la diversidad estructural de los parches arrecifales, aunque no es un constructor dominante en términos de cobertura.",
+    "morfologia_detalle": "Presenta una forma de crecimiento ramificada donde cada rama termina en una copa circular grande, de más de 1 cm de diámetro. Sus escleroseptos están fuertemente dentados."
+  },
+  "Isophyllastrea rigida": {
+    "descripcion": "Coral pétreo masivo con copas circulares bien definidas que no llegan a formar valles largos.",
+    "img": "imagenes/Mussidae/Isophyllastrea rigida 1.jpg",
+    "familia": "Mussidae",
+    "genero": "Isophyllastrea",
+    "profundidad_ideal": "Somera a Media (1-15 metros)",
+    "forma": "Masivo / Hemisférico",
+    "complejidad": "Baja",
+    "claves": ["copas grandes", "masivo", "múcura", "circular"],
+    "estado_actual": "Especie clasificada como común en las aguas de Mochima. Se localiza frecuentemente sobre sustratos rocosos firmes en colonias pequeñas y aisladas.",
+    "morfologia_detalle": "Se caracteriza por poseer copas circulares que superan el centímetro de diámetro (generalmente de 1 a 1.5 cm) y escleroseptos dentados."
+  },
+  "Isophyllia sinuosa": {
+    "descripcion": "Coral pétreo masivo conocido por sus valles cortos y muy anchos, de apariencia robusta.",
+    "img": "imagenes/Mussidae/Isophyllia sinuosa 1.jfif",
+    "familia": "Mussidae",
+    "genero": "Isophyllia",
+    "profundidad_ideal": "Media (2-15 metros)",
+    "forma": "Masivo / Meandroide",
+    "complejidad": "Baja",
+    "claves": ["valles anchos", "sinuoso", "cerebro", "múcura"],
+    "estado_actual": "En el Parque Nacional Mochima se registra como una especie rara. Su presencia es puntual y limitada dentro de las comunidades arrecifales de la bahía.",
+    "morfologia_detalle": "Posee valles sinuosos notablemente anchos, alcanzando los 2.5 cm. Presenta una densidad característica de 8 escleroseptos por cada centímetro de valle."
+  },
+  "Mycetophyllia aliciae": {
+    "descripcion": "Coral pétreo laminar o en forma de hoja, que crece pegado al sustrato con crestas radiales.",
+    "img": "imagenes/Mussidae/Mycetophyllia aliciae 1.jfif",
+    "familia": "Mussidae",
+    "genero": "Mycetophyllia",
+    "profundidad_ideal": "Media a Profunda (12-35 metros)",
+    "forma": "Laminar",
+    "complejidad": "Baja",
+    "claves": ["lámina", "hoja", "septos gruesos", "profundo"],
+    "estado_actual": "Registrada como especie rara en Mochima. Prefiere zonas de mayor profundidad o áreas sombreadas en los límites de los afloramientos rocosos.",
+    "morfologia_detalle": "Forma colonias en láminas delgadas u hojas incrustantes. Sus escleroseptos se identifican por ser iguales o incluso más gruesos que los espacios (interespacios) que hay entre ellos."
+  },
+
+
+  "Siderastrea siderea": {
+    "descripcion": "Coral de estrellas masivo, fundamental para la arquitectura arrecifal y conocido por su alta resistencia ambiental [1, 2].",
+    "img": "imagenes/Siderastreidae/Siderastrea siderea 1.jfif",
+    "familia": "Siderastreidae",
+    "genero": "Siderastrea",
+    "profundidad_ideal": "Somera a Profunda (1-35 metros)",
+    "forma": "Masivo / Hemisférico",
+    "complejidad": "Baja",
+    "claves": ["estrellas", "masivo", "resistente", "constructor", "pendiente 45°"],
+    "estado_actual": "Es uno de los constructores **más abundantes y dominantes** en el Parque Nacional Mochima [3-5]. Destaca por su **gran tolerancia** a las bajas temperaturas de la surgencia estacional y su alta capacidad para eliminar el sedimento que cae sobre la colonia [1, 4, 6].",
+    "morfologia_detalle": "Forma colonias masivas y redondeadas con coralitos que miden de 2.6 a 5.0 mm de diámetro [7, 8]. Su rasgo taxonómico distintivo es que el **borde interno de los septos cae en una pendiente de 45°** hacia el centro de la copa [7, 8]."
+  },
+  "Siderastrea radians": {
+    "descripcion": "Pequeño coral pétreo masivo, morfológicamente similar a S. siderea pero de menor escala y adaptado a zonas someras [2, 5].",
+    "img": "imagenes/Siderastreidae/Siderastrea radians 1.jfif",
+    "familia": "Siderastreidae",
+    "genero": "Siderastrea",
+    "profundidad_ideal": "Muy somera a Media (1-20 metros)",
+    "forma": "Masivo / Pequeño",
+    "complejidad": "Baja",
+    "claves": ["estrellas", "pequeño", "borde perpendicular", "somera"],
+    "estado_actual": "Se registra como una especie **común** en las comunidades coralinas de Mochima [5, 9]. Suele localizarse en parches arrecifales y sobre sustratos rocosos someros, mostrando una alta resistencia a condiciones ambientales adversas [6, 9].",
+    "morfologia_detalle": "Presenta coralitos notablemente más pequeños que S. siderea, con un diámetro de 1.5 a 4.2 mm [7, 8]. Se identifica porque el **borde interno de sus septos es perpendicular** respecto al suelo del coralito [7, 8]."
+  },
+
+
+  "Agaricia agaricites": {
+    "descripcion": "Coral pétreo incrustante o submasivo, uno de los agarícidos más comunes y abundantes en los arrecifes someros.",
+    "img": "imagenes/Agariciidae/Agaricia agaricites 1.jfif",
+    "familia": "Agariciidae",
+    "genero": "Agaricia",
+    "profundidad_ideal": "Somera a Media (3-20 metros)",
+    "forma": "Incrustante / Submasiva",
+    "complejidad": "Baja",
+    "claves": ["incrustante", "valles poco profundos", "4-5 coralitos", "común"],
+    "estado_actual": "Se registra como una especie **común** en el Parque Nacional Mochima. Es particularmente resistente y se encuentra en casi todas las localidades de la bahía, adaptándose a diversos niveles de iluminación y sedimentación.",
+    "morfologia_detalle": "Forma colonias incrustantes con valles poco profundos de paredes bajas. Se identifica por tener una densidad de **4 a 5 coralitos por centímetro**, separados radialmente por unos 3.5 a 4 mm."
+  },
+  "Agaricia fragilis": {
+    "descripcion": "Coral pétreo de estructura delicada que crece en forma de láminas u hojas delgadas.",
+    "img": "imagenes/Agariciidae/Agaricia fragilis 1.jfif",
+    "familia": "Agariciidae",
+    "genero": "Agaricia",
+    "profundidad_ideal": "Media a Profunda (5-35 metros)",
+    "forma": "Laminar (forma de hoja)",
+    "complejidad": "Baja",
+    "claves": ["frágil", "hoja", "valles discontinuos", "colinas juntas"],
+    "estado_actual": "Registrada como especie **rara** en Mochima. Debido a su morfología laminar y frágil, suele localizarse en zonas protegidas del fuerte oleaje o en paredes con pendiente pronunciada.",
+    "morfologia_detalle": "Forma colonias unifaciales en forma de hoja. Sus valles son discontinuos y se distingue taxonómicamente porque sus **colinas están muy juntas, separadas por solo 2 a 4 mm**."
+  },
+  "Agaricia lamarcki": {
+    "descripcion": "Coral pétreo laminar de gran tamaño, característico por sus crestas concéntricas y septos prominentes.",
+    "img": "imagenes/Agariciidae/Agaricia lamarcki 1.jfif",
+    "familia": "Agariciidae",
+    "genero": "Agaricia",
+    "profundidad_ideal": "Media a Profunda (hasta 45 metros)",
+    "forma": "Laminar (forma de hoja)",
+    "complejidad": "Baja",
+    "claves": ["hoja", "septos delgados", "valles continuos", "común"],
+    "estado_actual": "Es una especie **común** en las comunidades coralinas de Mochima. Prefiere ambientes de aguas más claras y profundidades medias, donde sus colonias en forma de hoja pueden alcanzar un desarrollo considerable.",
+    "morfologia_detalle": "Se identifica por tener valles largos y continuos con **septos alternados que son notablemente más delgados** que los espacios (interespacios) que hay entre ellos. Presenta de 3 a 5 coralitos por cada centímetro."
+  },
+
+
+  "Meandrina meandrites": {
+    "descripcion": "Coral pétreo masivo o hemisférico con valles sinuosos, visualmente parecido a los corales cerebro pero con septos lisos.",
+    "img": "imagenes/Meandrinidae/Meandrina meandrites 1.jpeg",
+    "familia": "Meandrinidae",
+    "genero": "Meandrina",
+    "profundidad_ideal": "Media (8-25 metros)",
+    "forma": "Masiva / Hemisférica",
+    "complejidad": "Baja",
+    "claves": ["septos lisos", "valles sinuosos", "cerebro liso"],
+    "estado_actual": "En el Parque Nacional Mochima se registra como una especie presente pero de abundancia limitada (rara), prefiriendo las zonas con mejores condiciones de circulación de agua.",
+    "morfologia_detalle": "Forma colonias masivas y hemisféricas que nunca forman pilares. Sus valles son largos y sinuosos, y se distingue fundamentalmente por poseer escleroseptos no dentados (bordes lisos)."
+  },
+  "Dichocoenia stokesii": {
+    "descripcion": "Coral pétreo masivo caracterizado por sus copas de forma ovalada o alargada y una textura granular entre ellas.",
+    "img": "imagenes/Meandrinidae/Dichocoenia stokesii 1.jpeg",
+    "familia": "Meandrinidae",
+    "genero": "Dichocoenia",
+    "profundidad_ideal": "Somera a Media (1-25 metros)",
+    "forma": "Masiva",
+    "complejidad": "Baja",
+    "claves": ["copas ovales", "cenostelo granular", "septos aserrados"],
+    "estado_actual": "Se clasifica como una especie **común** dentro del inventario de corales pétreos de Mochima, contribuyendo a la diversidad estructural de los parches arrecifales de la bahía.",
+    "morfologia_detalle": "Presenta copas ovaladas o alargadas que miden entre 3 y 9 mm de largo. Una característica clave para su identificación es su cenostelo (superficie entre coralitos) de textura marcadamente granular."
+  },
+  "Eusmilia fastigiata": {
+    "descripcion": "Conocido como 'Coral de flores', es un coral pétreo ramificado muy llamativo por sus copas terminales de bordes suaves.",
+    "img": "imagenes/Meandrinidae/Eusmilia fastigiata 1.jpeg",
+    "familia": "Meandrinidae",
+    "genero": "Eusmilia",
+    "profundidad_ideal": "Somera a Media (5-25 metros)",
+    "forma": "Ramificada",
+    "complejidad": "Alta",
+    "claves": ["coral de flores", "ramificado", "copas terminales", "septos lisos"],
+    "estado_actual": "Es una de las especies **abundantes** y conspicuas en el Parque Nacional Mochima. Su estructura ramificada ofrece refugio tridimensional crítico para la fauna pequeña del parque.",
+    "morfologia_detalle": "Posee un patrón de crecimiento ramificado donde los coralitos se encuentran exclusivamente en las puntas de las ramas. Las copas son de forma ovalada y sus escleroseptos tienen bordes completamente lisos (no dentados)."
+  },
+
+
+  "Stephanocoenia intersepta": {
+    "descripcion": "Coral pétreo masivo o incrustante con coralitos pequeños y bien definidos, un habitante persistente de los arrecifes caribeños.",
+    "img": "imagenes/Meandrinidae/Stephanocoenia intersepta 1.jpeg",
+    "familia": "Astrocoeniidae",
+    "genero": "Stephanocoenia",
+    "profundidad_ideal": "Somera a Media (1-15 metros)",
+    "forma": "Masiva / Incrustante",
+    "complejidad": "Baja",
+    "claves": ["masivo", "incrustante", "columela estiliforme", "24 septos"],
+    "estado_actual": "Se registra como una especie **común** en el inventario del Parque Nacional Mochima. Es un coral resistente que contribuye a la solidez de la base arrecifal en diversas localidades de la bahía.",
+    "morfologia_detalle": "Forma colonias masivas con coralitos que miden de 2.6 a 3.0 mm de diámetro. Posee una **columela estiliforme** central y se identifica por tener **24 septos exertos** (que sobresalen del borde del coralito)."
+  },
+  "Madracis decactis": {
+    "descripcion": "Coral pétreo que forma colonias compactas de tipo nodular o incrustante, fácilmente identificable por el número constante de sus septos.",
+    "img": "imagenes/Pocilloporidae/Madracis decactis 1.jfif",
+    "familia": "Pocilloporidae",
+    "genero": "Madracis",
+    "profundidad_ideal": "Somera a Profunda (1-30 metros)",
+    "forma": "Nodular / Incrustante",
+    "complejidad": "Baja",
+    "claves": ["nodular", "incrustante", "10 septos", "compacto"],
+    "estado_actual": "Clasificada como una especie **común** en las comunidades coralinas de Mochima. Destaca por su capacidad para sobrevivir y persistir incluso tras eventos de mortalidad masiva que afectan a otras especies de la zona.",
+    "morfologia_detalle": "Se presenta en formas nodulares o como costras incrustantes. Sus coralitos son pequeños (de 1.5 a 2.5 mm de diámetro) y tienen la característica taxonómica definitiva de poseer **exactamente 10 septos** cada uno."
+  },
+  "Oculina diffusa": {
+    "descripcion": "Coral pétreo ramificado de estructura delicada, común en zonas protegidas o parches arrecifales someros.",
+    "img": "imagenes/Oculinidae/Oculina diffusa 1.jfif",
+    "familia": "Oculinidae",
+    "genero": "Oculina",
+    "profundidad_ideal": "Somera (1-10 metros)",
+    "forma": "Ramificada",
+    "complejidad": "Alta",
+    "claves": ["ramificado", "ramas fusionadas", "ramas delgadas", "refugio"],
+    "estado_actual": "Registrada como una especie **común** en el Parque Nacional Mochima. Aunque aporta complejidad estructural al arrecife, su presencia es más puntual en comparación con los grandes constructores masivos de la bahía.",
+    "morfologia_detalle": "Se caracteriza por un patrón de crecimiento ramificado con **ramas cortas y fusionadas** entre sí. El grosor de estas ramas es típicamente **menor a los 10 mm de ancho**."
+  }
+}

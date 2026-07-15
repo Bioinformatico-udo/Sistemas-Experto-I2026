@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap');
+
+:root {
+    --primary-1: #89BCFF;
+    --primary-2: #FF86E1;
+    --bg-1: #FFF6FD;
+    --color-bg-2: #E6F0FF; 
+    --text-1: #160211;
+}
+
+/* =========================================
+   1. FORZAR DISEÑO GLOBAL DE STREAMLIT Y BARRA
+   ========================================= */
+html, body, [class*="css"], .stApp, [data-testid="stAppViewContainer"] {
+    font-family: 'Manrope', sans-serif !important;
+    background-color: var(--bg-1) !important;
+    color: var(--text-1) !important;
+}
+
+[data-testid="stSidebar"] {
+    background-color: var(--color-bg-2) !important;
+    border-right: 2px solid #D0E3FF !important; 
+    box-shadow: 2px 0 15px rgba(0,0,0,0.02) !important;
+}
+
+/* FORZAR BOTÓN DE MINIMIZAR SIEMPRE VISIBLE */
+[data-testid="stSidebarCollapseButton"],
+[data-testid="collapsedControl"],
+button[kind="header"] {
+    opacity: 1 !important;
+    visibility: visible !important;
+    background-color: transparent !important;
+}
+[data-testid="stSidebarCollapseButton"] svg,
+[data-testid="collapsedControl"] svg {
+    opacity: 1 !important;
+    visibility: visible !important;
+    fill: var(--text-1) !important;
+    color: var(--text-1) !important;
+}
+[data-testid="stSidebarCollapseButton"]:hover {
+    background-color: rgba(137, 188, 255, 0.2) !important;
+}
+
+/* =========================================
+   2. CAJA DE CHAT Y BOTÓN DE ENVIAR 
+   ========================================= */
+[data-testid="stChatInput"] {
+    background-color: #ffffff !important;
+    border: 2px solid var(--primary-1) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 6px 20px rgba(137, 188, 255, 0.2) !important; 
+    padding: 4px !important;
+    outline: none !important;
+}
+
+[data-testid="stChatInput"]:focus-within {
+    box-shadow: 0 6px 20px rgba(137, 188, 255, 0.4) !important; 
+}
+
+/* ANIQUILAR EL BORDE ROSA INTERNO DE STREAMLIT */
+[data-testid="stChatInput"] > div,
+[data-testid="stChatInput"] > div:focus-within,
+[data-baseweb="input"], 
+[data-baseweb="input"] > div, 
+[data-baseweb="input"] > div:focus-within,
+[data-baseweb="base-input"],
+[data-testid="stChatInput"] * {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+[data-testid="stChatInputSubmitButton"] {
+    background-color: var(--primary-1) !important;
+    border-radius: 50% !important;
+    opacity: 1 !important; 
+    transition: transform 0.2s ease !important;
+}
+[data-testid="stChatInputSubmitButton"]:hover {
+    transform: scale(1.1) !important;
+}
+[data-testid="stChatInputSubmitButton"] svg {
+    fill: #ffffff !important;
+}
+
+/* =========================================
+   3. ESTILOS DE BOTONES SEPARADOS
+   ========================================= */
+/* A. Botones de la Barra Lateral (Estilo Gemini: Sin bordes, alineados a la izquierda) */
+[data-testid="stSidebar"] div.stButton > button {
+    background-color: transparent !important; 
+    border: none !important; 
+    box-shadow: none !important; 
+    color: var(--text-1) !important;
+    border-radius: 8px !important; 
+    font-weight: 600 !important;
+    justify-content: flex-start !important; 
+    padding: 10px 14px !important; 
+    transition: background-color 0.2s ease !important;
+    width: 100% !important; 
+}
+[data-testid="stSidebar"] div.stButton > button p {
+    font-size: 0.95rem !important;
+    margin: 0 !important;
+}
+[data-testid="stSidebar"] div.stButton > button:hover,
+[data-testid="stSidebar"] div.stButton > button:focus {
+    background-color: rgba(137, 188, 255, 0.25) !important; 
+    border: none !important; 
+    transform: none !important; 
+    box-shadow: none !important; 
+    color: var(--text-1) !important;
+}
+
+/* B. Botones del Área Principal (ej. Reiniciar Chat) */
+[data-testid="stAppViewContainer"] .stButton > button {
+    background-color: #ffffff !important;
+    border: 2px solid var(--primary-1) !important;
+    color: var(--text-1) !important;
+    border-radius: 12px !important;
+    font-weight: 700 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04) !important;
+}
+[data-testid="stAppViewContainer"] .stButton > button:hover {
+    background-color: var(--primary-1) !important;
+    color: #fff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(137, 188, 255, 0.4) !important;
+}
+
+/* =========================================
+   4. ANIMACIONES
+   ========================================= */
+@keyframes slideUpFade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 0 0 rgba(255, 134, 225, 0.4); }
+    70% { box-shadow: 0 0 15px 10px rgba(255, 134, 225, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 134, 225, 0); }
+}
+
+/* =========================================
+   5. BURBUJAS DE CHAT Y CATÁLOGO
+   ========================================= */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.chat-message {
+    padding: 16px 20px;
+    border-radius: 18px;
+    max-width: 80%;
+    margin-bottom: 16px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.06); 
+    color: var(--text-1);
+    animation: slideUpFade 0.4s ease-out forwards;
+    line-height: 1.5;
+}
+
+.chat-user {
+    background: var(--primary-1);
+    align-self: flex-end;
+    margin-left: auto;
+    border-bottom-right-radius: 4px;
+    color: #160211; 
+    font-weight: 600;
+}
+
+.chat-assistant {
+    background: #ffffff; 
+    align-self: flex-start;
+    margin-right: auto;
+    border-bottom-left-radius: 4px;
+    border: 2px solid #D0E3FF; 
+}
+
+.chat-meta {
+    font-size: 0.82rem;
+    opacity: 0.8;
+    margin-bottom: 6px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #555;
+}
+
+.catalog-card {
+    background: #ffffff;
+    border: 2px solid #D0E3FF;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 12px;
+    color: var(--text-1);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+    transition: all 0.2s ease;
+    animation: slideUpFade 0.4s ease-out forwards;
+}
+
+.catalog-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-1);
+    box-shadow: 0 8px 25px rgba(137, 188, 255, 0.3);
+}
+
+.catalog-heading {
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: var(--primary-2);
+}
+
+.card-thumb img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.catalog-note {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed #ddd;
+}
+
+.success-card {
+    background: #ffffff;
+    border: 3px solid var(--primary-2);
+    animation: pulseGlow 2.5s infinite, slideUpFade 0.5s ease-out forwards;
+}
