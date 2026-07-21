@@ -1,0 +1,533 @@
+{
+    "Acropora palmata": {
+        "nombre_comun": "Orejón / Cuerno de alce",
+        "descripcion": "Colonia plocoide, ramificada y arborescente con ramas anchas y planas hacia su extremo apical. Habita en aguas claras y someras, siendo el principal constructor de esta unidad en el Caribe colombiano.",
+        "forma_colonia": [
+            "ramificada"
+        ],
+        "organizacion_coralites": [
+            "plocoide"
+        ],
+        "tipo_gemacion": [
+            "extratentacular"
+        ],
+        "tipo_columnela": [
+            "ausente"
+        ],
+        "superficie": [
+            "porosa"
+        ],
+        "tipo_ramificacion": [
+            "aplanada",
+            "ancha"
+        ],
+        "tamaño_polipos": [
+            "pequeño"
+        ],
+        "abundancia_local": "escaso_vivo",
+        "tolerancia_turbidez": "baja",
+        "tolerancia_algas": "baja"
+    },
+    "Acropora cervicornis": {
+        "nombre_comun": "Cuerno de ciervo",
+        "descripcion": "Colonia plocoide, ramificada y arborescente con ramas cilíndricas. Habita en aguas claras relativamente protegidas formando setos densos.",
+        "forma_colonia": [
+            "ramificada"
+        ],
+        "organizacion_coralites": [
+            "plocoide"
+        ],
+        "tipo_gemacion": [
+            "extratentacular"
+        ],
+        "tipo_columnela": [
+            "ausente"
+        ],
+        "superficie": [
+            "porosa",
+            "tubular"
+        ],
+        "tipo_ramificacion": [
+            "cilindrica",
+            "delgada"
+        ],
+        "tamaño_polipos": [
+            "pequeño"
+        ],
+        "abundancia_local": "muy escaso",
+        "tolerancia_turbidez": "baja",
+        "tolerancia_algas": "baja"
+    },
+    "Acropora prolifera": {
+        "nombre_comun": "Orejón fino",
+        "descripcion": "Es un híbrido de primera generación (F1) que se origina por la hibridación entre Acropora cervicornis y Acropora palmata.",
+        "forma_colonia": [
+            "ramificada"
+        ],
+        "organizacion_coralites": [
+            "plocoide"
+        ],
+        "tipo_gemacion": [
+            "extratentacular"
+        ],
+        "tipo_columnela": [
+            "ausente"
+        ],
+        "superficie": [
+            "porosa"
+        ],
+        "tipo_ramificacion": [
+            "cilindrica",
+            "fina",
+            "fusionada"
+        ],
+        "tamaño_polipos": [
+            "pequeño"
+        ],
+        "abundancia_local": "escaso",
+        "tolerancia_turbidez": "baja",
+        "tolerancia_algas": "baja"
+    },
+    "Porites porites": {
+        "nombre_comun": "Manoegato",
+        "descripcion": "Es una especie resistente a la alta sedimentación y a las bajas temperaturas. Se le conoce comúnmente con el nombre de coral (manoegato).",
+        "forma_colonia": [
+            "ramificada",
+            "digitoide"
+        ],
+        "organizacion_coralites": [
+            "cerioide"
+        ],
+        "tipo_gemacion": [
+            "extratentacular"
+        ],
+        "tipo_columnela": [
+            "trabecular"
+        ],
+        "superficie": [
+            "lisa",
+            "porosa"
+        ],
+        "tipo_ramificacion": [
+            "gruesa",
+            "chata"
+        ],
+        "tamaño_polipos": [
+            "pequeño"
+        ],
+        "abundancia_local": "comun",
+        "tolerancia_turbidez": "alta",
+        "tolerancia_algas": "media"
+    },
+    "Porites astreoides": {
+        "nombre_comun": "Coral mostaza",
+        "descripcion": "Se caracteriza por presentar altas tasas de fecundación, altas tasas de reclutamiento y una corta longevidad. Posee una gran tolerancia a condiciones adversas, como el incremento de la temperatura.",
+        "forma_colonia": [
+            "masiva",
+            "incrustante"
+        ],
+        "organizacion_coralites": [
+            "cerioide"
+        ],
+        "tipo_gemacion": [
+            "extratentacular"
+        ],
+        "tipo_columnela": [
+            "trabecular"
+        ],
+        "superficie": [
+            "nodular",
+            "bultos"
+        ],
+        "tamaño_polipos": [
+            "pequeño"
+        ],
+        "abundancia_local": "comun",
+        "tolerancia_turbidez": "alta",
+        "tolerancia_algas": "alta"
+    },
+    "Porites colonensis": {
+        "nombre_comun": "Coral panal incrustante",
+        "descripcion": "Es una especie incrustante de rocas que se considera poco común en el mar Caribe.",
+        "forma_colonia": [
+            "incrustante",
+            "laminar"
+        ],
+        "organizacion_coralites": [
+            "cerioide"
+        ],
+        "tipo_gemacion": [
+            "extratentacular"
+        ],
+        "tipo_columnela": [
+            "trabecular"
+        ],
+        "superficie": [
+            "lisa",
+            "porosa"
+        ],
+        "tamaño_polipos": [
+            "pequeño"
+        ],
+        "abundancia_local": "raro",
+        "tolerancia_turbidez": "media",
+        "tolerancia_algas": "media"
+    },
+    "Pseudodiploria strigosa": {
+        "nombre_comun": "Coral cerebro simétrico",
+        "descripcion": "Es una especie resistente a la alta sedimentación y a las bajas temperaturas. En Cubagua es una especie dominante, presentando colonias que pueden alcanzar 4 m de diámetro o más.",
+        "forma_colonia": [
+            "masiva",
+            "esferica"
+        ],
+        "organizacion_coralites": [
+            "meandroide"
+        ],
+        "tipo_gemacion": [
+            "intratentacular"
+        ],
+        "tipo_columnela": [
+            "trabecular"
+        ],
+        "superficie": [
+            "cerebriforme"
+        ],
+        "anchura_crestas": [
+            "estrechas",
+            "regulares"
+        ],
+        "abundancia_local": "dominante",
+        "tolerancia_turbidez": "media",
+        "tolerancia_algas": "media"
+    },
+    "Pseudodiploria clivosa": {
+        "nombre_comun": "Coral cerebro nudoso",
+        "descripcion": "Es una especie que se encuentra escasamente representada en Cubagua.",
+        "forma_colonia": [
+            "masiva",
+            "incrustante"
+        ],
+        "organizacion_coralites": [
+            "meandroide"
+        ],
+        "tipo_gemacion": [
+            "intratentacular"
+        ],
+        "tipo_columnela": [
+            "trabecular"
+        ],
+        "superficie": [
+            "cerebriforme",
+            "irregular"
+        ],
+        "anchura_crestas": [
+            "estrechas",
+            "bajas"
+        ],
+        "abundancia_local": "comun",
+        "tolerancia_turbidez": "media",
+        "tolerancia_algas": "media"
+    },
+    "Diploria labyrinthiformis": {
+        "nombre_comun": "Coral cerebro acanalado",
+        "descripcion": "Es uno de los principales corales constructores de arrecifes en el mar Caribe. Es conocido bajo el nombre de (coral cerebro) y es escaso en la isla de Cubagua.",
+        "forma_colonia": [
+            "masiva"
+        ],
+        "organizacion_coralites": [
+            "meandroide"
+        ],
+        "tipo_gemacion": [
+            "intratentacular"
+        ],
+        "tipo_columnela": [
+            "trabecular"
+        ],
+        "superficie": [
+            "cerebriforme"
+        ],
+        "anchura_crestas": [
+            "anchas con surco",
+            "profundas"
+        ],
+        "abundancia_local": "escaso",
+        "tolerancia_turbidez": "media",
+        "tolerancia_algas": "media"
+    },
+    "Colpophyllia natans": {
+        "nombre_comun": "Coral cerebro gigante",
+        "descripcion": "Es un coral constructor de arrecifes dominante en las zonas oceánicas alejadas de la costa continental. En localidades como Playa Conejo (Cubagua) está representado por muy pocas colonias.",
+        "forma_colonia": [
+            "masiva"
+        ],
+        "organizacion_coralites": [
+            "meandroide"
+        ],
+        "tipo_gemacion": [
+            "intratentacular"
+        ],
+        "tipo_columnela": [
+            "trabecular"
+        ],
+        "superficie": [
+            "cerebriforme"
+        ],
+        "anchura_crestas": [
+            "muy anchas"
+        ],
+        "abundancia_local": "escaso",
+        "tolerancia_turbidez": "baja",
+        "tolerancia_algas": "media"
+    },
+    "Montastraea cavernosa": {
+        "nombre_comun": "Coral caverna",
+        "descripcion": "Es una especie que muestra resistencia a la alta sedimentación y a las bajas temperaturas. Tiene una amplia distribución y es una de las especies de mayor abundancia en diversas áreas arrecifales.",
+        "forma_colonia": [
+            "masiva"
+        ],
+        "organizacion_coralites": [
+            "plocoide"
+        ],
+        "tipo_gemacion": [
+            "extratentacular"
+        ],
+        "tipo_columnela": [
+            "trabecular"
+        ],
+        "superficie": [
+            "con copas",
+            "protuberante"
+        ],
+        "tamaño_polipos": [
+            "grande"
+        ],
+        "abundancia_local": "comun",
+        "tolerancia_turbidez": "media",
+        "tolerancia_algas": "media"
+    },
+    "Orbicella annularis": {
+        "nombre_comun": "Coral estrella lobulado",
+        "descripcion": "Es uno de los principales corales constructores de arrecifes del Caribe. En áreas de Cubagua como Playa Conejo presenta altas densidades poblacionales.",
+        "forma_colonia": [
+            "masiva",
+            "columnar"
+        ],
+        "organizacion_coralites": [
+            "plocoide"
+        ],
+        "tipo_gemacion": [
+            "extratentacular"
+        ],
+        "tipo_columnela": [
+            "trabecular"
+        ],
+        "superficie": [
+            "nodular",
+            "con copas"
+        ],
+        "tamaño_polipos": [
+            "pequeño"
+        ],
+        "abundancia_local": "comun",
+        "tolerancia_turbidez": "media",
+        "tolerancia_algas": "media"
+    },
+    "Orbicella franksi": {
+        "nombre_comun": "Coral estrella irregular",
+        "descripcion": "Es una especie que domina las zonas arrecifales profundas, donde crece formando colonias planas y costrosas.",
+        "forma_colonia": [
+            "masiva",
+            "incrustante",
+            "laminar"
+        ],
+        "organizacion_coralites": [
+            "plocoide"
+        ],
+        "tipo_gemacion": [
+            "extratentacular"
+        ],
+        "tipo_columnela": [
+            "trabecular"
+        ],
+        "superficie": [
+            "irregular",
+            "con bultos",
+            "con copas"
+        ],
+        "tamaño_polipos": [
+            "pequeño"
+        ],
+        "abundancia_local": "comun",
+        "tolerancia_turbidez": "media",
+        "tolerancia_algas": "media"
+    },
+    "Orbicella faveolata": {
+        "nombre_comun": "Coral estrella montañoso",
+        "descripcion": "Es un coral fundamental en la construcción de arrecifes en el Caribe, dominando las zonas de aguas claras.",
+        "forma_colonia": [
+            "masiva",
+            "faldones"
+        ],
+        "organizacion_coralites": [
+            "plocoide"
+        ],
+        "tipo_gemacion": [
+            "extratentacular"
+        ],
+        "tipo_columnela": [
+            "trabecular"
+        ],
+        "superficie": [
+            "lisa",
+            "con copas"
+        ],
+        "tamaño_polipos": [
+            "pequeño"
+        ],
+        "abundancia_local": "comun",
+        "tolerancia_turbidez": "media",
+        "tolerancia_algas": "media"
+    },
+    "Siderastrea radians": {
+        "nombre_comun": "Coral estrella menor",
+        "descripcion": "Es una especie que se encuentra representada por pocas colonias en áreas locales como Playa Conejo.",
+        "forma_colonia": [
+            "masiva",
+            "incrustante",
+            "pequeña"
+        ],
+        "organizacion_coralites": [
+            "cerioide"
+        ],
+        "tipo_gemacion": [
+            "extratentacular"
+        ],
+        "tipo_columnela": [
+            "papilosa"
+        ],
+        "superficie": [
+            "lisa",
+            "hoyos profundos"
+        ],
+        "tamaño_polipos": [
+            "pequeño"
+        ],
+        "abundancia_local": "comun",
+        "tolerancia_turbidez": "alta",
+        "tolerancia_algas": "alta"
+    },
+    "Siderastrea siderea": {
+        "nombre_comun": "Coral estrella masivo",
+        "descripcion": "Presenta una gran tolerancia a los cambios de temperatura y posee una alta plasticidad fenotípica, lo cual le permite cambiar su morfología esqueletal de acuerdo al ambiente donde se encuentre. También es resistente a la alta sedimentación.",
+        "forma_colonia": [
+            "masiva",
+            "esferica"
+        ],
+        "organizacion_coralites": [
+            "cerioide"
+        ],
+        "tipo_gemacion": [
+            "extratentacular"
+        ],
+        "tipo_columnela": [
+            "papilosa"
+        ],
+        "superficie": [
+            "lisa",
+            "hoyos pequeños"
+        ],
+        "tamaño_polipos": [
+            "pequeño"
+        ],
+        "abundancia_local": "escaso",
+        "tolerancia_turbidez": "alta",
+        "tolerancia_algas": "alta"
+    },
+    "Oculina diffusa": {
+        "nombre_comun": "Coral marfil arbustivo",
+        "descripcion": "Es una especie que se encuentra de forma escasa en áreas locales como La Cabecera en la isla de Cubagua.",
+        "forma_colonia": [
+            "ramificada",
+            "arbustiva"
+        ],
+        "organizacion_coralites": [
+            "plocoide"
+        ],
+        "tipo_gemacion": [
+            "extratentacular"
+        ],
+        "tipo_columnela": [
+            "papilosa"
+        ],
+        "superficie": [
+            "lisa",
+            "costillas"
+        ],
+        "tipo_ramificacion": [
+            "fina",
+            "corta"
+        ],
+        "tamaño_polipos": [
+            "mediano"
+        ],
+        "abundancia_local": "raro",
+        "tolerancia_turbidez": "alta",
+        "tolerancia_algas": "media"
+    },
+    "Solenastrea bournoni": {
+        "nombre_comun": "Coral estrella liso",
+        "descripcion": "Es un coral de presencia escasa en la zona de La Cabecera en Cubagua.",
+        "forma_colonia": [
+            "masiva",
+            "lobulada"
+        ],
+        "organizacion_coralites": [
+            "plocoide"
+        ],
+        "tipo_gemacion": [
+            "extratentacular"
+        ],
+        "tipo_columnela": [
+            "trabecular"
+        ],
+        "superficie": [
+            "lisa",
+            "bultos",
+            "con copas"
+        ],
+        "tamaño_polipos": [
+            "pequeño"
+        ],
+        "abundancia_local": "escaso",
+        "tolerancia_turbidez": "alta",
+        "tolerancia_algas": "media"
+    },
+    "Perrito caliente": {
+        "nombre_comun": "Salchi papa",
+        "descripcion": "pan queso y salchicha",
+        "forma_colonia": [
+            "faldones"
+        ],
+        "superficie": [
+            "con copas"
+        ],
+        "tamaño_polipos": [
+            "grande"
+        ],
+        "organizacion_coralites": [
+            "meandroide"
+        ],
+        "tipo_gemacion": [
+            "intratentacular"
+        ],
+        "tipo_columnela": [
+            "papilosa"
+        ],
+        "tolerancia_turbidez": "baja",
+        "tolerancia_algas": "baja",
+        "abundancia_local": "comun",
+        "salsa": [
+            "tomate"
+        ]
+    }
+}

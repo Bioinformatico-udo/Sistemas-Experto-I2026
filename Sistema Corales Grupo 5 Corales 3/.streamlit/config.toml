@@ -1,0 +1,15 @@
+[theme]
+# El tono más vibrante (#26C6DA) para resaltar el botón de análisis, los sliders y las barras de progreso
+primaryColor = "#26c6da"
+
+# El tono más claro (#E0F7FA) para el fondo general, dando esa sensación de agua cristalina
+backgroundColor = "#e0f7fa"
+
+# El tono intermedio claro (#B2EBF2) para el panel lateral izquierdo, creando un contraste suave
+secondaryBackgroundColor = "#b2ebf2"
+
+# Nota: La paleta original no tiene un color oscuro. 
+# Añadimos este azul marino profundo para que las letras se lean perfectamente sobre los fondos claros.
+textColor = "#073141" 
+
+font = "sans serif"
