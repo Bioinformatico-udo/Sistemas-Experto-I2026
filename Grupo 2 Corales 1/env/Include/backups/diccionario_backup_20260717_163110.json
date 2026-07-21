@@ -639,5 +639,25 @@
     "estado_actual": "Registrada como una especie **común** en el Parque Nacional Mochima. Aunque aporta complejidad estructural al arrecife, su presencia es más puntual en comparación con los grandes constructores masivos de la bahía.",
     "morfologia_detalle": "Se caracteriza por un patrón de crecimiento ramificado con **ramas cortas y fusionadas** entre sí. El grosor de estas ramas es típicamente **menor a los 10 mm de ancho**.",
     "img_extra": []
+  },
+  "pipeloide": {
+    "descripcion": "Son los pipes unos corales que prenan a las mujeres",
+    "img": [],
+    "familia": "pipe",
+    "genero": "porites",
+    "profundidad_ideal": "Profunda (15+ metros)",
+    "forma": "Masivo",
+    "complejidad": "Alta",
+    "claves": [
+      "largo",
+      "peludo",
+      "huevo",
+      "cabezon",
+      "coral bicho",
+      "venuo"
+    ],
+    "estado_actual": "1800 en margarita",
+    "morfologia_detalle": "De diferentes colores",
+    "img_extra": []
   }
 }

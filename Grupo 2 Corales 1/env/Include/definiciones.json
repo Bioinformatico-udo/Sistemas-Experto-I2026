@@ -1,0 +1,90 @@
+{
+  "diccionario_completo_caracteristicas": {
+    
+    "caracteristicas_taxonomicas_y_ecologicas": {
+      "familia": {
+        "nombre": "Familia taxonómica",
+        "definicion": "La categoría taxonómica principal a la que pertenece el coral (ej. Acroporidae, Mussidae, Poritidae)."
+      },
+      "genero": {
+        "nombre": "Género taxonómico",
+        "definicion": "La subdivisión taxonómica por debajo de la familia y por encima de la especie (ej. Acropora, Diploria, Porites)."
+      },
+      "profundidad_ideal": {
+        "nombre": "Profundidad ideal",
+        "definicion": "El rango de profundidad en la columna de agua donde la especie tiene su desarrollo óptimo (Somera, Media o Profunda)."
+      },
+      "forma": {
+        "nombre": "Forma principal (Básica)",
+        "definicion": "Categorización general y sencilla del crecimiento del coral usada en el chatbot inicial (Ramificado, Masivo, Incrustante, etc.)."
+      },
+      "complejidad": {
+        "nombre": "Complejidad de cuidado",
+        "definicion": "Nivel de dificultad para mantener o cuidar el coral, útil para acuaristas o gestores de conservación (Baja, Media, Alta)."
+      }
+    },
+
+    "caracteristicas_morfologicas_avanzadas": {
+      "crecimiento": {
+        "nombre": "Forma general de la colonia",
+        "definicion": "Describe la forma tridimensional básica de la colonia de coral (ej. ramificado como un árbol, masivo como una roca, laminar como hojas o solitario como un único pólipo)."
+      },
+      "axial": {
+        "nombre": "Cáliz axial",
+        "definicion": "Se refiere a si las ramas del coral terminan en un único cáliz (copa) central y prominente en la punta. Es un rasgo biológico distintivo del género Acropora."
+      },
+      "forma_ramas": {
+        "nombre": "Morfología de las ramas",
+        "definicion": "Describe el aspecto físico específico de las ramificaciones, tales como aplanadas (orejones), cilíndricas (cuernos de venado), con puntas hinchadas o bifurcadas."
+      },
+      "forma_masiva": {
+        "nombre": "Tipo de crecimiento masivo",
+        "definicion": "Define el perfil o silueta exacta de las colonias sólidas. Pueden ser columnas verticales, montículos semiesféricos, tener superficies irregulares con bultos, o ser incrustantes (costras finas pegadas al sustrato)."
+      },
+      "disposicion": {
+        "nombre": "Disposición de los cálices",
+        "definicion": "Indica cómo se organizan los pólipos en la superficie de la colonia. Pueden fusionarse formando valles continuos (meandroides o 'corales cerebro') o mantenerse como cálices circulares individuales."
+      },
+      "tipo_valles": {
+        "nombre": "Estructura de los valles",
+        "definicion": "Detalla la morfología interna de los corales tipo cerebro. Evalúa si las paredes que separan los valles tienen surcos profundos en la parte superior, crestas afiladas o láminas dentadas en el fondo."
+      },
+      "paredes": {
+        "nombre": "Estructura de las paredes",
+        "definicion": "Determina si los cálices individuales comparten paredes contiguas como un panal de abejas (disposición cerioide) o si están separados por tejido esquelético intermediario (disposición plocoide)."
+      },
+      "pendiente": {
+        "nombre": "Inclinación de los septos",
+        "definicion": "Es el ángulo en el que los septos (las finas placas calcáreas dentro del cáliz) caen hacia el centro. Pueden descender en una pendiente gradual de 45 grados o caer de forma abrupta y perpendicular (90 grados)."
+      },
+      "num_septos": {
+        "nombre": "Número de septos",
+        "definicion": "La cantidad exacta de septos presentes en el cáliz. Algunas especies tienen un número constante que no varía y sirve para identificarlas rápidamente (como exactamente 10 o 24 septos)."
+      },
+      "forma_caliz": {
+        "nombre": "Forma del cáliz",
+        "definicion": "Indica la geometría del borde exterior del cáliz individual, diferenciando entre aberturas que son perfectamente circulares y aquellas que son ovaladas o estiradas."
+      },
+      "lamina_detalle": {
+        "nombre": "Detalles de la lámina",
+        "definicion": "Características específicas de las colonias con crecimiento laminar (en forma de placas u hojas). Evalúa la separación de sus colinas o si los septos son más delgados o gruesos que los espacios vacíos entre ellos."
+      },
+      "tamano": {
+        "nombre": "Tamaño de los cálices",
+        "definicion": "Clasificación basada en el diámetro promedio de los cálices individuales. Ayuda a separar taxonómicamente a los corales de pólipo grande (LPS, mayor a 10 mm) de los de pólipo pequeño (SPS, menor a 10 mm)."
+      },
+      "septos": {
+        "nombre": "Bordes de los Septos",
+        "definicion": "Describe la textura de los bordes superiores de los septos. Estos pueden ser completamente lisos o presentar denticiones, espinas o granulaciones claramente visibles al tacto o a la vista."
+      },
+      "dientes": {
+        "nombre": "Textura de los dientes",
+        "definicion": "Si el coral posee septos dentados, esta característica clasifica si los dientes son finos (similares a pequeñas agujas) o si son gruesos y toscos (como pirámides irregulares)."
+      },
+      "columela": {
+        "nombre": "Presencia de Columela",
+        "definicion": "La columela es el eje o estructura central en el fondo del cáliz. Puede estar presente (como un pilar sólido o una aglomeración esponjosa de carbonato) o estar ausente (dejando el centro del cáliz totalmente hueco)."
+      }
+    }
+  }
+}
