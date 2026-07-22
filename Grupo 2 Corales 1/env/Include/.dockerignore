@@ -1,0 +1,44 @@
+# Ignorados comunes para construir la imagen desde `env/Include`
+# Archivos compilados y caches
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Configs de editores/IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Dependencias y builds locales
+dist/
+build/
+*.egg-info/
+pip-wheel-metadata/
+
+# Entornos virtuales locales (si se crean dentro del contexto)
+.venv/
+venv/
+env/
+
+# Caches de pruebas
+.pytest_cache/
+.cache/
+
+# Backups locales no necesarios en la imagen
+backups/
+
+# Archivos sensibles o de configuración local
+.env
+*.sqlite3
+
+# Node/NPM (si aparecen en el repo)
+node_modules/
+
+# Logs
+*.log
+

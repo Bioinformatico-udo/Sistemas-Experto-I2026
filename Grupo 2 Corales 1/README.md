@@ -125,3 +125,80 @@ Este proyecto combina:
 - y una base de datos temática sobre corales del Caribe venezolano.
 
 Es una propuesta útil para mostrar cómo un sistema experto puede organizar conocimiento ecológico y convertirlo en una experiencia interactiva.
+
+## Cómo iniciar el proyecto
+
+A continuación se presentan instrucciones claras y reproducibles para ejecutar la aplicación. Elija la opción que prefiera: usar Docker (recomendado) o ejecutar localmente con Python.
+
+### Requisitos previos
+
+- Windows 10/11 o macOS/Linux
+- Git (para clonar el repositorio)
+- Docker Desktop (si va a usar Docker)
+- Python 3.8+ (si va a ejecutar sin Docker)
+
+### Opción A — Ejecutar con Docker (recomendado)
+
+1. Clona el repositorio y entra en la carpeta del proyecto:
+
+```powershell
+git clone <URL-del-repositorio>
+cd "Grupo 2 Corales 1"
+```
+
+2. Construye la imagen Docker desde la raíz del proyecto:
+
+```powershell
+docker build -t coralbot_app .
+```
+
+3. Ejecuta el contenedor y publica el puerto 8501 (puerto por defecto de Streamlit):
+
+```powershell
+docker run --rm -p 8501:8501 coralbot_app
+```
+
+4. Abre tu navegador en http://localhost:8501 y verifica que la app cargue.
+
+Notas:
+- Use `--rm` para que el contenedor se elimine al detenerlo.
+- Si el puerto 8501 ya está en uso, cambie el mapeo de puertos, por ejemplo `-p 8502:8501`.
+
+### Opción B — Ejecutar localmente con Python (sin Docker)
+
+1. Crea y activa un entorno virtual (PowerShell):
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+En CMD usa:
+
+```cmd
+.\.venv\Scripts\activate
+```
+
+2. Instala dependencias (si existe `requirements.txt`) o instala Streamlit:
+
+```powershell
+pip install -r requirements.txt
+# o, si no existe requirements.txt
+pip install streamlit
+```
+
+3. Ejecuta la aplicación Streamlit:
+
+```powershell
+streamlit run env\Include\main_corales.py
+```
+
+4. Abre http://localhost:8501 en tu navegador.
+
+### Solución de problemas comunes
+
+- PowerShell bloquea la ejecución de scripts: ejecuta `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser` como administrador si es necesario.
+- Si falta algún paquete, instala con `pip install <paquete>` o revisa `requirements.txt`.
+- Verifica que la ruta `env\Include\main_corales.py` exista y que el archivo sea el punto de entrada correcto.
+
+Si prefieres, puedo añadir un `requirements.txt` o un `docker-compose.yml` para facilitar la ejecución. Dime cuál opción prefieres.
