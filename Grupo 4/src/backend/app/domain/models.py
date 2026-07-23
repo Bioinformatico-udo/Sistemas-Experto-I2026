@@ -53,9 +53,11 @@ class Species(BaseModel):
     habitat: str
     field_characteristics: List[str] = Field(default_factory=list)
     image_url: str
+    attributes: Dict[str, Any] = Field(default_factory=dict)
 
 class InferenceResult(BaseModel):
     working_memory: Dict[str, Any]
     fired_rules: List[str]
     detected_species: Species | None
     next_recommended_fact: str | None
+    species_certainties: List[Dict[str, Any]] = Field(default_factory=list)

@@ -1,17 +1,5 @@
 [
   {
-    "id": "Callinectes sapidus",
-    "name": "Cangrejo Azul (Callinectes sapidus)",
-    "description": "Un crustáceo decápodo nativo de las costas del océano Atlántico. Destaca por sus pinzas de un azul brillante.",
-    "habitat": "Zonas costeras, estuarios y lagunas salobres.",
-    "field_characteristics": [
-      "Caparazón de color verde oliva a gris con espinas laterales pronunciadas.",
-      "Pinzas delanteras con tonalidades de azul cobalto.",
-      "Último par de patas aplanado en forma de pala para nadar."
-    ],
-    "image_url": "/assets/blue_crab.jpg"
-  },
-  {
     "id": "No Crustáceo",
     "name": "No Crustáceo",
     "description": "El espécimen analizado no cumple con los criterios morfológicos del subfilo Crustacea (por ejemplo, carece de dos pares de antenas).",
@@ -19,7 +7,10 @@
     "field_characteristics": [
       "Número de antenas diferente a 2 pares."
     ],
-    "image_url": "/assets/no_crustacean.jpg"
+    "image_url": "/assets/no_crustacean.jpg",
+    "attributes": {
+      "numero_antenas": 0
+    }
   },
   {
     "id": "Especie no identificada",
@@ -27,7 +18,8 @@
     "description": "No se pudo identificar la especie con la información disponible.",
     "habitat": "Desconocido",
     "field_characteristics": [],
-    "image_url": ""
+    "image_url": "",
+    "attributes": {}
   },
   {
     "id": "Neopisosoma cf. neglectum",
@@ -38,182 +30,432 @@
       "Quelípedos lisos",
       "Carpo con tres crestas dorsales longitudinales"
     ],
-    "image_url": ""
+    "image_url": "",
+    "attributes": {
+      "numero_antenas": 2,
+      "segmento_antenal": "corto",
+      "paredes_caparazon": "incompletas",
+      "membranas_area_branquial": "unica",
+      "superficie_quelipedo": "lisa"
+    }
   },
   {
     "id": "Neopisosoma angustifrons",
     "name": "Neopisosoma angustifrons",
-    "description": "Species with conical granules on chelipeds.",
-    "habitat": "Fondo marino",
-    "field_characteristics": ["Granulos cónicos", "Setas escasas"],
-    "image_url": ""
+    "description": "Especie de Porcellanidae con gránulos cónicos en los quelípedos y setas escasas.",
+    "habitat": "Fondo marino rocoso.",
+    "field_characteristics": [
+      "Granulos cónicos",
+      "Setas escasas"
+    ],
+    "image_url": "",
+    "attributes": {
+      "numero_antenas": 2,
+      "segmento_antenal": "corto",
+      "paredes_caparazon": "incompletas",
+      "membranas_area_branquial": "unica",
+      "superficie_quelipedo": "cónico"
+    }
   },
   {
     "id": "Neopisosoma orientale",
     "name": "Neopisosoma orientale",
-    "description": "Species with rounded granules on chelipeds.",
-    "habitat": "Fondo marino",
-    "field_characteristics": ["Granulos redondeados", "Setas abundantes"],
-    "image_url": ""
+    "description": "Especie de Porcellanidae con gránulos redondeados en los quelípedos y abundantes setas.",
+    "habitat": "Fondo marino rocoso.",
+    "field_characteristics": [
+      "Granulos redondeados",
+      "Setas abundantes"
+    ],
+    "image_url": "",
+    "attributes": {
+      "numero_antenas": 2,
+      "segmento_antenal": "corto",
+      "paredes_caparazon": "incompletas",
+      "membranas_area_branquial": "unica",
+      "superficie_quelipedo": "redondeado"
+    }
   },
   {
     "id": "Clastotoechus nodosus",
     "name": "Clastotoechus nodosus",
-    "description": "Species with flattened chelipeds and trilobulated front.",
-    "habitat": "Rocas intermareales",
-    "field_characteristics": ["Quelípedos aplanados", "Frente trilobulada"],
-    "image_url": ""
+    "description": "Especie de Porcellanidae con quelípedos aplanados y frente avanzada y trilobulada.",
+    "habitat": "Rocas intermareales.",
+    "field_characteristics": [
+      "Quelípedos aplanados",
+      "Frente trilobulada"
+    ],
+    "image_url": "",
+    "attributes": {
+      "numero_antenas": 2,
+      "segmento_antenal": "corto",
+      "paredes_caparazon": "incompletas",
+      "membranas_area_branquial": "mosaico",
+      "tipo_quelipedo_frente": "aplanado_trilobulado"
+    }
   },
   {
     "id": "Pachycheles serratus",
     "name": "Pachycheles serratus",
-    "description": "Species with seven telson pieces.",
-    "habitat": "Suelos arenosos",
-    "field_characteristics": ["Telson de siete piezas"],
-    "image_url": ""
+    "description": "Especie de Pachycheles con un telson de siete piezas calcificadas.",
+    "habitat": "Suelos arenosos y grietas rocosas.",
+    "field_characteristics": [
+      "Telson de siete piezas"
+    ],
+    "image_url": "",
+    "attributes": {
+      "numero_antenas": 2,
+      "segmento_antenal": "corto",
+      "paredes_caparazon": "incompletas",
+      "membranas_area_branquial": "mosaico",
+      "tipo_quelipedo_frente": "robusto_no",
+      "piezas_telson": 7
+    }
   },
   {
     "id": "Pachycheles monilifer",
     "name": "Pachycheles monilifer",
-    "description": "Species with advanced front and tubercular carpo.",
-    "habitat": "Arrecifes",
-    "field_characteristics": ["Frente avanzado", "Carpo con tubérculos discoidales"],
-    "image_url": ""
+    "description": "Especie de Pachycheles con telson de cinco piezas y carpo con tubérculos discoidales en hileras.",
+    "habitat": "Arrecifes y fondos duros.",
+    "field_characteristics": [
+      "Frente avanzado",
+      "Carpo con tubérculos discoidales"
+    ],
+    "image_url": "",
+    "attributes": {
+      "numero_antenas": 2,
+      "segmento_antenal": "corto",
+      "paredes_caparazon": "incompletas",
+      "membranas_area_branquial": "mosaico",
+      "tipo_quelipedo_frente": "robusto_no",
+      "piezas_telson": 5,
+      "forma_frente_carpo": "avanzado"
+    }
   },
   {
     "id": "Pachycheles riseii",
     "name": "Pachycheles riseii",
-    "description": "Species with smooth carpo and sinusoidal front.",
-    "habitat": "Zonas rocosas",
-    "field_characteristics": ["Carpo liso", "Frente sinuosa"],
-    "image_url": ""
+    "description": "Especie de Pachycheles con carpo liso y frente sinuosa.",
+    "habitat": "Zonas rocosas intermareales.",
+    "field_characteristics": [
+      "Carpo liso",
+      "Frente sinuosa"
+    ],
+    "image_url": "",
+    "attributes": {
+      "numero_antenas": 2,
+      "segmento_antenal": "corto",
+      "paredes_caparazon": "incompletas",
+      "membranas_area_branquial": "mosaico",
+      "tipo_quelipedo_frente": "robusto_no",
+      "piezas_telson": 5,
+      "forma_frente_carpo": "recta",
+      "superficie_carpo": "liso"
+    }
   },
   {
     "id": "Pachycheles ackleianus",
     "name": "Pachycheles ackleianus",
-    "description": "Species with tuberculated carpo and straight front.",
-    "habitat": "Fondos duros",
-    "field_characteristics": ["Carpo tuberculado", "Frente recta"],
-    "image_url": ""
+    "description": "Especie de Pachycheles con carpo tuberculado dispuesto de forma irregular y frente recta.",
+    "habitat": "Fondos duros y coralinos.",
+    "field_characteristics": [
+      "Carpo tuberculado",
+      "Frente recta"
+    ],
+    "image_url": "",
+    "attributes": {
+      "numero_antenas": 2,
+      "segmento_antenal": "corto",
+      "paredes_caparazon": "incompletas",
+      "membranas_area_branquial": "mosaico",
+      "tipo_quelipedo_frente": "robusto_no",
+      "piezas_telson": 5,
+      "forma_frente_carpo": "recta",
+      "superficie_carpo": "tuberculado"
+    }
   },
   {
     "id": "Petrolisthes tridentatus",
     "name": "Petrolisthes tridentatus",
-    "description": "Species with lobular orbital tooth and non-inflated third pereopod merus.",
-    "habitat": "Arrecifes tropicales",
-    "field_characteristics": ["Diente lobuliforme", "Mero de tercera pata no inflado"],
-    "image_url": ""
+    "description": "Petrolisthes con diente lobuliforme en los ángulos orbitales internos.",
+    "habitat": "Arrecifes tropicales y zonas rocosas.",
+    "field_characteristics": [
+      "Diente lobuliforme",
+      "Mero de tercera pata no inflado"
+    ],
+    "image_url": "",
+    "attributes": {
+      "numero_antenas": 2,
+      "segmento_antenal": "corto",
+      "paredes_caparazon": "enteras",
+      "margen_carpo": "entero",
+      "dientes_orbitales_patas": "diente_lobuliforme"
+    }
   },
   {
     "id": "Petrolisthes tonsorius",
     "name": "Petrolisthes tonsorius",
-    "description": "Species with triangular front and inflated third pereopod merus.",
-    "habitat": "Zonas rocosas",
-    "field_characteristics": ["Frente triangular", "Mero de tercera pata inflado"],
-    "image_url": ""
+    "description": "Petrolisthes con frente triangular y mero de la tercera pata caminadora inflado.",
+    "habitat": "Zonas rocosas expuestas.",
+    "field_characteristics": [
+      "Frente triangular",
+      "Mero de tercera pata inflado"
+    ],
+    "image_url": "",
+    "attributes": {
+      "numero_antenas": 2,
+      "segmento_antenal": "corto",
+      "paredes_caparazon": "enteras",
+      "margen_carpo": "entero",
+      "dientes_orbitales_patas": "sin_diente_lobuliforme"
+    }
   },
   {
     "id": "Petrolisthes jugosus",
     "name": "Petrolisthes jugosus",
-    "description": "Species with five telson pieces.",
-    "habitat": "Costa del Pacífico",
-    "field_characteristics": ["Telson de cinco piezas"],
-    "image_url": ""
+    "description": "Especie de Petrolisthes con telson de cinco piezas y margen del carpo dentado.",
+    "habitat": "Arrecifes coralinos y rocas.",
+    "field_characteristics": [
+      "Telson de cinco piezas",
+      "Margen del carpo dentado"
+    ],
+    "image_url": "",
+    "attributes": {
+      "numero_antenas": 2,
+      "segmento_antenal": "corto",
+      "paredes_caparazon": "enteras",
+      "margen_carpo": "dentado",
+      "piezas_telson_petrolisthes": 5
+    }
   },
   {
     "id": "Petrolisthes politus",
     "name": "Petrolisthes politus",
-    "description": "Species with three equal teeth on carpo.",
-    "habitat": "Estuarios",
-    "field_characteristics": ["Tres dientes del carpo"],
-    "image_url": ""
+    "description": "Petrolisthes con tres dientes subiguales y equidistantes en el carpo.",
+    "habitat": "Zonas intermareales bajo rocas.",
+    "field_characteristics": [
+      "Tres dientes del carpo",
+      "Espina epibranquial ausente"
+    ],
+    "image_url": "",
+    "attributes": {
+      "numero_antenas": 2,
+      "segmento_antenal": "corto",
+      "paredes_caparazon": "enteras",
+      "margen_carpo": "dentado",
+      "piezas_telson_petrolisthes": 7,
+      "espina_epibranquial": "ausente",
+      "dientes_carpo_ausente": "tres"
+    }
   },
   {
     "id": "Petrolisthes lewisi",
     "name": "Petrolisthes lewisi",
-    "description": "Species with fused teeth on carpo.",
-    "habitat": "Rocas",
-    "field_characteristics": ["Dientes fusionados del carpo"],
-    "image_url": ""
+    "description": "Petrolisthes con dientes fusionados en el carpo en el tercio proximal.",
+    "habitat": "Rocas intermareales.",
+    "field_characteristics": [
+      "Dientes fusionados del carpo",
+      "Tercio distal del carpo desarmado"
+    ],
+    "image_url": "",
+    "attributes": {
+      "numero_antenas": 2,
+      "segmento_antenal": "corto",
+      "paredes_caparazon": "enteras",
+      "margen_carpo": "dentado",
+      "piezas_telson_petrolisthes": 7,
+      "espina_epibranquial": "ausente",
+      "dientes_carpo_ausente": "fusionados"
+    }
   },
   {
     "id": "Petrolisthes armatus",
     "name": "Petrolisthes armatus",
-    "description": "Species with three separate carpo teeth.",
-    "habitat": "Arenas",
-    "field_characteristics": ["Tres dientes separados del carpo"],
-    "image_url": ""
+    "description": "Petrolisthes con tres dientes separados en el carpo y espina epibranquial presente.",
+    "habitat": "Zonas estuarinas y fangosas intermareales.",
+    "field_characteristics": [
+      "Tres dientes separados del carpo",
+      "Espina epibranquial presente"
+    ],
+    "image_url": "",
+    "attributes": {
+      "numero_antenas": 2,
+      "segmento_antenal": "corto",
+      "paredes_caparazon": "enteras",
+      "margen_carpo": "dentado",
+      "piezas_telson_petrolisthes": 7,
+      "espina_epibranquial": "presente",
+      "dientes_carpo_presente": "tres"
+    }
   },
   {
     "id": "Petrolisthes galathinus",
     "name": "Petrolisthes galathinus",
-    "description": "Species with asperous carapace texture.",
-    "habitat": "Zonas rocosas",
-    "field_characteristics": ["Textura áspera"],
-    "image_url": ""
+    "description": "Petrolisthes con caparazón áspero que exhibe estrías pilíferas transversas prominentes.",
+    "habitat": "Arrecifes y fondos rocosos.",
+    "field_characteristics": [
+      "Textura áspera del caparazón",
+      "Cuatro dientes en el carpo"
+    ],
+    "image_url": "",
+    "attributes": {
+      "numero_antenas": 2,
+      "segmento_antenal": "corto",
+      "paredes_caparazon": "enteras",
+      "margen_carpo": "dentado",
+      "piezas_telson_petrolisthes": 7,
+      "espina_epibranquial": "presente",
+      "dientes_carpo_presente": "cuatro",
+      "textura_caparazon": "aspero"
+    }
   },
   {
     "id": "Petrolisthes marginatus",
     "name": "Petrolisthes marginatus",
-    "description": "Species with smooth carapace texture.",
-    "habitat": "Costas",
-    "field_characteristics": ["Textura lisa"],
-    "image_url": ""
+    "description": "Petrolisthes con caparazón relativamente liso y pubescencia fina.",
+    "habitat": "Costas rocosas de coral.",
+    "field_characteristics": [
+      "Textura lisa con pubescencia fina",
+      "Pliegues en región posterolateral"
+    ],
+    "image_url": "",
+    "attributes": {
+      "numero_antenas": 2,
+      "segmento_antenal": "corto",
+      "paredes_caparazon": "enteras",
+      "margen_carpo": "dentado",
+      "piezas_telson_petrolisthes": 7,
+      "espina_epibranquial": "presente",
+      "dientes_carpo_presente": "cuatro",
+      "textura_caparazon": "liso"
+    }
   },
   {
     "id": "Minyocerus angustus",
     "name": "Minyocerus angustus",
-    "description": "Species with rudimentary antennas and elongated carapace.",
-    "habitat": "Fondos arenosos",
-    "field_characteristics": ["Antenas rudimentarias", "Caparazón 1.3x ancho"],
-    "image_url": ""
+    "description": "Especie asociada comúnmente con comátulas, caracterizada por antenas rudimentarias.",
+    "habitat": "Fondos arenosos, comúnmente simbiótica.",
+    "field_characteristics": [
+      "Antenas rudimentarias",
+      "Caparazón 1.3 veces más largo que ancho"
+    ],
+    "image_url": "",
+    "attributes": {
+      "numero_antenas": 2,
+      "segmento_antenal": "largo",
+      "tipo_antena": "rudimentaria"
+    }
   },
   {
     "id": "Megalobrachium soriatum",
     "name": "Megalobrachium soriatum",
-    "description": "Species with five telson plates.",
-    "habitat": "Profundidades",
-    "field_characteristics": ["Telson de cinco placas"],
-    "image_url": ""
+    "description": "Especie de Megalobrachium con telson de cinco placas.",
+    "habitat": "Rocas y restos orgánicos submareales.",
+    "field_characteristics": [
+      "Telson de cinco placas",
+      "Antenas normales"
+    ],
+    "image_url": "",
+    "attributes": {
+      "numero_antenas": 2,
+      "segmento_antenal": "largo",
+      "tipo_antena": "normal",
+      "forma_frente_caparazon": "largo_igual_ancho",
+      "piezas_telson_megalobrachium": 5
+    }
   },
   {
     "id": "Megalobrachium mortenseni",
     "name": "Megalobrachium mortenseni",
-    "description": "Species with eroded carapace and truncated carpo.",
-    "habitat": "Restos de naufragios",
-    "field_characteristics": ["Caparazón erosionado", "Carpo truncado"],
-    "image_url": ""
+    "description": "Megalobrachium con caparazón fuertemente erosionado y protuberancia proximal truncada en el carpo.",
+    "habitat": "Restos de arrecifes y conchas.",
+    "field_characteristics": [
+      "Caparazón erosionado",
+      "Carpo con protuberancia truncada"
+    ],
+    "image_url": "",
+    "attributes": {
+      "numero_antenas": 2,
+      "segmento_antenal": "largo",
+      "tipo_antena": "normal",
+      "forma_frente_caparazon": "largo_igual_ancho",
+      "piezas_telson_megalobrachium": 7,
+      "textura_caparazon_carpo": "erosionado"
+    }
   },
   {
     "id": "Megalobrachium poeyi",
     "name": "Megalobrachium poeyi",
-    "description": "Species with abundant setae on carapace and chelipeds.",
-    "habitat": "Áreas con algas",
-    "field_characteristics": ["Setas abundantes"],
-    "image_url": ""
+    "description": "Megalobrachium cubierto de setas abundantes tanto en el caparazón como en los quelípedos.",
+    "habitat": "Zonas intermareales con algas.",
+    "field_characteristics": [
+      "Setas abundantes",
+      "Caparazón áspero"
+    ],
+    "image_url": "",
+    "attributes": {
+      "numero_antenas": 2,
+      "segmento_antenal": "largo",
+      "tipo_antena": "normal",
+      "forma_frente_caparazon": "largo_igual_ancho",
+      "piezas_telson_megalobrachium": 7,
+      "textura_caparazon_carpo": "aspero",
+      "vellosidad": "abundante"
+    }
   },
   {
     "id": "Megalobrachium roseum",
     "name": "Megalobrachium roseum",
-    "description": "Species with sparse setae.",
-    "habitat": "Rocas bajas",
-    "field_characteristics": ["Setas escasas"],
-    "image_url": ""
+    "description": "Megalobrachium con setas escasas o ausentes en su caparazón.",
+    "habitat": "Bajo rocas intermareales.",
+    "field_characteristics": [
+      "Setas escasas o ausentes",
+      "Caparazón áspero"
+    ],
+    "image_url": "",
+    "attributes": {
+      "numero_antenas": 2,
+      "segmento_antenal": "largo",
+      "tipo_antena": "normal",
+      "forma_frente_caparazon": "largo_igual_ancho",
+      "piezas_telson_megalobrachium": 7,
+      "textura_caparazon_carpo": "aspero",
+      "vellosidad": "escasa"
+    }
   },
   {
     "id": "Pisidia brasiliensis",
     "name": "Pisidia brasiliensis",
-    "description": "Species with posterior spines and twisted fingers.",
-    "habitat": "Costas brasileñas",
-    "field_characteristics": ["Espínulas posteriores", "Dedos torcidos"],
-    "image_url": ""
+    "description": "Pisidia con espínulas detrás del ángulo epibranquial y dedos torcidos que sobresalen de la palma.",
+    "habitat": "Fondo marino blando y praderas de pastos marinos.",
+    "field_characteristics": [
+      "Espínulas posteriores",
+      "Dedos torcidos"
+    ],
+    "image_url": "",
+    "attributes": {
+      "numero_antenas": 2,
+      "segmento_antenal": "largo",
+      "tipo_antena": "normal",
+      "forma_frente_caparazon": "ancho_mas_largo",
+      "margenes_caparazon_dedos": "espinulas"
+    }
   },
   {
     "id": "Porcellana sayana",
     "name": "Porcellana sayana",
-    "description": "Species without spines and with unarmed carpo.",
-    "habitat": "Estuarios",
-    "field_characteristics": ["Sin espínulas", "Carpo sin lóbulos"],
-    "image_url": ""
+    "description": "Porcellana con márgenes desarmados sin espínulas y carpo con lóbulo proximal.",
+    "habitat": "Asociada con cangrejos ermitaños en conchas de gasterópodos.",
+    "field_characteristics": [
+      "Márgenes desarmados",
+      "Carpo con lóbulo proximal"
+    ],
+    "image_url": "",
+    "attributes": {
+      "numero_antenas": 2,
+      "segmento_antenal": "largo",
+      "tipo_antena": "normal",
+      "forma_frente_caparazon": "ancho_mas_largo",
+      "margenes_caparazon_dedos": "desarmados"
+    }
   }
 ]
