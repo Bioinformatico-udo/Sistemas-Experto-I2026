@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+}
+
+/* Clases útiles personalizadas para transiciones animadas */
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+.slide-fade-leave-active {
+  transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter-from {
+  transform: translateX(20px);
+  opacity: 0;
+}
+.slide-fade-leave-to {
+  transform: translateX(-20px);
+  opacity: 0;
+}
