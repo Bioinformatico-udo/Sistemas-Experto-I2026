@@ -1,0 +1,63 @@
+{
+  "pregunta": "¿El organismo pertenece al reino animal o vegetal/alga?",
+  "atributo": "reino",
+  "opciones": {
+    "animal": {
+      "pregunta": "¿Qué tipo de soporte o esqueleto posee el animal?",
+      "atributo": "tipo_esqueleto",
+      "opciones": {
+        "externo (concha)": {
+          "pregunta": "¿Cuál es la forma de la concha?",
+          "atributo": "forma_concha",
+          "opciones": {
+            "espiral con labio acampanado": {
+              "resultado": "botuto"
+            }
+          }
+        },
+        "interno (espinas)": {
+          "pregunta": "¿Posee aletas con espinas venenosas?",
+          "atributo": "aletas_venenosas",
+          "opciones": {
+            "si": {
+              "resultado": "pez_leon"
+            }
+          }
+        },
+        "externo (calcareo)": {
+          "pregunta": "¿Cuál es la forma de su estructura calcárea ramificada?",
+          "atributo": "forma",
+          "opciones": {
+            "ramificada aplanada": {
+              "resultado": "coral_alce"
+            }
+          }
+        },
+        "interno (huesos y caparazon)": {
+          "pregunta": "¿Cómo son sus extremidades adaptadas al movimiento?",
+          "atributo": "extremidades",
+          "opciones": {
+            "aletas natatorias": {
+              "resultado": "tortuga_verde"
+            }
+          }
+        }
+      }
+    },
+    "vegetal": {
+      "pregunta": "¿Qué tipo de planta marina es?",
+      "atributo": "tipo",
+      "opciones": {
+        "planta fanerogama (con flores)": {
+          "pregunta": "¿Cómo es la forma de sus hojas?",
+          "atributo": "forma_hoja",
+          "opciones": {
+            "cinta aplanada verde": {
+              "resultado": "thalassia"
+            }
+          }
+        }
+      }
+    }
+  }
+}

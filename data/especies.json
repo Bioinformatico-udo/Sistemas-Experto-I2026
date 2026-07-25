@@ -1,0 +1,739 @@
+[
+  {
+    "id": "millepora_alcicornis",
+    "nombre_cientifico": "Millepora alcicornis",
+    "nombre_comun": "Coral de Fuego Cuerno de Alce",
+    "familia": "Milleporidae",
+    "orden": "Anthoathecata",
+    "tipo": "Hidrocoral",
+    "descripcion": "Hidrocoral con forma ramificada o incrustante. Superficie porosa sin coralitos visibles. Produce urticación al contacto.",
+    "habitat": "Zonas someras (1-10m) con fuerte oleaje. Arrecifes de barrera y franjeantes.",
+    "caracteristicas": {
+      "tiene_coralitos": false,
+      "forma": "ramificada_incrustante",
+      "tipo_esqueleto": "calcareo_poroso",
+      "urticante": true
+    }
+  },
+  {
+    "id": "millepora_complanata",
+    "nombre_cientifico": "Millepora complanata",
+    "nombre_comun": "Coral de Fuego Laminar",
+    "familia": "Milleporidae",
+    "orden": "Anthoathecata",
+    "tipo": "Hidrocoral",
+    "descripcion": "Hidrocoral en forma de láminas verticales. Superficie porosa sin coralitos visibles. Produce urticación al contacto.",
+    "habitat": "Zonas someras (1-10m). Arrecifes de barrera y franjeantes.",
+    "caracteristicas": {
+      "tiene_coralitos": false,
+      "forma": "laminar_vertical",
+      "tipo_esqueleto": "calcareo_poroso",
+      "urticante": true
+    }
+  },
+  {
+    "id": "millepora_squarrosa",
+    "nombre_cientifico": "Millepora squarrosa",
+    "nombre_comun": "Coral de Fuego Irregular",
+    "familia": "Milleporidae",
+    "orden": "Anthoathecata",
+    "tipo": "Hidrocoral",
+    "descripcion": "Hidrocoral aplanado con superficie muy irregular. Superficie porosa sin coralitos visibles. Produce urticación al contacto.",
+    "habitat": "Zonas someras (1-10m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "tiene_coralitos": false,
+      "forma": "aplanado_irregular",
+      "tipo_esqueleto": "calcareo_poroso",
+      "urticante": true
+    }
+  },
+  {
+    "id": "stylaster_roseus",
+    "nombre_cientifico": "Stylaster roseus",
+    "nombre_comun": "Coral de Rosario",
+    "familia": "Stylasteridae",
+    "orden": "Anthoathecata",
+    "tipo": "Hidrocoral",
+    "descripcion": "Hidrocoral con ramificaciones finas y delicadas. Coloración rosada o anaranjada. Habita en zonas profundas.",
+    "habitat": "Zonas profundas (10-30m). Cuevas y oquedades en arrecifes.",
+    "caracteristicas": {
+      "tiene_coralitos": false,
+      "forma": "ramificada_fina",
+      "tipo_esqueleto": "calcareo_poroso",
+      "urticante": false,
+      "color": "rosado_anaranjado"
+    }
+  },
+  {
+    "id": "acropora_palmata",
+    "nombre_cientifico": "Acropora palmata",
+    "nombre_comun": "Coral Orejón o Cuerno de Alce",
+    "familia": "Acroporidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral pétreo con ramas aplanadas en forma de paleta o abanico. Principal constructor de arrecifes en zonas someras.",
+    "habitat": "Zonas someras (1-5m) con fuerte oleaje. Arrecifes de barrera y franjeantes.",
+    "caracteristicas": {
+      "tiene_coralitos": true,
+      "forma": "ramificada_abanico",
+      "ramas_aplanadas": true,
+      "coralitos_en": "toda_la_superficie",
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "acropora_cervicornis",
+    "nombre_cientifico": "Acropora cervicornis",
+    "nombre_comun": "Tarrito de Venado",
+    "familia": "Acroporidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral pétreo con ramas cilíndricas delgadas y largas. Colonias poco tupidas y muy ramificadas.",
+    "habitat": "Zonas someras a profundas (3-20m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "tiene_coralitos": true,
+      "forma": "ramificada_cilindrica",
+      "ramas_aplanadas": false,
+      "ramas_largas_fusionadas": "largas",
+      "coralitos_en": "toda_la_superficie",
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "acropora_prolifera",
+    "nombre_cientifico": "Acropora prolifera",
+    "nombre_comun": "Coral Fusionado",
+    "familia": "Acroporidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral pétreo con ramas cilíndricas fusionadas entre sí. Colonias tupidas y densas.",
+    "habitat": "Zonas someras (1-10m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "tiene_coralitos": true,
+      "forma": "ramificada_fusionada",
+      "ramas_aplanadas": false,
+      "ramas_largas_fusionadas": "fusionadas",
+      "coralitos_en": "toda_la_superficie",
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "undaria_agaricites",
+    "nombre_cientifico": "Undaria agaricites",
+    "nombre_comun": "Coral Hoja",
+    "familia": "Agariciidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral laminar con colinas y valles. Forma incrustante o en láminas. Antes clasificado como Agaricia agaricites.",
+    "habitat": "Zonas someras a profundas (2-40m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "tiene_coralitos": true,
+      "forma": "laminar",
+      "superficie": "colinas_y_valles",
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "undaria_humilis",
+    "nombre_cientifico": "Undaria humilis",
+    "nombre_comun": "Coral Hoja",
+    "familia": "Agariciidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral laminar con colinas y valles. Forma submasiva convexa. Antes clasificado como Agaricia humilis.",
+    "habitat": "Zonas someras a profundas (2-20m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "tiene_coralitos": true,
+      "forma": "laminar",
+      "superficie": "colinas_y_valles",
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "agaricia_fragilis",
+    "nombre_cientifico": "Agaricia fragilis",
+    "nombre_comun": "Coral Hoja Quebradiza",
+    "familia": "Agariciidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral laminar con colinas distanciadas 2-4 mm. Estructura frágil y quebradiza.",
+    "habitat": "Zonas profundas (10-30m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "tiene_coralitos": true,
+      "forma": "laminar",
+      "superficie": "colinas_y_valles",
+      "colinas_distanciadas": "2-4mm",
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "agaricia_lamarcki",
+    "nombre_cientifico": "Agaricia lamarcki",
+    "nombre_comun": "Coral Hoja de Lamarck",
+    "familia": "Agariciidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral laminar con valles continuos. Septos alternados más delgados que los interespacios.",
+    "habitat": "Zonas profundas (10-30m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "tiene_coralitos": true,
+      "forma": "laminar",
+      "superficie": "colinas_y_valles",
+      "valles_continuos": true,
+      "septos_alternados": "delgados",
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "agaricia_tenuifolia",
+    "nombre_cientifico": "Agaricia tenuifolia",
+    "nombre_comun": "Coral Hoja Fina",
+    "familia": "Agariciidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral laminar bifacial (pólipos en ambas caras). Hojas delgadas y delicadas.",
+    "habitat": "Zonas profundas (10-30m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "tiene_coralitos": true,
+      "forma": "laminar_bifacial",
+      "superficie": "colinas_y_valles",
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "agaricia_undata",
+    "nombre_cientifico": "Agaricia undata",
+    "nombre_comun": "Coral Hoja Ondulada",
+    "familia": "Agariciidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral laminar con colinas distanciadas 6-7 mm. Superficie ondulada.",
+    "habitat": "Zonas profundas (10-30m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "amarillo oscuro, verde o marrón",
+      "tiene_coralitos": true,
+      "forma": "laminar",
+      "superficie": "colinas_y_valles",
+      "colinas_distanciadas": "6-7mm",
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "leptoseris_cucullata",
+    "nombre_cientifico": "Leptoseris cucullata",
+    "nombre_comun": "Coral Hoja",
+    "familia": "Agariciidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral laminar sin columela. Forma hojas onduladas y circulares.",
+    "habitat": "Zonas profundas (10-40m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "marrón",
+      "tiene_coralitos": true,
+      "forma": "laminar",
+      "sin_columela": true,
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "porites_astreoides",
+    "nombre_cientifico": "Porites astreoides",
+    "nombre_comun": "Coral de Dedo",
+    "familia": "Poritidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral masivo o incrustante con coralitos profundos de 1.2-1.5 mm. Muy común en arrecifes.",
+    "habitat": "Zonas someras (1-15m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "amarillo, marrón grisáceo, verde",
+      "tiene_coralitos": true,
+      "forma": "masiva_incrustante",
+      "superficie": "copas",
+      "coralitos_profundos": true,
+      "coralitos_medida": "1.2-1.5mm",
+      "tipo_esqueleto": "calcareo_poroso"
+    }
+  },
+  {
+    "id": "porites_divaricata",
+    "nombre_cientifico": "Porites divaricata",
+    "nombre_comun": "Coral de Dedo Delgado",
+    "familia": "Poritidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral ramificado con ramas de menos de 6 mm de diámetro. Colonias densas.",
+    "habitat": "Zonas someras (1-10m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "Gris, amarillo-verdoso",
+      "tiene_coralitos": true,
+      "forma": "ramificada",
+      "ramas_diametro": "menor_6mm",
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "porites_furcata",
+    "nombre_cientifico": "Porites furcata",
+    "nombre_comun": "Coral de Dedo Bifurcado",
+    "familia": "Poritidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral ramificado con puntas bifurcadas. Ramas de más de 10 mm de diámetro.",
+    "habitat": "Zonas someras (1-10m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "Gris-marrón",
+      "tiene_coralitos": true,
+      "forma": "ramificada",
+      "ramas_diametro": "mayor_10mm",
+      "ramas_puntas": "bifurcadas",
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "porites_porites",
+    "nombre_cientifico": "Porites porites",
+    "nombre_comun": "Coral de Dedo",
+    "familia": "Poritidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral ramificado con puntas hinchadas. Ramas de más de 10 mm de diámetro.",
+    "habitat": "Zonas someras (1-10m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "Gris-marrón",
+      "tiene_coralitos": true,
+      "forma": "ramificada",
+      "ramas_diametro": "mayor_10mm",
+      "ramas_puntas": "hinchadas",
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "siderastrea_radians",
+    "nombre_cientifico": "Siderastrea radians",
+    "nombre_comun": "Coral Mucura",
+    "familia": "Siderastreidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral masivo poroso con coralitos de 1.5-4.2 mm. Septos perpendiculares.",
+    "habitat": "Zonas someras (1-15m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "marrón claro",
+      "tiene_coralitos": true,
+      "forma": "masiva",
+      "superficie": "copas",
+      "tipo_esqueleto": "calcareo_poroso",
+      "coralitos_medida": "1.5-4.2mm"
+    }
+  },
+  {
+    "id": "siderastrea_siderea",
+    "nombre_cientifico": "Siderastrea siderea",
+    "nombre_comun": "Coral Mucura",
+    "familia": "Siderastreidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral masivo poroso con coralitos de 2.6-5.0 mm. Septos en pendiente de 45°.",
+    "habitat": "Zonas someras a profundas (2-40m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "marrón-rojizo claro",
+      "tiene_coralitos": true,
+      "forma": "masiva",
+      "superficie": "copas",
+      "tipo_esqueleto": "calcareo_poroso",
+      "coralitos_medida": "2.6-5.0mm"
+    }
+  },
+  {
+    "id": "dendrogyra_cylindrus",
+    "nombre_cientifico": "Dendrogyra cylindrus",
+    "nombre_comun": "Coral Pilar",
+    "familia": "Meandrinidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral masivo con pilares rectos y gruesos. Estructura única que parece manos o dedos.",
+    "habitat": "Zonas profundas (10-30m). Cantiles coralinos del sur del archipiélago.",
+    "caracteristicas": {
+      "color": "Gris, marrón",
+      "tiene_coralitos": true,
+      "forma": "masiva",
+      "superficie": "valles",
+      "estructura": "pilares",
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "meandrina_meandrites",
+    "nombre_cientifico": "Meandrina meandrites",
+    "nombre_comun": "Coral Cerebro",
+    "familia": "Meandrinidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral masivo hemisférico con valles pronunciados. Septos no dentados.",
+    "habitat": "Zonas profundas (5-30m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "Gris, marrón claro",
+      "tiene_coralitos": true,
+      "forma": "masiva_hemisferica",
+      "superficie": "valles",
+      "septos_dentados": false,
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "eusmilia_fastigiata",
+    "nombre_cientifico": "Eusmilia fastigiata",
+    "nombre_comun": "Coral Flor de Copa",
+    "familia": "Meandrinidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral ramificado con copas ovales en las puntas. Escleroseptos de bordes lisos.",
+    "habitat": "Zonas profundas (10-30m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "amarillo-marrón, gris",
+      "tiene_coralitos": true,
+      "forma": "ramificada",
+      "coralitos_en": "puntas",
+      "copas_ovales": true,
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "scolymia_lacera",
+    "nombre_cientifico": "Scolymia lacera",
+    "nombre_comun": "Coral Solitario",
+    "familia": "Mussidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral solitario con septos toscamente dentados (<5 dientes/cm).",
+    "habitat": "Zonas profundas (10-30m). Fondos rocosos y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "verde brillante, rojo, naranja o marrón",
+      "tiene_coralitos": true,
+      "forma": "solitario",
+      "septos": "toscamente_dentados",
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "mussa_angulosa",
+    "nombre_cientifico": "Mussa angulosa",
+    "nombre_comun": "Coral de Musgo",
+    "familia": "Mussidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral ramificado con copas circulares y septos dentados. Colonias hemisféricas.",
+    "habitat": "Zonas profundas (10-30m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "gris, morado, verde",
+      "tiene_coralitos": true,
+      "forma": "ramificada",
+      "coralitos_en": "puntas",
+      "copas_circulares": true,
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "isophyllia_sinuosa",
+    "nombre_cientifico": "Isophyllia sinuosa",
+    "nombre_comun": "Coral Cerebro",
+    "familia": "Mussidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral masivo con valles de 2.5 cm de ancho. 8 escleroseptos por cm.",
+    "habitat": "Zonas profundas (10-30m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "verde claro, lavanda, amarillo",
+      "tiene_coralitos": true,
+      "forma": "masiva",
+      "superficie": "valles",
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "isophyllastrea_rigida",
+    "nombre_cientifico": "Isophyllastrea rigida",
+    "nombre_comun": "Coral Estrella",
+    "familia": "Mussidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral masivo con copas de diámetro mayor de 1 cm.",
+    "habitat": "Zonas profundas (10-30m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "gris-verdoso",
+      "tiene_coralitos": true,
+      "forma": "masiva",
+      "superficie": "copas",
+      "copas_diametro": "mayor_1cm",
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "mycetophyllia_aliciae",
+    "nombre_cientifico": "Mycetophyllia aliciae",
+    "nombre_comun": "Coral de Placas",
+    "familia": "Mussidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral masivo con valles y septos iguales o más gruesos que los interespacios.",
+    "habitat": "Zonas profundas (10-30m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "marrón, verde",
+      "tiene_coralitos": true,
+      "forma": "masiva",
+      "superficie": "valles",
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "mycetophyllia_ferox",
+    "nombre_cientifico": "Mycetophyllia ferox",
+    "nombre_comun": "Coral de Placas",
+    "familia": "Mussidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral masivo con valles discontinuos, angostos y someros.",
+    "habitat": "Zonas profundas (10-30m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "marrón, gris",
+      "tiene_coralitos": true,
+      "forma": "masiva",
+      "superficie": "valles",
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "mycetophyllia_lamarckiana",
+    "nombre_cientifico": "Mycetophyllia lamarckiana",
+    "nombre_comun": "Coral de Placas",
+    "familia": "Mussidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral masivo con colinas radiales ausentes en el centro.",
+    "habitat": "Zonas profundas (10-30m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "marrón, gris",
+      "tiene_coralitos": true,
+      "forma": "masiva",
+      "superficie": "valles",
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "orbicella_annularis",
+    "nombre_cientifico": "Orbicella annularis",
+    "nombre_comun": "Coral Montaña",
+    "familia": "Faviidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral masivo columnar con coralitos separados. Superficie lisa. Tejido vivo en la parte superior.",
+    "habitat": "Zonas someras a profundas (3-30m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "marrón, amarillo",
+      "tiene_coralitos": true,
+      "forma": "masiva_columnar",
+      "superficie": "copas",
+      "copas_separadas": true,
+      "superficie_lisa": true,
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "orbicella_faveolata",
+    "nombre_cientifico": "Orbicella faveolata",
+    "nombre_comun": "Coral Montaña",
+    "familia": "Faviidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral masivo hemisférico con coralitos separados. Superficie lisa.",
+    "habitat": "Zonas someras a profundas (3-30m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "marrón, gris, verde-amarillento",
+      "tiene_coralitos": true,
+      "forma": "masiva_hemisferica",
+      "superficie": "copas",
+      "copas_separadas": true,
+      "superficie_lisa": true,
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "orbicella_franksi",
+    "nombre_cientifico": "Orbicella franksi",
+    "nombre_comun": "Coral Montaña",
+    "familia": "Faviidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral masivo con coralitos separados. Superficie desigual con coralitos irregulares.",
+    "habitat": "Zonas profundas (10-30m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "marrón, gris, verde-amarillento",
+      "tiene_coralitos": true,
+      "forma": "masiva",
+      "superficie": "copas",
+      "copas_separadas": true,
+      "superficie_lisa": false,
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "montastraea_cavernosa",
+    "nombre_cientifico": "Montastraea cavernosa",
+    "nombre_comun": "Coral de Montaña",
+    "familia": "Faviidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral masivo con copas siempre circulares de al menos 6 mm. Cenostelo no granular.",
+    "habitat": "Zonas profundas (5-40m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "verde, marrón, gris, naranja",
+      "tiene_coralitos": true,
+      "forma": "masiva",
+      "superficie": "copas",
+      "copas_diametro": "mayor_6mm",
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "diploria_labyrinthiformis",
+    "nombre_cientifico": "Diploria labyrinthiformis",
+    "nombre_comun": "Coral Cerebro Laberinto",
+    "familia": "Faviidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral masivo con valles largos y sinuosos de menos de 0.5 cm. Paredes con surco superior.",
+    "habitat": "Zonas profundas (5-30m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "marrón-amarillento, marrón-grisáceo",
+      "tiene_coralitos": true,
+      "forma": "masiva",
+      "superficie": "valles",
+      "valles_largos": true,
+      "paredes_surco": true,
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "pseudodiploria_strigosa",
+    "nombre_cientifico": "Pseudodiploria strigosa",
+    "nombre_comun": "Coral Cerebro",
+    "familia": "Faviidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral masivo con valles largos y sinuosos. Paredes sin surco superior. Antes Diploria strigosa.",
+    "habitat": "Zonas someras a profundas (1-30m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "marrón-púrpura, gris, verde",
+      "tiene_coralitos": true,
+      "forma": "masiva",
+      "superficie": "valles",
+      "valles_largos": true,
+      "paredes_surco": false,
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "colpophyllia_natans",
+    "nombre_cientifico": "Colpophyllia natans",
+    "nombre_comun": "Coral Cerebro",
+    "familia": "Faviidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral masivo con valles y pared doble. Series caliculares largas. 9-11 septos/cm.",
+    "habitat": "Zonas profundas (5-30m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "marrón, gris",
+      "tiene_coralitos": true,
+      "forma": "masiva",
+      "superficie": "valles",
+      "pared_doble": true,
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "favia_fragum",
+    "nombre_cientifico": "Favia fragum",
+    "nombre_comun": "Coral Estrella",
+    "familia": "Faviidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral masivo con copas apiñadas de 4.5-6.5 mm. Paredes fusionadas.",
+    "habitat": "Zonas someras (1-10m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "marrón-anaranjado, verde claro",
+      "tiene_coralitos": true,
+      "forma": "masiva",
+      "superficie": "copas",
+      "copas_apinadas": true,
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "manicina_areolata",
+    "nombre_cientifico": "Manicina areolata",
+    "nombre_comun": "Coral Corazón de Roca",
+    "familia": "Faviidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral masivo con valles cortos lobulados. Un valle central continuo. Septos con dientes finos.",
+    "habitat": "Zonas someras (2-10m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "marrón-anaranjado, marrón, gris y verde",
+      "tiene_coralitos": true,
+      "forma": "masiva",
+      "superficie": "valles",
+      "valles_cortos": true,
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "madracis_decactis",
+    "nombre_cientifico": "Madracis decactis",
+    "nombre_comun": "Coral de Estrellas",
+    "familia": "Pocilloporidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral nodular o incrustante con coralitos de 1.5-2.5 mm. 10 escleroseptos.",
+    "habitat": "Zonas profundas (10-30m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "marrón-verdoso, verde-amarillento, gris-azulado",
+      "tiene_coralitos": true,
+      "forma": "nodular_incrustante",
+      "superficie": "copas",
+      "numero_septos": 10,
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "stephanocoenia_intersepta",
+    "nombre_cientifico": "Stephanocoenia intersepta",
+    "nombre_comun": "Coral Estrella",
+    "familia": "Astrocoeniidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Coral incrustante o masivo con columela estiliforme. Coralitos de 2.6-3.0 mm con 24 septos.",
+    "habitat": "Zonas someras (1-15m). Arrecifes y comunidades coralinas.",
+    "caracteristicas": {
+      "color": "marrón",
+      "tiene_coralitos": true,
+      "forma": "incrustante_masiva",
+      "superficie": "copas",
+      "columela_estiliforme": true,
+      "numero_septos": 24,
+      "tipo_esqueleto": "calcareo_compacto"
+    }
+  },
+  {
+    "id": "acropora_test_species",
+    "nombre_cientifico": "Acropora test_species",
+    "nombre_comun": "Coral Test",
+    "familia": "Acroporidae",
+    "orden": "Scleractinia",
+    "tipo": "Escleractinio",
+    "descripcion": "Especie de prueba unitaria",
+    "habitat": "Los Roques Test",
+    "caracteristicas": {
+      "color": "marrón",
+      "forma": "ramificada"
+    }
+  }
+]

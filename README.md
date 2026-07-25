@@ -1,103 +1,66 @@
-# Repositorio de Proyectos de Sistemas Expertos
+# Sistema Experto Taxonómico: Corales de Los Roques 🌊🪸
 
-Bienvenido/a al repositorio oficial de **Proyectos de Sistemas Expertos**. Este espacio está dedicado a los proyectos desarrollados por los grupos de trabajo 1, 2, 3, 4, 5, 6, 7 y 8. Cada grupo tiene asignada una carpeta específica para trabajar en su proyecto, con el objetivo de evitar conflictos entre equipos.
+Este proyecto implementa un **Sistema Experto Híbrido** diseñado para identificar y clasificar las especies de corales del **Parque Nacional Archipiélago de Los Roques, Venezuela**. 
 
----
-
-## 🚀 Objetivo
-
-Fomentar el aprendizaje, la creatividad y el desarrollo de habilidades prácticas en la implementación de sistemas expertos, proporcionando un entorno colaborativo para compartir y mejorar proyectos.
+Combina la precisión científica de la **IA Simbólica** (Árbol de Decisión Dicotómico y Motor de Inferencia Reglado) con la flexibilidad de la **IA Subsimbólica** (Red Neuronal en TensorFlow/Keras y Motor de Ponderación Inteligente), expuesto a través de un backend **FastAPI** y una interfaz web moderna en **React + Vite**.
 
 ---
 
-
-## 📂 Estructura del repositorio
-
-El repositorio está organizado en carpetas individuales para cada grupo. Cada equipo debe trabajar exclusivamente en su carpeta asignada:
+## 📂 Arquitectura del Proyecto
 
 ```
-/Proyectos-Sistemas-Expertos
-├── Grupo1/
-├── Grupo2/
-├── Grupo3/
-├── Grupo4/
-├── Grupo5/
-├── Grupo6/
-├── Grupo7/
-└── Grupo8/
-```
-
-Dentro de cada carpeta, cada grupo puede organizar su proyecto de la siguiente manera:
-
-```
-/GrupoX
-├── README.md          # Descripción del proyecto
-├── src/               # Código fuente
-├── docs/              # Documentación adicional
-├── tests/             # Casos de prueba (opcional)
-└── assets/            # Recursos como imágenes o diagramas (opcional)
+Sistemas-Experto-I2026/
+├── run_server.py               # Lanzador principal del servidor FastAPI + React
+├── src/
+│   ├── api/                    # Servidor REST en FastAPI
+│   │   ├── app.py              # Endpoints API y middleware CORS
+│   │   └── schemas.py          # Modelos Pydantic para validación
+│   ├── motor_inferencia.py     # Motor de inferencia en árbol dicotómico
+│   ├── modelo_hibrido.py       # Red Neuronal TensorFlow y Predictor Híbrido
+│   ├── motor_ponderacion.py    # Algoritmo de ponderación semántica
+│   ├── base_conocimiento.py    # Gestor de especies y reglas taxonómicas
+│   ├── preguntas.py            # Generador de clave de preguntas
+│   └── explicacion.py          # Generador de explicaciones de diagnóstico
+├── frontend/                   # Aplicación Web SPA (React + Vite)
+│   ├── src/
+│   │   ├── components/         # Cuestionario, Modo IA, Catálogo y Guía
+│   │   ├── App.jsx             # Contenedor principal React
+│   │   └── index.css           # Sistema de diseño oceanográfico
+│   └── package.json
+├── data/                       # Dataset, reglas.json y especies.json
+├── tests/                      # Suite de pruebas unitarias pytest y API
+├── requirements.txt            # Dependencias Python
+└── README.md
 ```
 
 ---
 
-## 🛠️ Reglas para trabajar en el repositorio
+## 🛠️ Instalación y Lanzamiento
 
-1. **Trabajo exclusivo en tu carpeta:** Cada grupo debe modificar solo los archivos dentro de su carpeta asignada.
-2. **Documentación:** Cada proyecto debe incluir un archivo `README.md` con:
-   - Nombre del proyecto.
-   - Descripción general.
-   - Instrucciones de instalación y uso.
-   - Ejemplos de entrada/salida.
-3. **Sin cambios en otras carpetas:** Evita editar archivos de otros grupos o de la raíz del repositorio.
-4. **Commits descriptivos:** Asegúrate de que los mensajes de tus commits describan claramente los cambios realizados.
-
----
-
-## 🚀 Pasos para comenzar
-
-### 1. Clona el repositorio
-Descarga el repositorio a tu computadora local:
+### 1. Requerimientos e Instalación
+Asegúrese de tener Python 3.8+ y Node.js 18+ instalados.
 ```bash
-git clone https://github.com/Bioinformatico-udo/Sistemas-Expertos-I2026.git
+pip install -r requirements.txt
 ```
 
-### 2. Cambia al directorio de tu grupo
-Navega a la carpeta correspondiente a tu equipo:
+### 2. Iniciar el Servidor Unificado (FastAPI + React)
+Ejecute en la raíz del proyecto:
 ```bash
-cd Grupo1  # Cambia 'Grupo1' por tu carpeta asignada
+python run_server.py
 ```
+- 🌐 **Interfaz Web (React)**: [http://localhost:8000](http://localhost:8000)
+- 📚 **Documentación API (Swagger UI)**: [http://localhost:8000/docs](http://localhost:8000/docs)
 
-### 3. Trabaja en tu proyecto
-Agrega tus archivos y realiza los cambios necesarios. Recuerda documentar tu progreso y mantener el código organizado.
+### 3. Desarrollo de Frontend (Opcional - Hot Reload)
+Si desea hacer cambios en vivo al código React:
+```bash
+cd frontend
+npm install
+npm run dev
+```
+Acceda a `http://localhost:5173`.
 
-### 4. Sube tus cambios al repositorio
-1. Agrega los archivos modificados:
-   ```bash
-   git add .
-   ```
-2. Crea un commit descriptivo:
-   ```bash
-   git commit -m "Descripción de los cambios"
-   ```
-3. Sube los cambios al repositorio remoto:
-   ```bash
-   git push origin main
-   ```
-
----
-
-## ✅ Buenas prácticas
-
-- **Respalda tu trabajo:** Haz commits frecuentes para evitar pérdida de información.
-- **Revisa tu código:** Antes de subir cambios, asegúrate de que todo funciona correctamente.
-- **Comunicación:** Usa la sección de issues en GitHub para reportar problemas o discutir ideas con el administrador del proyecto.
-
----
-
-## 🧑‍💻 Soporte
-
-Si tienes dudas o problemas técnicos, comunícate con el administrador del repositorio.
-
----
-
-¡Gracias por colaborar y dar lo mejor de ti en este proyecto! 😊
+### 4. Ejecutar Pruebas Unitarias y de API
+```bash
+pytest
+```

@@ -1,0 +1,14 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+resultado_*.txt
+
+# Node / Frontend
+frontend/node_modules/
+
+# OS & Editor
+.DS_Store
+.vscode/
+.idea/
