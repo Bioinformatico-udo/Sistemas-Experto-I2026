@@ -4,9 +4,9 @@ Bienvenido a la guía de usuario del sistema experto **CoraAI**. Esta plataforma
 
 ---
 
-## 💻 1. Acceso a la Plataforma Web
-
-1. Asegúrate de ejecutar el servidor con:
+## 💻 1. Acceso a la Plataforma Web & Requisitos
+- **Versión de Python**: **`Python 3.8 o superior`** (3.8 / 3.9 / 3.10 / 3.11).
+- **Servidor**: Asegúrate de ejecutar el servidor con:
    ```bash
    python run_server.py
    ```

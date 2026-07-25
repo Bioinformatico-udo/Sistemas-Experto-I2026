@@ -4,7 +4,14 @@ Este documento ofrece las especificaciones técnicas del backend, frontend, API 
 
 ---
 
-## 🏗️ 1. Arquitectura de Software
+## 📋 1. Requisitos del Sistema y Entorno
+- **Python**: **`Python 3.8 o superior`** (Recomendado Python 3.10 / 3.11 para TensorFlow 2.15 y FastAPI 0.110).
+- **Node.js**: **`Node.js 18.0 o superior`** & **`npm 9.0+`**.
+- **Sistema Operativo**: Multiplataforma (Windows 10/11, Linux Ubuntu 20.04+, macOS).
+
+---
+
+## 🏗️ 2. Arquitectura de Software
 
 La aplicación sigue una arquitectura cliente-servidor desacoplada con compilación unificada para distribución en producción.
 
