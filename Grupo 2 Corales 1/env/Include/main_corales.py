@@ -57,6 +57,24 @@ WELCOME_MESSAGE = (
     "Puedes escribir respuestas directas como 'Acroporidae', 'Acropora', 'Somera', 'Ramificado' o 'Baja'."
 )
 
+RESPONSABLES = [
+    {
+        "nombre": "Jhon Fernandez",
+        "cedula": "32.086.485",
+        "github": "https://github.com/Jhon-Fernandez1/Portafolio-Personal",
+    },
+    {
+        "nombre": "Alfonso Cedeño",
+        "cedula": "31.241.821",
+        "github": "https://github.com/fonchocc/Portafolio-Personal-UDO",
+    },
+    {
+        "nombre": "Roberth Alvarez",
+        "cedula": "31.232.207",
+        "github": "https://github.com/RoberthAlverez/RoberthAlverez",
+    },
+]
+
 st.set_page_config(page_title=PAGE_TITLE, layout="wide")
 
 css_path = os.path.join(os.path.dirname(__file__), "styles.css")
@@ -610,6 +628,9 @@ with st.sidebar:
         st.session_state.page_view = "Cuestionario"
         iniciar_cuestionario()
 
+    if st.button("🛠️ Responsables", use_container_width=True):
+        st.session_state.page_view = "Soporte"
+
     st.markdown("<hr style='margin: 15px 0; border: none; border-top: 1px solid #D0E3FF;'>", unsafe_allow_html=True)
     st.markdown("<h4 style='text-align: center; color: #160211;'>🔒 Modo Administrador</h4>", unsafe_allow_html=True)
     
@@ -638,8 +659,21 @@ with st.sidebar:
             st.session_state.page_view = "Chatbot"
             st.rerun()
 
+# --- VISTA: SOPORTE Y RESPONSABLES ---
+if st.session_state.page_view == "Soporte":
+    st.title("🛠️ Soporte y Responsables")
+    st.write("Equipo responsable del desarrollo y mantenimiento de CoralBot.")
+
+    for responsable in RESPONSABLES:
+        st.markdown(f"### {responsable['nombre']}")
+        st.write(f"Cédula de Identidad: {responsable['cedula']}")
+        st.markdown(f"GitHub: [{responsable['github']}]({responsable['github']})")
+        st.markdown("---")
+
+    st.info("Si necesitas ayuda, reportar un problema o colaborar con el proyecto, puedes contactar a cualquiera de los responsables.")
+
 # --- VISTA: PANEL DE ADMINISTRADOR ---
-if st.session_state.page_view == "Admin" and st.session_state.is_admin:
+elif st.session_state.page_view == "Admin" and st.session_state.is_admin:
     st.title("⚙️ Panel de Administración del Diccionario")
     st.write("Gestiona las especies de corales. Cualquier cambio creará un respaldo automático del diccionario.")
     
