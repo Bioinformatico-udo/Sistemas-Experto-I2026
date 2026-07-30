@@ -11,16 +11,13 @@ Repositorio oficial: <https://github.com/Bioinformatico-udo/Sistemas-Experto-I20
 
 ## 1. Integrantes del Grupo
 
-> ⚠️ **Completar antes de la entrega** con nombres y apellidos completos.
+| # | Nombres y apellidos | Cédula de identidad |
+|---|---------------------|---------------------|
+| 1 | Luis Lunar | 29.985.921 |
+| 2 | Eliu Salazar | 28.166.979 |
+| 3 | José Romero | 30.382.561 |
 
-| # | Nombres y apellidos completos | Cédula | Rol principal en el proyecto |
-|---|-------------------------------|--------|------------------------------|
-| 1 | _(completar)_ | _(completar)_ | Base de conocimientos / curaduría taxonómica |
-| 2 | _(completar)_ | _(completar)_ | Motor de inferencia |
-| 3 | _(completar)_ | _(completar)_ | Interfaz gráfica (PyQt6) |
-| 4 | _(completar)_ | _(completar)_ | Documentación y pruebas |
-
-**Grupo N.º:** _(completar)_ · **Carpeta en el repositorio:** `GrupoN/sistema_experto_diogenidae/`
+**Grupo N.º 3** · **Ubicación en el repositorio:** rama `Grupo3`, carpeta `Grupo3/`
 
 ---
 
@@ -50,10 +47,15 @@ El dominio es acotado y bien delimitado, condición ideal para un sistema expert
   mm), sustratos, intervalo batimétrico, estaciones de muestreo y distribución
   geográfica.
 
-El conocimiento se formalizó a partir de la clave dicotómica de Provenzano (1959) para
-los ermitaños de aguas someras del Atlántico occidental, en la adaptación regional para
-la Península de Macanao de Lira (1997), y la nomenclatura se validó contra el registro
-vigente de WoRMS/DecaNet.
+El conocimiento se formalizó a partir de la **clave para las especies de la familia
+Diogenidae de la Península de Macanao** publicada por Lira (1997), adaptada por ese autor
+de Provenzano (1959). El trabajo de Lira analizó 3542 especímenes recolectados en 14
+localidades que cubren toda la costa de la península, e identificó 37 especies de
+anomuros pertenecientes a 5 familias y 17 géneros; de ese conjunto, el presente sistema
+implementa la clave correspondiente a las nueve especies de Diogenidae. Las nueve reglas
+del sistema reproducen los ocho nodos de esa clave, con un nodo adicional de confirmación
+para *Isocheles wurdemanni*. La nomenclatura se contrastó además con el registro vigente
+de WoRMS/DecaNet (véase la nota de la sección 10).
 
 ### 2.3 Utilidad
 
@@ -100,6 +102,8 @@ nunca razona y el motor nunca sabe cómo se dibuja una pantalla.
 │   especies_usuario.json → especies añadidas por el usuario       │
 └──────────────────────────────────────────────────────────────────┘
 ```
+
+*Diagrama en sintaxis Mermaid; se visualiza renderizado en GitHub.*
 
 ```mermaid
 flowchart TD
@@ -289,7 +293,9 @@ catálogo— más un diálogo modal para la gestión de especies.
 
 ```bash
 git clone https://github.com/Bioinformatico-udo/Sistemas-Experto-I2026.git
-cd Sistemas-Experto-I2026/GrupoN/sistema_experto_diogenidae
+cd Sistemas-Experto-I2026
+git checkout Grupo3
+cd Grupo3
 ```
 
 **2. Crear y activar un entorno virtual** (recomendado)
@@ -634,26 +640,41 @@ sistema_experto_diogenidae/
 
 ### Fuentes taxonómicas
 
-1. Provenzano, A. J., Jr. (1959). The shallow-water hermit crabs of Florida. *Bulletin
-   of Marine Science of the Gulf and Caribbean, 9*(4), 349–420.
-2. McLaughlin, P. A., & Provenzano, A. J., Jr. (1974). Hermit crabs of the genus
-   *Paguristes* (Crustacea: Decapoda: Diogenidae) from the western Atlantic. *Bulletin
-   of Marine Science, 24*.
-3. Lira, C. (1997). _(completar: título exacto, tipo de trabajo —tesis de grado o trabajo
-   de ascenso—, Universidad de Oriente, Núcleo de Nueva Esparta, y número de páginas)._
-   Fuente primaria de la adaptación de la clave para la Península de Macanao.
+1. Lira G., C. F. (1997). *Crustáceos anomuros costeros de la Península de Macanao, Isla
+   de Margarita, Venezuela* [Trabajo de grado de Magíster Scientiarum en Ciencias
+   Marinas, mención Biología Marina]. Universidad de Oriente, Núcleo de Sucre, Instituto
+   Oceanográfico, Postgrado en Ciencias Marinas. Cumaná, febrero de 1997, 219 p.
+   — **Fuente primaria** de la clave dicotómica implementada y de todos los datos
+   morfológicos, ecológicos y de distribución de la base de conocimientos.
+2. Provenzano, A. J., Jr. (1959). The shallow-water hermit crabs of Florida. *Bulletin
+   of Marine Science of the Gulf and Caribbean, 9*(4), 349–420. — Clave original de la
+   que Lira (1997) adaptó la utilizada en este sistema.
+3. McLaughlin, P. A., & Provenzano, A. J., Jr. (1974a). Hermit crabs of the genus
+   *Paguristes* (Crustacea: Decapoda: Diogenidae) from the western Atlantic. Part I. The
+   *Paguristes tortugae* complex, with notes on variation. *Bulletin of Marine Science,
+   24*(1), 165–234.
 4. McLaughlin, P. A., Komai, T., Lemaitre, R., & Rahayu, D. L. (2010). Annotated
    checklist of anomuran decapod crustaceans of the world. Part I — Lithodoidea,
    Lomisoidea and Paguroidea. *Raffles Bulletin of Zoology, Supplement 23*, 5–107.
 5. Melo, G. A. S. (1999). *Manual de identificação dos Crustacea Decapoda do litoral
    brasileiro: Anomura, Thalassinidea, Palinuridea, Astacidea*. São Paulo: Editora
    Plêiade.
-6. Biffar, T. A., & Provenzano, A. J., Jr. (1972). Descripción de *Dardanus fucosus*
-   (Crustacea: Decapoda: Diogenidae). *Bulletin of Marine Science*. _(verificar volumen y
-   páginas)._
+6. Biffar, T. A., & Provenzano, A. J., Jr. (1972). A reexamination of *Dardanus venosus*
+   (H. Milne-Edwards) and *Dardanus imperator* (Miers), with a description of a new
+   species of *Dardanus* from the western Atlantic (Crustacea, Decapoda, Diogenidae).
+   *Bulletin of Marine Science, 22*(4), 777–805.
 7. WoRMS Editorial Board (2026). *World Register of Marine Species / DecaNet*.
    <https://www.marinespecies.org> — consultado para validar la nomenclatura y las
    autorías de las nueve especies.
+
+> **Nota nomenclatural.** Dos autorías de la fuente primaria fueron actualizadas al
+> criterio vigente de WoRMS/DecaNet. En *Clibanarius antillensis*, la propia sinonimia de
+> Lira (1997) registra que el nombre de 1858 es un *nomen nudum* y que la publicación
+> válida corresponde a 1859, por lo que se adoptó **Stimpson, 1859**. En *Isocheles
+> wurdemanni*, la fuente primaria emplea 1862 y WoRMS acepta 1859; ambas fechas remiten a
+> la misma descripción original (Stimpson, *Annals of the Lyceum of Natural History of
+> New York*, 7(11): 85), publicada por entregas, de donde procede la discrepancia. Se
+> adoptó **Stimpson, 1859** por ser la autoría aceptada en el registro vigente.
 
 ### Fuentes de ingeniería del conocimiento
 

@@ -17,11 +17,12 @@ PREGUNTAS = [
         "texto": "¿Las setas del flagelo antenal miden MÁS de 6 veces la longitud de un artejo del flagelo?",
         "explicacion": (
             "Observe el flagelo antenal bajo lupa.\n"
-            "→ Setas largas (> 6× artejo): Paguristes angustitheca\n"
-            "→ Setas cortas (≤ 1× artejo): Paguristes perplexus"
+            "→ Setas largas, de 6 a 8 veces el artejo: Paguristes angustitheca\n"
+            "→ Setas cortas, menos de 6 veces el artejo (≈ 1 artejo en\n"
+            "   P. perplexus): Paguristes perplexus"
         ),
         "imagenDesc": "Flagelo antenal — comparar longitud de setas vs artejo",
-        "opciones": [("Sí, setas muy largas (> 6× artejo)", True), ("No, setas cortas (≈ 1 artejo o menos)", False)],
+        "opciones": [("Sí, setas muy largas (> 6× artejo)", True), ("No, setas cortas (menos de 6× artejo)", False)],
         "aplicaCuando": lambda obs: obs.get("pleopodosPrimerSomito") is True,
     },
     {
