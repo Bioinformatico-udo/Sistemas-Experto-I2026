@@ -1,40 +1,33 @@
 # Clasificador de Crustáceos Porcellanidae
 
-## Integrantes - Grupo 4
+## Integrantes del Grupo
 
 - Br. Jesús Rodríguez — C.I. V-30685591
-- Br. Alejandra Mendez — C.I. V-30919860
+- Br. Alejandra Méndez — C.I. V-30919860
 - Br. Wilmer Moreno — C.I. V-30911319
 
 ---
 
 ## Descripción General
 
-### Propósito del Sistema
-Clasificador de Crustáceos Porcellanidae es un sistema experto interactivo diseñado para automatizar y orientar la identificación taxonómica de especímenes pertenecientes a la familia Porcellanidae (conocidos comúnmente como falsos cangrejos o cangrejos de porcelana). La herramienta guía al usuario a través de una serie de preguntas dinámicas sobre la anatomía morfológica del ejemplar recolectado y evalúa progresivamente las características observadas para emitir un diagnóstico preciso sobre el género o especie correspondiente.
+El Clasificador de Crustáceos Porcellanidae es un sistema experto interactivo concebido para resolver la ambigüedad en la identificación taxonómica de los crustáceos pertenecientes a la familia Porcellanidae (falsos cangrejos o cangrejos de porcelana, pertenecientes al infraorden Anomura).
 
-### Problema Biológico y Taxonómico que Resuelve
-La familia Porcellanidae pertenece al infraorden Anomura y se caracteriza por una morfología que a simple vista confunde a estudiantes e investigadores con los cangrejos verdaderos (infraorden Brachyura). La diferenciación entre especies dentro de este grupo tradicionalmente requiere el uso de claves dicotómicas impresas extensas y un alto grado de experiencia en la observación de estructuras microscópicas o sutiles, como la articulación antenal, la segmentación del caparazón o las crestas de los quelípedos.
+### Problema y Dominio del Conocimiento
+A nivel de campo o laboratorio, los especímenes de Porcellanidae se confunden fácilmente con los cangrejos verdaderos (infraorden Brachyura) debido a su abdomen reducido plegado bajo el cefalotórax. Además, la diferenciación interna a nivel de género y especie requiere la evaluación de rasgos morfológicos sutiles (estructura de los segmentos antenales, suturas del caparazón, número de membranas branquiales, número de placas del telson y textura de los quelípedos). Tradicionalmente, este proceso se realiza mediante claves dicotómicas impresas extensas que resultan complejas para estudiantes e investigadores sin experiencia especializada.
 
-El Clasificador de Crustáceos Porcellanidae resuelve esta barrera reduciendo la ambigüedad en la identificación de campo o laboratorio. En lugar de forzar una lectura lineal de claves taxonómicas rígidas, el sistema sintetiza el conocimiento morfológico en una base de reglas parametrizada y permite evaluar características observadas de forma flexible, entregando el resultado final acompañado del árbol taxonómico y las justificaciones morfológicas que respaldan la inferencia.
-
-### Lógica de Inferencia y Arquitectura del Sistema
-El núcleo del sistema fue desarrollado aplicando la metodología de ingeniería del conocimiento de Buchanan (Identificación, Conceptualización, Formalización, Implementación y Evaluación) y sigue los principios de la Arquitectura Hexagonal (Puertos y Adaptadores) para desacoplar completamente la lógica de inferencia del marco web y la persistencia de datos.
-
-- **Motor de Inferencia:** Implementa un algoritmo nativo de encadenamiento hacia adelante (Forward Chaining). El motor parte de los hechos observables o respuestas suministradas por el usuario (por ejemplo, número de antenas, tipo de segmento antenal, paredes del caparazón) y evalúa de manera iterativa el conjunto de reglas de producción almacenadas en la base de conocimientos. A medida que las premisas se satisfacen, el motor deduce nuevos hechos hasta alcanzar una conclusión taxonómica definitiva (especie o género) o determinar que el espécimen no pertenece al grupo bajo estudio.
-- **Base de Conocimientos:** Las reglas morfológicas y las fichas de las especies están declaradas de manera independiente en formatos estructurados (JSON), lo que permite extender el conocimiento taxonómico sin modificar el código fuente del motor.
-- **Extensibilidad:** El sistema permite incorporar nuevas especies directamente desde la interfaz web mediante el modal **Agregar especie**. La aplicación persiste el registro en `src/backend/app/data/species.json`, de modo que el motor de inferencia lo incorpora automáticamente sin necesidad de modificar código.
-
-
-### Valor Técnico y Académico
-Desde el punto de vista académico, el proyecto sirve como un recurso pedagógico clave para estudiantes de biología y ciencias marinas, facilitando el aprendizaje práctico de la taxonomía de decápodos anomuros. A nivel técnico, demuestra la efectividad de implementar sistemas de lógica basada en reglas con una arquitectura moderna de software, mantenible, fácil de auditar mediante pruebas unitarias y lista para integrarse en plataformas web interactivas.
+### Utilidad del Sistema Experto
+La herramienta automatiza la evaluación taxonómica guiando al usuario a través de un cuestionario dinámico adaptativo. Evalúa únicamente las características morfológicas necesarias para deducir la especie o determinar si el ejemplar no pertenece a la familia o subfilo, ofreciendo un diagnóstico respaldado por un reporte transparente de explicabilidad lógica.
 
 ---
 
-## Especies en la Base de Conocimientos
+## Arquitectura del Sistema
 
-A continuación se enumeran las especies catalogadas en `species.json`. 
+### Descripción de la Base de Conocimientos
+La base de conocimientos está desacoplada del motor de inferencia mediante archivos en formato JSON declarativo (`src/backend/app/data/`):
+- **Hechos y Preguntas (`rules.json`):** Define el catálogo de atributos morfológicos observables (`numero_antenas`, `segmento_antenal`, `paredes_caparazon`, `membranas_area_branquial`, `superficie_quelipedo`, entre otros) y las preguntas con opciones estructuradas presentadas al usuario.
+- **Catálogo de Especies (`species.json`):** Contiene las fichas taxonómicas, descripciones y conjuntos de atributos requeridos para identificar cada especie.
 
+#### Especies Registradas en la Base de Conocimientos:
 - *Neopisosoma cf. neglectum*
 - *Neopisosoma angustifrons*
 - *Neopisosoma orientale*
@@ -58,87 +51,121 @@ A continuación se enumeran las especies catalogadas en `species.json`.
 - *Megalobrachium roseum*
 - *Pisidia brasiliensis*
 - *Porcellana sayana*
+
+### Explicación del Motor de Inferencia
+El motor de inferencia está desarrollado en Python 3.11+ aplicando la metodología de ingeniería del conocimiento de Buchanan y los principios de la Arquitectura Hexagonal:
+- **Estrategia de Razonamiento:** Utiliza **Encadenamiento hacia Adelante (Forward Chaining)**. Partiendo de las premisas morfológicas recolectadas (hechos), el motor evalúa iterativamente las reglas de producción para inferir nuevos hechos de nivel superior (subfilo, familia, género) hasta concluir en la especie o declarar un descarte.
+- **Mecanismo de Explicabilidad:** Registra cada regla disparada en orden cronológico, generando una traza justificativa que explica al usuario el porqué de la conclusión taxonómica.
+- **Extensibilidad:** El sistema permite incorporar nuevas especies directamente desde la interfaz web mediante el modal **Agregar especie** (previa autenticación con usuario `admin` y contraseña `Admin`). La aplicación persiste el registro en `src/backend/app/data/species.json`, de modo que el motor de inferencia lo incorpora automáticamente sin necesidad de modificar código.
+
+### Diagrama de Arquitectura del Sistema
+
+```mermaid
+flowchart TD
+    subgraph Frontend["Interfaz Web (Vue.js 3 + Vite)"]
+        UI["HomeView / DiagnosisView"] -->|1. Selección de Hechos Morfológicos| STORE["Pinia Store (diagnosisStore)"]
+        STORE -->|2. Petición HTTP REST| API_CLIENT["Servicio API (api.js)"]
+        RESULT_VIEW["ResultView (Ficha + Explicabilidad)"] <--|5. Respuesta con Especie y Justificación| STORE
+    end
+
+    subgraph Backend["Backend FastAPI (Arquitectura Hexagonal)"]
+        API_CLIENT -->|3. Controlador REST (Adapters)| CTRL["Inference Router"]
+        CTRL -->|4. Ejecución de Inferencia| ENGINE["Motor Forward Chaining (Domain)"]
+        ENGINE <-->|Consulta de Reglas y Especies| KB["Base de Conocimientos (JSON)"]
+    end
+```
+
+### Recursos Educativos
+El sistema integra fichas informativas con descripciones anatómicas, hábitats naturales y un catálogo interactivo que sirve como recurso didáctico para la docencia universitaria en taxonomía de decápodos anomuros.
+
 ---
 
-## Instrucciones de Instalación y Uso
+## Instalación y Configuración
 
-### Requisitos Previos
-Asegúrese de contar con los siguientes elementos instalados en su sistema operativo antes de comenzar:
+### Prerrequisitos
+- **Python:** 3.11 o superior.
+- **Node.js:** 18.0.0 o superior con el gestor de paquetes `npm`.
+- **Git:** Instalado en la consola de comandos.
 
-- Python 3.11 o superior.
-- Node.js 18.0.0 o superior junto con el gestor de paquetes npm.
-- Git instalado en su consola de comandos.
+### Instrucciones Paso a Paso
 
-### Clonación y Configuración del Repositorio
-1. Clone el repositorio en su equipo local y ubíquese en la rama y carpeta correspondiente al proyecto:
+1. **Clonación del Repositorio:**
    ```bash
    git clone https://github.com/Bioinformatico-udo/Sistemas-Experto-I2026.git
    git switch Grupo4
    cd Sistemas-Experto-I2026/"Grupo 4"
    ```
 
-### Ejecución del Backend (FastAPI)
-El backend contiene la lógica del motor de inferencia en Python y expone los puntos de entrada REST para procesar las reglas y hechos.
-
-1. Ingrese al directorio del backend:
+2. **Configuración y Ejecución del Backend (FastAPI):**
+   Navegue al directorio del backend y cree el entorno virtual:
    ```bash
    cd src/backend
+   python -m venv venv
    ```
-2. Cree y active un entorno virtual de Python:
-   - En Windows (PowerShell):
-     ```powershell
-     python -m venv venv
-     .\venv\Scripts\Activate.ps1
-     ```
-   - En Linux / macOS:
-     ```bash
-     python3 -m venv venv
-     source venv/bin/activate
-     ```
-3. Instale las dependencias requeridas:
+   - En Windows (PowerShell): `.\venv\Scripts\Activate.ps1`
+   - En Linux / macOS: `source venv/bin/activate`
+
+   Instale las dependencias y ejecute el servidor API:
    ```bash
    pip install -r requirements.txt
-   ```
-4. Inicie el servidor de desarrollo Uvicorn:
-   ```bash
    python -m uvicorn app.main:app --reload
    ```
-   El servidor estará escuchando por defecto en `http://127.0.0.1:8000`. Puede consultar la documentación interactiva Swagger en `http://127.0.0.1:8000/docs`.
+   El backend estará disponible en `http://127.0.0.1:8000` (documentación de la API en `/docs`).
 
-### Ejecución del Frontend (Vue.js 3)
-El frontend proporciona una interfaz interactiva e intuitiva para responder las preguntas sobre el espécimen y visualizar el resultado de la inferencia.
-
-1. Abra una nueva terminal y navegue a la carpeta del frontend:
+3. **Configuración y Ejecución del Frontend (Vue.js 3):**
+   En una nueva terminal, navegue al frontend e inicie el servidor de desarrollo:
    ```bash
    cd src/frontend
-   ```
-2. Instale las dependencias de JavaScript:
-   ```bash
    npm install
-   ```
-3. Ejecute el servidor local de desarrollo:
-   ```bash
    npm run dev
    ```
-4. Abra su navegador web en la dirección indicada en la consola (usualmente `http://localhost:5173`).
+   La interfaz web estará disponible en `http://localhost:5173`.
 
-### Pruebas Automatizadas
-Para verificar el correcto funcionamiento del motor de encadenamiento hacia adelante y la consistencia de la base de conocimientos, ejecute el conjunto de pruebas unitarias con pytest desde la carpeta `src/backend`:
-```bash
-pytest tests/
-```
+4. **Ejecución de Pruebas Automatizadas:**
+   Desde la carpeta `src/backend`:
+   ```bash
+   pytest tests/
+   ```
+   O de forma alternativa mediante el módulo de Python con salida detallada:
+   ```bash
+   python -m pytest -v
+   ```
 
 ---
 
-## Ejemplos de Entrada y Salida (Casos de Uso)
+## Guía de Uso
 
-A continuación se presentan dos escenarios representativos de interacción con el motor de inferencia de PorcellaniDEX.
+### Modo de Interacción con el Sistema
+El sistema ofrece dos vías de interacción según las necesidades del usuario:
 
-### Caso de Uso 1: Clasificación Exitosa de *Neopisosoma cf. neglectum*
+1. **Interfaz Web Interactiva (Recomendado):**
+   Accediendo a `http://localhost:5173`, el usuario inicia el diagnóstico asistido. El sistema despliega tarjetas con preguntas morfológicas de selección múltiple (como tipo de segmento antenal o suturas del caparazón). A medida que se responde cada pregunta, el motor reevalúa las reglas y solicita únicamente las variables adicionales pertinentes.
 
-En este escenario, el usuario ingresa las respuestas morfológicas de un ejemplar recolectado en zona costera rocosa.
+2. **API REST / Consola de Comandos (cURL / Postman):**
+   Se pueden enviar conjuntos de hechos en formato JSON mediante peticiones HTTP POST a la ruta `/api/v1/inference/evaluate` para recibir el diagnóstico estructurado directamente sin usar la interfaz gráfica.
 
-**Entrada (Petición JSON enviada al motor de inferencia / API):**
+### Explicación de la Interfaz Web
+- **Vista Principal (`HomeView.vue`):** Pantalla de bienvenida, acceso al catálogo completo de especies y botón de inicio de diagnóstico.
+- **Vista de Diagnóstico (`DiagnosisView.vue`):** Indicador de progreso adaptativo, tarjeta de la pregunta actual (`DiagnosisCard.vue`) y estado de consulta en tiempo real.
+- **Vista de Resultados (`ResultView.vue`):** Despliega la especie identificada, su fotografía, hábitat, clasificación taxonómica estructurada y el panel de explicabilidad con las reglas disparadas.
+- **Modal de Inicio de Sesión (`LoginModal.vue`):** Permite al usuario autenticarse como experto para desbloquear la gestión de la base de conocimientos.
+- **Modal Agregar Especie (`AddSpeciesModal.vue`):** Formulario exclusivo para usuarios autenticados que permite incorporar nuevas especies a la base de datos morfológica.
+
+### Autenticación para la Gestión de Especies
+Para registrar nuevas especies en el sistema desde la interfaz web, se requiere iniciar sesión como usuario experto desde el botón de acceso en la barra superior. Las credenciales predeterminadas de administración son:
+
+- **Usuario:** `admin`
+- **Contraseña:** `Admin`
+
+Al iniciar sesión con estas credenciales, el sistema activa los privilegios de experto y habilita el modal de **Agregar especie**, guardando automáticamente los nuevos datos morfológicos en `species.json` de manera persistente.
+
+---
+
+## Ejemplos de Ejecución
+
+### Ejemplo 1: Clasificación Exitosa de *Neopisosoma cf. neglectum* (Vía API REST)
+
+**Entrada (Petición JSON):**
 ```json
 {
   "facts": {
@@ -151,7 +178,7 @@ En este escenario, el usuario ingresa las respuestas morfológicas de un ejempla
 }
 ```
 
-**Salida (Respuesta de inferencia obtenida):**
+**Salida / Diagnóstico Obtenido:**
 ```json
 {
   "status": "COMPLETED",
@@ -182,45 +209,14 @@ En este escenario, el usuario ingresa las respuestas morfológicas de un ejempla
 }
 ```
 
----
+### Ejemplo 2: Flujo Interactivo y Salida en Interfaz Web (Frontend)
 
-### Caso de Uso 2: Flujo Interactivo de Diagnóstico desde la Interfaz Web (Frontend Vue.js)
+**1. Interacción en Pantalla:**
+- El usuario selecciona `2 pares de antenas` y `segmento antenal corto`.
+- El sistema consulta el motor y recomienda la pregunta de paredes del caparazón (`Incompletas`).
+- El usuario indica `Superficie del quelípedo lisa`.
 
-Este escenario ejemplifica cómo el usuario final interactúa paso a paso con la aplicación web (`src/frontend`) a través del cuestionario dinámico, desde la selección de atributos morfológicos en la interfaz gráfica hasta la generación del reporte visual de explicabilidad.
-
-**1. Interacción en Pantalla (Entrada del Usuario mediante Componentes Vue):**
-
-- **Inicio:** El usuario presiona el botón "Iniciar Diagnóstico" en la vista principal (`HomeView.vue`).
-- **Paso 1 (Selección Morfológica - Antenas):** La vista `DiagnosisView.vue` renderiza la primera tarjeta con la pregunta recomendada dinámicamente por el motor.
-  - *Pregunta en Pantalla:* "¿Cómo es el segmento basal de la antena?"
-  - *Opción seleccionada por el usuario:* `Corto (no alcanza el margen anterior del caparazón)`
-- **Paso 2 (Evaluación Adaptativa - Caparazón):** Al seleccionar la opción, la aplicación envía el hecho al backend y recibe automáticamente la siguiente pregunta relevante.
-  - *Pregunta en Pantalla:* "¿Las paredes posteriores del caparazón son incompletas o enteras?"
-  - *Opción seleccionada por el usuario:* `Incompletas (porciones posteriores ausentes o placas pequeñas)`
-- **Paso 3 (Textura de Quelípedos):**
-  - *Pregunta en Pantalla:* "¿Cómo es la superficie del quelípedo?"
-  - *Opción seleccionada por el usuario:* `Lisa (sin granos ni tubérculos)`
-
-**2. Estado del Store del Frontend (Acumulación de Hechos en `diagnosisStore.js`):**
-
-A nivel de código en el cliente frontend, las opciones marcadas por el usuario alimentan el estado reactivo que procesa la interacción:
-
-```json
-{
-  "answers": [
-    { "fact": "numero_antenas", "value": 2 },
-    { "fact": "segmento_antenal", "value": "corto" },
-    { "fact": "paredes_caparazon", "value": "incompletas" },
-    { "fact": "membranas_area_branquial", "value": "unica" },
-    { "fact": "superficie_quelipedo", "value": "lisa" }
-  ],
-  "progressPercentage": 100
-}
-```
-
-**3. Renderizado del Resultado Final (Salida en `ResultView.vue`):**
-
-Una vez concluida la inferencia, la interfaz cambia a la pantalla de resultados desplegando la especie identificada, su ficha morfológica y la cadena de explicabilidad:
+**2. Renderizado del Resultado Final (`ResultView.vue`):**
 
 ```text
 +-------------------------------------------------------------------------------+
@@ -242,41 +238,91 @@ Una vez concluida la inferencia, la interfaz cambia a la pantalla de resultados 
 +-------------------------------------------------------------------------------+
 ```
 
----
+### Ejemplo 3: Flujo Interactivo sin Coincidencia al 100% (Presentación de Especies Candidatas)
 
-## Estructura del Proyecto
+Este escenario ejemplifica el comportamiento del sistema cuando la información morfológica suministrada por el usuario es parcial o insuficiente para alcanzar una deducción única del 100%. La interfaz web notifica que no se ha detectado una especie de forma inequívoca y presenta las tres especies con mayor porcentaje de probabilidad y concordancia morfológica.
 
-El código fuente del sistema se distribuye de la siguiente manera:
+**1. Interacción en Pantalla:**
+- **Paso 1:** El usuario indica `2 pares de antenas` y `segmento antenal corto`.
+- **Paso 2:** El usuario selecciona `Paredes del caparazón enteras`.
+- **Paso 3:** El usuario no logra determinar la estructura del telson o la textura del carpo por daño morfológico en el espécimen de laboratorio y finaliza la consulta.
+
+**2. Diagnóstico Emitido por el Motor (Respuesta con Candidatas):**
+
+```json
+{
+  "status": "INCOMPLETE_CERTAINTY",
+  "identified_species": null,
+  "top_candidate_species": [
+    {
+      "id": "Petrolisthes_tridentatus",
+      "name": "Petrolisthes tridentatus",
+      "match_percentage": 75,
+      "description": "Petrolisthes con diente lobuliforme en los ángulos orbitales internos.",
+      "habitat": "Arrecifes tropicales y zonas rocosas."
+    },
+    {
+      "id": "Petrolisthes_tonsorius",
+      "name": "Petrolisthes tonsorius",
+      "match_percentage": 60,
+      "description": "Petrolisthes con frente triangular y mero de la tercera pata caminadora inflado.",
+      "habitat": "Zonas rocosas expuestas."
+    },
+    {
+      "id": "Petrolisthes_jugosus",
+      "name": "Petrolisthes jugosus",
+      "match_percentage": 50,
+      "description": "Especie de Petrolisthes con telson de cinco piezas y margen del carpo dentado.",
+      "habitat": "Arrecifes coralinos y rocas."
+    }
+  ]
+}
+```
+
+**3. Renderizado en la Interfaz Web (`ResultView.vue`):**
 
 ```text
-Grupo 4/
-├── README.md                      # Documentación principal del sistema
-└── src/                           # Código fuente del sistema
-    ├── backend/                   # Backend desarrollado en FastAPI
-    │   ├── app/
-    │   │   ├── domain/            # Modelos del dominio y motor de encadenamiento nativo
-    │   │   ├── ports/             # Puertos para desacoplamiento arquitectónico
-    │   │   ├── adapters/          # Adaptadores (controladores HTTP y persistencia)
-    │   │   ├── data/              # Base de conocimientos (reglas y catálogo de especies)
-    │   │   └── main.py            # Punto de entrada de la aplicación FastAPI
-    │   ├── tests/                 # Suite de pruebas unitarias con pytest
-    │   └── requirements.txt       # Dependencias de Python
-    └── frontend/                  # Interfaz web desarrollada en Vue.js 3 + Vite
-        ├── public/                # Recursos estáticos públicos 
-        ├── src/
-        │   ├── assets/            # Recurso de estilos y diseño
-        │   ├── components/        # Componentes UI reutilizables
-        │   │   ├── common/        # Componentes base (BaseButton, ProgressBar, Modales de autenticación)
-        │   │   ├── diagnosis/     # Componentes del flujo de inferencia (DiagnosisCard, ExplanabilityPanel)
-        │   │   └── portfolio/     # Tarjetas y vistas del catálogo de especies
-        │   ├── composables/       # Lógica reactiva reutilizable (gestión de autenticación y sesión)
-        │   ├── services/          # Clientes HTTP para la integración con la API REST
-        │   ├── stores/            # Gestión del estado global mediante Pinia (diagnosisStore.js)
-        │   ├── views/             # Vistas principales (HomeView, DiagnosisView, ResultView)
-        │   ├── App.vue            # Componente raíz de la aplicación web
-        │   ├── main.js            # Punto de entrada JavaScript y montaje de Vue.js
-        │   └── style.css          # Definición de estilos generales y Tailwind CSS
-        ├── index.html             # Estructura HTML inicial de la aplicación SPA
-        ├── package.json           # Declaración de dependencias y scripts de construcción
-        └── vite.config.js         # Configuración del empaquetador de módulos Vite
++-------------------------------------------------------------------------------+
+|                      NO SE ENCONTRÓ UNA ESPECIE EXACTA                        |
++-------------------------------------------------------------------------------+
+| MENSAJE: No se detectó una especie con 100% de certidumbre según los datos    |
+| ingresados. A continuación se presentan las 3 especies más probables con       |
+| mayor porcentaje de concordancia:                                             |
++-------------------------------------------------------------------------------+
+| CANDIDATA 1 (CONCORDANCIA: 75%):                                              |
+| Especie:   Petrolisthes tridentatus                                           |
+| Hábitat:   Arrecifes tropicales y zonas rocosas                               |
+| Atributos Coincidentes: 2 antenas, segmento corto, paredes enteras            |
++-------------------------------------------------------------------------------+
+| CANDIDATA 2 (CONCORDANCIA: 60%):                                              |
+| Especie:   Petrolisthes tonsorius                                             |
+| Hábitat:   Zonas rocosas expuestas                                            |
+| Atributos Coincidentes: 2 antenas, segmento corto, paredes enteras            |
++-------------------------------------------------------------------------------+
+| CANDIDATA 3 (CONCORDANCIA: 50%):                                              |
+| Especie:   Petrolisthes jugosus                                               |
+| Hábitat:   Arrecifes coralinos y rocas                                        |
+| Atributos Coincidentes: 2 antenas, segmento corto, paredes enteras            |
++-------------------------------------------------------------------------------+
 ```
+
+---
+
+## Conclusiones y Trabajo Futuro
+
+### Reflexión sobre el Proceso de Desarrollo
+El desarrollo del Clasificador de Crustáceos Porcellanidae permitió aplicar de manera práctica la metodología de ingeniería del conocimiento de Buchanan. La estructuración del conocimiento morfológico en reglas de producción aisladas facilitó el desacoplamiento entre el razonamiento lógico y la representación de datos. Asimismo, la adopción de una Arquitectura Hexagonal garantizó una integración limpia y mantenible entre el motor de inferencia en Python (FastAPI) y la interfaz de usuario en Vue.js 3.
+
+Uno de los principales retos consistió en modelar la ambigüedad taxonómica inicial entre Anomura y Brachyura, minimizando la cantidad de preguntas requeridas para cada diagnóstico. Se resolvió priorizando dinámicamente las preguntas con mayor poder discriminatorio en la base de conocimientos.
+
+### Posibles Mejoras y Extensiones Futuras
+- **Visión por Computador Integrada:** Incorporar modelos de clasificación de imágenes para sugerir rasgos morfológicos de forma automática a partir de fotografías tomadas en campo.
+- **Lógica Difusa y Manejo de Incertidumbre:** Extender el motor para admitir factores de certeza cuando las estructuras anatómicas del ejemplar se encuentren parcialmente dañadas.
+- **Exportación de Reportes PDF:** Permitir la descarga de informes técnicos de diagnóstico con ficha taxonómica y mapa de distribución geográfica.
+- **Modo PWA Offline:** Habilitar capacidades PWA para la ejecución sin conexión a internet en estaciones biológicas aisladas.
+
+---
+
+## Referencias Bibliográficas para la construcción de la base de conocimientos
+
+- Lira, C. F. (1997). *Crustáceos anomuros costeros de la Península de Macanao, Isla de Margarita, Venezuela* [Tesis de maestría, Universidad de Oriente].

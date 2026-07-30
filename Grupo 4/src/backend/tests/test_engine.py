@@ -67,45 +67,112 @@ def test_engine_recommends_next_fact():
     assert "R2" not in result.fired_rules
     assert result.next_recommended_fact == "tipo_caparazon"
 
-def test_engine_detects_porcellana_sayana():
-    # Rule R18 from our JSON knowledge base: sin espínulas posteriores
+def test_engine_skips_recommended_fact_when_no_aplica():
     rules = [
         Rule(
-            id="R18",
-            name="Sin espínulas posteriores",
-            description="Identifica Porcellana sayana.",
-            antecedents=[Antecedent(fact="espinas_posteriores", operator="==", value=False)],
-            consequents=[Consequent(fact="especie_detectada", value="Porcellana sayana")]
+            id="R1",
+            name="Test Rule 1",
+            description="",
+            antecedents=[Antecedent(fact="numero_antenas", operator="==", value=2)],
+            consequents=[Consequent(fact="subfilo", value="Crustacea")]
+        ),
+        Rule(
+            id="R2",
+            name="Test Rule 2",
+            description="",
+            antecedents=[
+                Antecedent(fact="subfilo", operator="==", value="Crustacea"),
+                Antecedent(fact="tipo_caparazon", operator="==", value="cefalotorax")
+            ],
+            consequents=[Consequent(fact="especie_detectada", value="Callinectes sapidus")]
+        )
+    ]
+    
+    engine = ForwardChainingEngine(rules, [], [])
+    
+    initial_facts = {"numero_antenas": 2, "tipo_caparazon": "no_aplica"}
+    result = engine.infer(initial_facts)
+    
+    assert result.working_memory["tipo_caparazon"] == "no_aplica"
+    assert result.next_recommended_fact != "tipo_caparazon"
+
+def test_engine_detects_porcellana_sayana():
+    rules = [
+        Rule(
+            id="R_sayana",
+            name="Identificación de porcellana sayana",
+            description="",
+            antecedents=[
+                Antecedent(fact="genus", operator="==", value="Porcellana"),
+                Antecedent(fact="margin_carapace", operator="==", value="spined")
+            ],
+            consequents=[Consequent(fact="especie_detectada", value="porcellana_sayana")]
         )
     ]
     species_list = [
-        Species(id="Porcellana sayana", name="Porcellana sayana", description="", habitat="", image_url="")
+        Species(
+            id="porcellana_sayana",
+            name="porcellana sayana",
+            attributes={"genus": "Porcellana", "margin_carapace": "spined", "numero_antenas": 2}
+        )
     ]
     engine = ForwardChainingEngine(rules, species_list, [])
-    result = engine.infer({"espinas_posteriores": False})
+    
+    working_memory = {"genus": "Porcellana", "margin_carapace": "spined", "numero_antenas": 2}
+    result = engine.infer(working_memory)
+    
     assert result.detected_species is not None
-    assert result.detected_species.id == "Porcellana sayana"
-    assert "R18" in result.fired_rules
+    assert result.detected_species.id == "porcellana_sayana"
 
 def test_engine_tuberculado_rule():
-    # Rule R12: Frente recta + carpo tuberculado -> Pachycheles ackleianus
     rules = [
         Rule(
-            id="R12",
-            name="Frente recta + carpo tuberculado",
-            description="Identifica Pachycheles ackleianus.",
+            id="R_tub",
+            name="Regla Tuberculado",
+            description="",
             antecedents=[
-                Antecedent(fact="forma_frente_carpo", operator="==", value="recta"),
-                Antecedent(fact="superficie_quelipedo", operator="==", value="tuberculado")
+                Antecedent(fact="superficie_cheliped", operator="==", value="tuberculado")
             ],
-            consequents=[Consequent(fact="especie_detectada", value="Pachycheles ackleianus")]
+            consequents=[Consequent(fact="especie_detectada", value="especie_tuberculada")]
         )
     ]
     species_list = [
-        Species(id="Pachycheles ackleianus", name="Pachycheles ackleianus", description="", habitat="", image_url="")
+        Species(
+            id="especie_tuberculada",
+            name="Especie Tuberculada",
+            attributes={"superficie_cheliped": "tuberculado", "numero_antenas": 2}
+        )
     ]
     engine = ForwardChainingEngine(rules, species_list, [])
-    result = engine.infer({"forma_frente_carpo": "recta", "superficie_quelipedo": "tuberculado"})
+    
+    working_memory = {"superficie_cheliped": "tuberculado", "numero_antenas": 2}
+    result = engine.infer(working_memory)
+    
     assert result.detected_species is not None
-    assert result.detected_species.id == "Pachycheles ackleianus"
-    assert "R12" in result.fired_rules
+    assert result.detected_species.id == "especie_tuberculada"
+
+def test_engine_fallback_when_no_species_reaches_100_percent():
+    rules = []
+    species_list = [
+        Species(
+            id="Pet_1",
+            name="Petrolisthes 1",
+            description="Especie 1",
+            attributes={"segmento": "corto", "paredes": "enteras"}
+        ),
+        Species(
+            id="Pet_2",
+            name="Petrolisthes 2",
+            description="Especie 2",
+            attributes={"segmento": "corto", "paredes": "incompletas"}
+        )
+    ]
+    engine = ForwardChainingEngine(rules, species_list, [])
+    
+    # Usuario respondió segmento = corto, pero paredes = no_aplica
+    working_memory = {"numero_antenas": 2, "segmento": "corto", "paredes": "no_aplica"}
+    result = engine.infer(working_memory)
+    
+    # Al estar "paredes" marcada como no_aplica, Pet_1 y Pet_2 difieren en paredes y quedan inviables
+    assert result.detected_species is None
+    assert result.next_recommended_fact is None

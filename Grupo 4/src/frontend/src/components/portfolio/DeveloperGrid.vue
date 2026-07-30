@@ -4,38 +4,26 @@ import DeveloperCard from './DeveloperCard.vue';
 
 const developers = ref([
   {
-    name: 'Jesús',
+    name: 'Jesús Rodríguez',
     role: 'Lead Backend & Inferencia',
     description: 'Especialista en Inteligencia Artificial y modelado de bases de conocimiento bajo Arquitectura Hexagonal.',
-    github: 'https://github.com',
-    linkedin: 'https://linkedin.com',
-    portfolio: '#',
-    photo: '' // Vacío para usar iniciales
+    github: 'https://github.com/Ezuchu',
+    portfolio: 'https://v0-portafolio-e5aivyax2-jesusmiguelrr17-8978s-projects.vercel.app/',
+    photo: '' 
   },
   {
-    name: 'Desarrollador 2',
+    name: 'Wilmer Moreno',
     role: 'UI/UX & Frontend Dev',
     description: 'Diseñador de interfaces reactivas y animaciones interactivas inspiradas en el concepto Oceanic Deep-Tech.',
-    github: 'https://github.com',
-    linkedin: 'https://linkedin.com',
-    portfolio: '#',
+    github: 'https://github.com/wilmermor',
+    portfolio: 'https://wilmer-rho.vercel.app/',
     photo: ''
   },
   {
-    name: 'Desarrollador 3',
+    name: 'Alejandra Méndez',
     role: 'Ingeniero del Conocimiento',
     description: 'Responsable del levantamiento de reglas taxonómicas y estructuración del motor de inferencia.',
-    github: 'https://github.com',
-    linkedin: 'https://linkedin.com',
-    portfolio: '#',
-    photo: ''
-  },
-  {
-    name: 'Desarrollador 4',
-    role: 'QA & Integración',
-    description: 'Encargado de asegurar la calidad del flujo del sistema experto y pruebas de caja negra del descarte.',
-    github: 'https://github.com',
-    linkedin: 'https://linkedin.com',
+    github: 'https://github.com/alemen-08',
     portfolio: '#',
     photo: ''
   }
@@ -50,7 +38,7 @@ const developers = ref([
         Equipo multidisciplinario del Grupo 4 responsable del modelado ontológico y desarrollo del sistema experto.
       </p>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <DeveloperCard
         v-for="dev in developers"
         :key="dev.name"
