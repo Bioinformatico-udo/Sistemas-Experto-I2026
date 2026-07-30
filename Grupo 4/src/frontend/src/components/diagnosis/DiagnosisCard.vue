@@ -13,14 +13,6 @@ const handleSelectOption = async (value) => {
   if (store.loading) return;
   await store.answerQuestion(question.value.fact, value);
 };
-
-// Responder "No estoy seguro" (podría asignar un valor por defecto o saltar)
-const handleUncertain = async () => {
-  if (store.loading) return;
-  // En sistemas expertos de descarte morfológico, "no estoy seguro" puede enviarse como null o valor por defecto
-  // Para este motor, omitiremos el hecho o enviaremos un valor nulo para forzar al motor a recomendar el siguiente
-  await store.answerQuestion(question.value.fact, null);
-};
 </script>
 
 <template>
@@ -60,8 +52,8 @@ const handleUncertain = async () => {
       </button>
     </div>
 
-    <!-- Controles Inferiores (Atrás / No sé) -->
-    <div class="flex justify-between items-center border-t border-slate-800/60 pt-6">
+    <!-- Controles Inferiores (Atrás) -->
+    <div class="flex justify-start items-center border-t border-slate-800/60 pt-6">
       <BaseButton
         variant="secondary"
         @click="store.goBack()"
@@ -73,15 +65,6 @@ const handleUncertain = async () => {
           <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
         </svg>
         Atrás
-      </BaseButton>
-
-      <BaseButton
-        variant="outline"
-        @click="handleUncertain"
-        :disabled="store.loading"
-        class="text-amber-400 border-amber-500/30 hover:bg-amber-500/10 hover:border-amber-400"
-      >
-        No estoy seguro
       </BaseButton>
     </div>
   </div>

@@ -4,7 +4,7 @@ import { computed } from 'vue';
 const props = defineProps({
   variant: {
     type: String,
-    default: 'primary', // primary, secondary, outline, danger
+    default: 'primary', // primario, secundario, contorno, peligro
   },
   disabled: {
     type: Boolean,
@@ -43,3 +43,4 @@ const variantClasses = computed(() => {
     <slot />
   </button>
 </template>
+
