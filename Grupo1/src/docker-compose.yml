@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  porcellanspark:
+    build: .
+    container_name: porcellanspark
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./especies_personalizadas.json:/app/especies_personalizadas.json
+    network_mode: host
