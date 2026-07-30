@@ -216,5 +216,5 @@ La combinación con **Keras + Ponderación Semántica** resolvió esto permitien
 * **Prieto, M. A. (1972)**. *Los arrecifes coralinos del atolón Los Roques*. Centro Submarinista CESUSIBO; Universidad Simón Bolívar; Universidad Central de Venezuela.
 * **Villamizar, E., Yranzo, A., González, M., Herrera, A. T., Pérez, J., & Camissotti, H. (2014)**. Diversidad y condición de salud de corales pétreos en algunos arrecifes del Parque Nacional Archipiélago Los Roques, Venezuela. *Acta Biológica Venezuelica*, 34(2), 257-279.
 
-### Como plus: portafolio personales de cada estudiante
+### Como plus: portafolio personales de cada estudiante se encontraran de manera directa en el codigo con botones que le enviaran al deseado por usted
 
