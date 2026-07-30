@@ -11,8 +11,13 @@ Combina la precisión y certeza de la **IA Simbólica** (Árbol de Decisión Dic
 Desarrollado para la asignatura de **Sistemas Expertos (I2026)** en la **Universidad de Oriente**:
 
 * **Alexander González** — *Desarrollo Backend & Algoritmos*
+  - 🌐 [Portafolio Personal](https://portafolio-zeta-nine.vercel.app/)
+
 * **Lázaro Hernánde** — *Desarrollo Frontend & Reglas Taxonómicas*
+  - 🌐 [Portafolio Personal](https://my-portafolio-weld.vercel.app/)
+
 * **Marxel Rodriguez** — *Lógica del Sistema & Investigador del proyecto*
+  - 🌐 [Portafolio Personal](https://portafoliomarxel.vercel.app/)
 
 ## 📖 Descripción General y Dominio de Conocimiento
 
