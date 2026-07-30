@@ -330,4 +330,4 @@ Uno de los principales retos consistió en modelar la ambigüedad taxonómica in
 
 ## Referencias Bibliográficas para la construcción de la base de conocimientos
 
-- Lira, C. F. (1997). *Crustáceos anomuros costeros de la Península de Macanao, Isla de Margarita, Venezuela* [Tesis de maestría, Universidad de Oriente].
+- Lira, C. F. (1997). *Crustáceos anomuros costeros de la Península de Macanao, Isla de Margarita, Venezuela* [Tesis de maestría, Universidad de Oriente]. [https://ecamaulavirtual.milaulas.com/pluginfile.php/1807/mod_resource/content/1/Lira%20%201997%20Crust%C3%A1ceos%20anomuros%20costeros%20de%20la%20pen%C3%ADnsula%20de%20Macanao%2C%20isla%20de%20Margarita%2C%20Venezuela.pdf](https://ecamaulavirtual.milaulas.com/pluginfile.php/1807/mod_resource/content/1/Lira%20%201997%20Crust%C3%A1ceos%20anomuros%20costeros%20de%20la%20pen%C3%ADnsula%20de%20Macanao%2C%20isla%20de%20Margarita%2C%20Venezuela.pdf)
