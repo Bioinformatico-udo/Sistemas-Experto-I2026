@@ -9,7 +9,7 @@ const emit = defineEmits(['close', 'species-added']);
 const { token } = useAuth();
 const diagnosisStore = useDiagnosisStore();
 
-// ── 1. Estado del Formulario General y Taxonómico ────────────────────────────────
+// ── 1. General & Taxonomy Form State ──────────────────────────────────────────
 const name = ref('');
 const idOverride = ref('');
 const genus = ref('Petrolisthes');
@@ -17,7 +17,7 @@ const customGenus = ref('');
 const habitat = ref('');
 const fieldCharacteristicsText = ref('');
 
-// Géneros predefinidos para Porcellanidae
+// Predefined genera for Porcellanidae
 const commonGenera = [
   'Petrolisthes',
   'Pachycheles',
@@ -30,7 +30,7 @@ const commonGenera = [
   'Otro...'
 ];
 
-// ID de especie calculado formateado en minúsculas (slug)
+// Computed species ID slugified in lowercase
 const computedId = computed(() => {
   if (idOverride.value.trim()) {
     return idOverride.value.trim().toLowerCase().replace(/\s+/g, '_');
@@ -39,7 +39,7 @@ const computedId = computed(() => {
   return name.value.trim().toLowerCase().replace(/\s+/g, '_');
 });
 
-// Valor final del género
+// Final genus value
 const finalGenus = computed(() => {
   if (genus.value === 'Otro...') {
     return customGenus.value.trim();
@@ -47,7 +47,7 @@ const finalGenus = computed(() => {
   return genus.value;
 });
 
-// ── 2. Estado de Carga de Imagen ───────────────────────────────────────────────
+// ── 2. Image Upload State ──────────────────────────────────────────────────────
 const imageFile = ref(null);
 const imagePreview = ref(null);
 const imageBase64 = ref(null);
@@ -93,8 +93,8 @@ function removeImage() {
   imageFilename.value = '';
 }
 
-// ── 3. Estado de Atributos Morfológicos Dinámicos ─────────────────────────────
-// Regla obligatoria para Porcellanidae: se requiere "segmento_antenal"
+// ── 3. Dynamic Morphological Attributes State ─────────────────────────────────
+// Mandatory rule for Porcellanidae: "segmento_antenal" is required
 const attributes = ref([
   {
     mode: 'existing',
@@ -107,7 +107,7 @@ const attributes = ref([
   }
 ]);
 
-// Hechos/preguntas existentes disponibles desde el store
+// Available existing questions/facts from store
 const existingFacts = computed(() => {
   return diagnosisStore.questions.map(q => ({
     fact: q.fact,
@@ -148,7 +148,7 @@ function getOptionsForFact(factName) {
   return f ? f.options : [];
 }
 
-// ── 4. Validación, Carga y Envío ──────────────────────────────────────────────
+// ── 4. Validation, Loading, & Submit ──────────────────────────────────────────
 const isLoading = ref(false);
 const errorMessage = ref('');
 const successMessage = ref('');
@@ -206,11 +206,11 @@ async function handleSubmit() {
     const factLabels = {};
     const optionLabels = {};
 
-    // NOTA: 'genus' NO se agrega a attributesMap según los requerimientos.
-    // Se envía a través de request.genus y request.taxonomy.genus.
+    // NOTE: 'genus' is NOT added to attributesMap per requirements.
+    // It is sent via request.genus and request.taxonomy.genus.
     attributes.value.forEach(row => {
       const factName = row.mode === 'existing' ? row.fact : row.fact.trim().toLowerCase().replace(/\s+/g, '_');
-      if (factName === 'genus') return; // Omitir género si fue seleccionado accidentalmente en atributos
+      if (factName === 'genus') return; // Skip genus if selected accidentally in attributes
 
       const val = row.value === '__custom__' || !row.value ? row.customValue.trim() : row.value;
       attributesMap[factName] = val;
@@ -232,7 +232,7 @@ async function handleSubmit() {
       .map(s => s.trim())
       .filter(Boolean);
 
-    // Extraer el epíteto específico para la taxonomía
+    // Extract species epithet for taxonomy
     const nameParts = name.value.trim().split(/\s+/);
     const speciesEpithet = nameParts.length >= 2 ? nameParts.slice(1).join(' ') : nameParts[0];
 
@@ -309,10 +309,10 @@ onMounted(async () => {
         aria-modal="true"
         aria-labelledby="modal-title"
       >
-        <!-- Barra de acento superior -->
+        <!-- Top accent bar -->
         <div class="h-1.5 w-full bg-gradient-to-r from-cyan-500 via-teal-400 to-emerald-500 shrink-0"></div>
 
-        <!-- Encabezado -->
+        <!-- Header -->
         <div class="px-6 pt-5 pb-4 border-b border-slate-800 flex justify-between items-start shrink-0">
           <div>
             <div class="flex items-center gap-2">
@@ -337,10 +337,10 @@ onMounted(async () => {
           </button>
         </div>
 
-        <!-- Cuerpo del Formulario (Desplazable) -->
+        <!-- Form Body (Scrollable) -->
         <form @submit.prevent="handleSubmit" class="flex-1 overflow-y-auto px-6 py-6 space-y-8">
 
-          <!-- Notificaciones de Alerta -->
+          <!-- Alert Notifications -->
           <Transition name="fade">
             <div v-if="errorMessage" class="p-4 rounded-xl bg-rose-950/50 border border-rose-500/50 text-rose-300 text-sm flex items-start gap-3">
               <svg class="w-5 h-5 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -369,7 +369,7 @@ onMounted(async () => {
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <!-- Nombre -->
+              <!-- Name -->
               <div class="space-y-1.5">
                 <label class="text-xs font-semibold text-slate-300">
                   Nombre de la Especie <span class="text-rose-400">*</span>
@@ -389,7 +389,7 @@ onMounted(async () => {
                 </p>
               </div>
 
-              <!-- Género -->
+              <!-- Genus -->
               <div class="space-y-1.5">
                 <label class="text-xs font-semibold text-slate-300">
                   Género Taxonómico <span class="text-rose-400">*</span>
@@ -411,7 +411,7 @@ onMounted(async () => {
               </div>
             </div>
 
-            <!-- Hábitat -->
+            <!-- Habitat -->
             <div class="space-y-1.5">
               <label class="text-xs font-semibold text-slate-300">Distribución Geográfica / Hábitat (Opcional)</label>
               <textarea
@@ -422,7 +422,7 @@ onMounted(async () => {
               ></textarea>
             </div>
 
-            <!-- Características de Campo -->
+            <!-- Field Characteristics -->
             <div class="space-y-1.5">
               <label class="text-xs font-semibold text-slate-300">Características de Campo (Notas de identificación rápida, 1 por línea)</label>
               <textarea
@@ -515,14 +515,14 @@ onMounted(async () => {
 
             <p v-if="antennaError" class="text-xs text-rose-400">{{ antennaError }}</p>
 
-            <!-- Filas de Atributos -->
+            <!-- Attribute Rows -->
             <div class="space-y-3">
               <div
                 v-for="(row, idx) in attributes"
                 :key="idx"
                 class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60 space-y-3 relative"
               >
-                <!-- Encabezado con insignia para la fila -->
+                <!-- Badge header for row -->
                 <div class="flex justify-between items-center">
                   <div class="flex items-center gap-2">
                     <span class="text-xs font-mono font-bold text-slate-400">#{{ idx + 1 }}</span>
@@ -530,7 +530,7 @@ onMounted(async () => {
                       Obligatorio (Porcellanidae)
                     </span>
 
-                    <!-- Alternar Modo (si no es obligatorio) -->
+                    <!-- Mode Toggle (if not mandatory) -->
                     <div v-else class="flex rounded-lg bg-slate-900 p-0.5 border border-slate-700/80 text-xs">
                       <button
                         type="button"
@@ -549,7 +549,7 @@ onMounted(async () => {
                     </div>
                   </div>
 
-                  <!-- Botón eliminar (deshabilitado para obligatorios) -->
+                  <!-- Delete button (disabled for mandatory) -->
                   <button
                     v-if="!row.isRequired"
                     type="button"
@@ -563,7 +563,7 @@ onMounted(async () => {
                   </button>
                 </div>
 
-                <!-- Modo A: Hecho Existente -->
+                <!-- Mode A: Existing Fact -->
                 <div v-if="row.mode === 'existing'" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div class="space-y-1">
                     <label class="text-[11px] font-semibold text-slate-400">Hecho / Atributo Existente</label>
@@ -601,7 +601,7 @@ onMounted(async () => {
                   </div>
                 </div>
 
-                <!-- Modo B: Nuevo Hecho Personalizado -->
+                <!-- Mode B: Custom New Fact -->
                 <div v-else class="space-y-3">
                   <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div class="space-y-1">
@@ -639,7 +639,7 @@ onMounted(async () => {
             </div>
           </div>
 
-          <!-- Botón de Envío -->
+          <!-- Submit Button -->
           <div class="pt-4 border-t border-slate-800 flex justify-end gap-3">
             <button
               type="button"
@@ -686,4 +686,3 @@ onMounted(async () => {
   opacity: 0;
 }
 </style>
-
