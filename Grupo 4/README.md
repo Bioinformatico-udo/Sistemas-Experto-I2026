@@ -2,9 +2,9 @@
 
 ## Integrantes del Grupo
 
-- Br. Jesús Rodríguez — C.I. V-30685591
-- Br. Alejandra Méndez — C.I. V-30919860
-- Br. Wilmer Moreno — C.I. V-30911319
+- Br. Jesús Miguel Rodríguez Rodríguez— C.I. V-30685591
+- Br. Alejandra del Valle Méndez Núñez — C.I. V-30919860
+- Br. Wilmer José Moreno Durán— C.I. V-30911319
 
 ---
 

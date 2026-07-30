@@ -24,7 +24,7 @@ const developers = ref([
     role: 'Ingeniero del Conocimiento',
     description: 'Responsable del levantamiento de reglas taxonómicas y estructuración del motor de inferencia.',
     github: 'https://github.com/alemen-08',
-    portfolio: '#',
+    portfolio: 'https://alejandra-del-valle-portfolio.vercel.app/',
     photo: ''
   }
 ]);
