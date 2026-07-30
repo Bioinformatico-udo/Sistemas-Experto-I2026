@@ -82,8 +82,8 @@ class InicioPage:
 
         # Descripción general
         description_text = (
-            "Utilice este sistema para identificar y verificar especies de la familia Porcellanidae. Explore las secciones para obtener más información,\n"
-            "aprenda a usar la herramienta y consulte el glosario técnico. Estamos dedicados a la investigación marina."
+            "Utilice este sistema para identificar y verificar especies de la familia Porcellanidae. Explore las secciones para obtener más información,"
+            " aprenda a usar la herramienta y consulte el glosario técnico. Estamos dedicados a la investigación marina."
         )
         description_label = ctk.CTkLabel(self.frame, text=description_text, font=ctk.CTkFont(family="Segoe UI", size=14),
                                         text_color=COLOR_TEXT_SECONDARY, wraplength=800, justify="center")
