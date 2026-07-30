@@ -22,16 +22,16 @@ Hemos rediseñado la interfaz del asistente de identificación por IA para prese
    - **Enriquecimiento del Dataset**: Agregamos nuevos sinónimos en [`src/generador_dataset.py`](file:///c:/Users/Pc01/Desktop/Lazaro/Sistemas%20expertos/Sistemas-Experto-I2026/src/generador_dataset.py) para que la red neuronal los asocie correctamente:
      - Formas masivas: `"redondo"`, `"redonda"`, `"esférico"`, `"esférica"`, `"forma redonda"`.
      - Superficie de valles: `"surcos profundos"`, `"surcos"`, `"surcos sinuosos"`, `"canales"`.
-   - **Algoritmo de Superposición Semántica (Overlap Coefficient)**: Modificamos [`src/ui/pantalla_ia.py`](file:///c:/Users/Pc01/Desktop/Lazaro/Sistemas%20expertos/Sistemas-Experto-I2026/src/ui/pantalla_ia.py) para calcular la similitud buscando en el nombre común, científico y descripción, empleando normalización de acentos y lematización básica de plurales en español.
+    - **Algoritmo de Superposición Semántica (Overlap Coefficient)**: Modificamos el predictor backend para calcular la similitud buscando en el nombre común, científico y descripción, empleando normalización de acentos y lematización básica de plurales en español.
 
 ---
 
 ## Verificación
 
-* Ejecuta la aplicación utilizando la consola en su entorno virtual local:
+* Ejecuta la plataforma web iniciando el servidor unificado:
   ```powershell
-  .\venv\Scripts\python.exe -X utf8 -u -m src.main
+  python run_server.py
   ```
-* **Comportamiento**: Escribe cualquier descripción descriptiva, por ejemplo, `"Coral grande redondo con surcos profundos como cerebro, color gris, zona profunda"`. La interfaz te mostrará ahora correctamente a **Diploria labyrinthiformis** y **Pseudodiploria strigosa** (Coral Cerebro) con **67% de confianza** liderando el ranking, y la red neuronal clasificará de forma óptima las variables `p19 = masiva` y `p30 = valles`.
+* Abre en tu navegador [http://localhost:8000](http://localhost:8000) e ingresa al **Asistente IA**.
+* **Comportamiento**: Escribe cualquier descripción descriptiva, por ejemplo, `"Coral grande redondo con surcos profundos como cerebro, color gris, zona profunda"`. La interfaz web te mostrará correctamente a **Diploria labyrinthiformis** y **Pseudodiploria strigosa** (Coral Cerebro) con su porcentaje de confianza liderando el ranking.
 * **Animación de Carga por Pasos**: Al pulsar el botón de análisis, se muestra un stepper animado que simula las 4 etapas lógicas de clasificación (Lectura/Normalización, Red Neuronal Keras, Inferencia Semántica y Cómputo del Ranking) durante exactamente 2 segundos antes de desvelar el Top 5 de similitud.
-
