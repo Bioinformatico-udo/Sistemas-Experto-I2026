@@ -564,9 +564,6 @@ Este comportamiento es deliberado: un sistema experto honesto debe distinguir en
 
 ### 8.1 Sobre el proceso de desarrollo
 
-> ⚠️ **Personalizar esta subsección** con la experiencia real del grupo. Los puntos
-> técnicos siguientes son verificables en el repositorio.
-
 **La formalización del conocimiento fue más costosa que la programación.** Traducir una
 clave dicotómica impresa a reglas ejecutables obligó a explicitar decisiones que en el
 texto original quedan implícitas: qué carácter examinar primero, qué hacer cuando dos
