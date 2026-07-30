@@ -1,0 +1,335 @@
+{
+    "Ulva lactuca": {
+        "clase": "Chlorophyta",
+        "familia": "Ulvaceae",
+        "imagen": "ulva_lactuca.png",
+        "caracteristicas": {
+            "talo": "Laminar, membranoso, verde brillante, solitario o en mechones",
+            "tamaño_cm": "10–25 (hasta 70) alto",
+            "estructura": "Dos capas celulares de grosor; células redondas a poliédricas, 8–12 µm diám., 1 pirenoide",
+            "fijacion": "Disco de fijación pequeño e inconspicuo",
+            "habitat": "Sustratos duros, intermareal hasta 10 m; aguas eutrofizadas",
+            "clave_id": "Lámina ancha translúcida verde, dos capas celulares"
+        }
+    },
+    "Ulva intestinalis": {
+        "clase": "Chlorophyta",
+        "familia": "Ulvaceae",
+        "imagen": "Ulva_instestinalis.png",
+        "caracteristicas": {
+            "talo": "Tubular, hueco, flácido, verde amarillento, mechones gregarios",
+            "tamaño_cm": "5–30 (hasta 100) largo, 0.3–1.0 cm ancho",
+            "estructura": "Paredes de una sola célula de grosor; células no en filas longitudinales",
+            "fijacion": "Rizoides finos que forman almohadilla discoidal densa",
+            "habitat": "Raíces de mangle, madera, rocas, epífita; intermareal",
+            "clave_id": "Tubos huecos contorsionados, una célula de grosor"
+        }
+    },
+    "Ulva flexuosa": {
+        "clase": "Chlorophyta",
+        "familia": "Ulvaceae",
+        "imagen": "Ulva_flexuosa.png",
+        "caracteristicas": {
+            "talo": "Tubular a aplanado en cintas, flácido, verde claro, mechones",
+            "tamaño_cm": "5–15 (hasta 25) largo, 1–5 mm diám.",
+            "estructura": "Una capa celular; células en filas longitudinales y transversales",
+            "fijacion": "Rizoides formando almohadilla densamente entrelazada",
+            "habitat": "Aguas salobres, manglares, epífita; intermareal superior a 5 m",
+            "clave_id": "Tubos huecos estrechos o cintas aplanadas, una capa celular"
+        }
+    },
+    "Chaetomorpha antennina": {
+        "clase": "Chlorophyta",
+        "familia": "Cladophoraceae",
+        "imagen": "Chaetomorpha_antennina.png",
+        "caracteristicas": {
+            "talo": "Filamentos rígidos no ramificados, en parches densos, verde amarillento a verde oscuro",
+            "tamaño_cm": "7–10 (hasta 20) alto; células 450–550 µm diám.",
+            "estructura": "Células gigantes uniseriadas, visibles a simple vista; célula basal muy larga con constricciones anulares",
+            "fijacion": "Fuerte disco con rizoides cortos ramificados, estriaciones",
+            "habitat": "Rocas intermareal medio-superior, oleaje fuerte",
+            "clave_id": "Filamentos rígidos no ramificados de células gigantes en forma de barril"
+        }
+    },
+    "Cladophora albida": {
+        "clase": "Chlorophyta",
+        "familia": "Cladophoraceae",
+        "imagen": "Cladophora_albida.png",
+        "caracteristicas": {
+            "talo": "Montículos hemisféricos esponjosos (expuesto) o filamentos delicados ondulados (protegido), verde pálido a oscuro",
+            "tamaño_cm": "1–3 (expuesto) a 15 (protegido) alto",
+            "ramificacion": "Irregular a dicotómica abajo, unilateral arriba; máx. 1 rama por nudo",
+            "celulas": "Cilíndricas, 40–80 µm diám., ápices falciformes, estrechándose a 12 µm",
+            "fijacion": "Rizoides finos y cortos",
+            "habitat": "Sustratos duros, intermareal a 2 m",
+            "clave_id": "Ápices curvados en forma de hoz, ramificación escasa"
+        }
+    },
+    "Cladophora catenata": {
+        "clase": "Chlorophyta",
+        "familia": "Cladophoraceae",
+        "imagen": "Cladophora_catenata.png",
+        "caracteristicas": {
+            "talo": "Rígido, crujiente, pompón o bolas, verde hierba brillante a oscuro",
+            "tamaño_cm": "2–9 alto; células hasta 420 µm diám.",
+            "ramificacion": "Dicotómica irregular, máx. 1 rama por nudo",
+            "celulas": "Cilíndricas, paredes gruesas (5–13 µm), células apicales 160–275 µm diám.",
+            "fijacion": "Rizoides finos ramificados",
+            "habitat": "Intermarial bajo, expuesto, hasta 55 m profundidad",
+            "clave_id": "Células grandes, paredes gruesas, forma de pompón rígido"
+        }
+    },
+    "Cladophora vagabunda": {
+        "clase": "Chlorophyta",
+        "familia": "Cladophoraceae",
+        "imagen": "Cladophora_vagabunda.png",
+        "caracteristicas": {
+            "talo": "Suave, esponjoso, pompón (expuesto) o mechones largos (protegido), verde pálido a hierba",
+            "tamaño_cm": "Pompones 4 cm diám.; mechones 30 cm alto",
+            "ramificacion": "Pseudodicotómica abajo, unilateral arriba; 1–4 ramas por nudo",
+            "celulas": "Cilíndricas, 80–140 µm diám., ápices rectos arriba, falciformes abajo",
+            "fijacion": "Rizoides finos con conexiones hapteroides entre filamentos",
+            "habitat": "Rocas, guijarros, intermareal bajo a 2 m",
+            "clave_id": "Suave, muchas ramas por nudo, conexiones entre filamentos"
+        }
+    },
+    "Caulerpa racemosa": {
+        "clase": "Chlorophyta",
+        "familia": "Caulerpaceae",
+        "imagen": "Caulerpa_racemosa.png",
+        "caracteristicas": {
+            "talo": "Erecto o rastrero, con ramillas en forma de uva, verde uniforme o con punto central (ojo de gato)",
+            "tamaño_cm": "1–5 alto; ramillas 2–4 mm diám.",
+            "estructura": "Cenocítico; estolones 2–3 mm diám., rizoides de eje grueso",
+            "fijacion": "Rizoides robustos desde estolones",
+            "habitat": "Rocas con oleaje moderado, praderas de pastos; intermareal a 50 m",
+            "clave_id": "Ramillas esféricas agrupadas como uvas sobre estolones"
+        }
+    },
+    "Caulerpa sertularioides": {
+        "clase": "Chlorophyta",
+        "familia": "Caulerpaceae",
+        "imagen": "Caulerpa_sertularioides.png",
+        "caracteristicas": {
+            "talo": "Erecto, plumoso, verde claro, hasta 20 cm alto, 1–2 cm ancho",
+            "ramillas": "Opuestas, aciculares (aguja), 180–330 µm diám., 3–11 mm largo",
+            "estructura": "Cenocítico; estolones 2–2.5 mm diám., hasta 2 m largo",
+            "fijacion": "Rizoides gruesos desde estolones",
+            "habitat": "Aguas someras arenosas, manglares, pastos marinos; hasta 10 m",
+            "clave_id": "Forma de pluma delicada con ramillas opuestas finas"
+        }
+    },
+    "Gracilaria mammillaris": {
+        "clase": "Rhodophyta",
+        "familia": "Gracilariaceae",
+        "imagen": "Gracilaria_mammilaris.png",
+        "caracteristicas": {
+            "talo": "Gregario, carnoso, aplanado, rojo verdoso a rojo oscuro",
+            "tamaño_cm": "Hasta 9 (14) alto; ramas hasta 1 cm ancho, 0.5–1 mm grosor",
+            "ramificacion": "Subdicotómica a tricotómica",
+            "estructura": "Médula de células grandes 50–150 µm; corteza 1–3 capas",
+            "fijacion": "Estípite corto, disco de fijación inconspicuo",
+            "habitat": "Sustratos duros, protegido/oleaje moderado; 18–60 m profundidad",
+            "clave_id": "Aplanado, rojo-verdoso, ápices escotados (muesca)"
+        }
+    },
+    "Gracilaria cervicornis": {
+        "clase": "Rhodophyta",
+        "familia": "Gracilariaceae",
+        "imagen": "Gracilaria_cervicornis.png",
+        "caracteristicas": {
+            "talo": "Resistente, resbaladizo, marrón rojizo a verde amarillento, ramificación cervicorne distal",
+            "tamaño_cm": "Hasta 20 (40) alto; ramas parcialmente aplanadas 1–5 mm ancho",
+            "estructura": "Médula de células gruesas 175–300 µm; corteza 3–7 capas",
+            "fijacion": "Disco de fijación inconspicuo",
+            "habitat": "Guijarros, conchas, oleaje moderado; hasta 10 m",
+            "clave_id": "Base aplanada, ramillas cilíndricas, puntas en asta de ciervo"
+        }
+    },
+    "Gracilaria damaecornis": {
+        "clase": "Rhodophyta",
+        "familia": "Gracilariaceae",
+        "imagen": "Gracilaria_damaecornis.png",
+        "caracteristicas": {
+            "talo": "Arbustivo, tenaz, coriáceo, rojo rosado, dicotómico",
+            "tamaño_cm": "Hasta 15 alto; ramas cilíndricas a ligeramente aplanadas 1.5–4 mm diám.",
+            "estructura": "Médula células hasta 200 µm, pared delgada; corteza pequeña pigmentada",
+            "fijacion": "Disco de fijación inconspicuo",
+            "habitat": "Fragmentos de coral, rocas; hasta 10 m",
+            "clave_id": "Dicotómico, cilíndrico, ápices romos, rosáceo"
+        }
+    },
+    "Gracilaria cornea": {
+        "clase": "Rhodophyta",
+        "familia": "Gracilariaceae",
+        "imagen": "Gracilaria_cornea.png",
+        "caracteristicas": {
+            "talo": "Arbustivo, cartilaginoso muy firme, pardo rojizo a purpúreo, ramificación irregular",
+            "ramas": "Exclusivamente cilíndricas, puntas agudas",
+            "estructura": "Pseudoparenquimatoso; médula incolora grande, corteza pequeña pigmentada",
+            "fijacion": "Disco de fijación discoidal; frecuente en arribazón",
+            "habitat": "Mixto arenoso-rocoso, somero; común en playa",
+            "clave_id": "Cilíndrico, rígido, puntas agudas, sin láminas"
+        }
+    },
+    "Hypnea musciformis": {
+        "clase": "Rhodophyta",
+        "familia": "Hypneaceae",
+        "imagen": "Hypnea_musciformis.png",
+        "caracteristicas": {
+            "talo": "Alambreado, enredado, cilíndrico, rojo anaranjado a violáceo (verdoso con luz intensa)",
+            "tamaño_cm": "Hasta 20 (50) largo; ramas 0.5–2.0 mm diám.",
+            "ramificacion": "Irregular; ramillas laterales cortas en forma de espolón; ápices principales transformados en zarcillos anchos aplanados",
+            "fijacion": "Disco pequeño; principalmente epífito usando zarcillos apicales",
+            "habitat": "Epífito sobre Sargassum, Gracilaria; también en sustratos duros; hasta 26 m",
+            "clave_id": "Alambrado, con ramillas espinosas y ganchos apicales enroscados"
+        }
+    },
+    "Centroceras clavulatum": {
+        "clase": "Rhodophyta",
+        "familia": "Ceramiaceae",
+        "imagen": "Centroceras_clavulatum.png",
+        "caracteristicas": {
+            "talo": "Filamentoso, mechones sueltos, marrón rojizo oscuro; ápices en pinza (forcipados)",
+            "tamaño_cm": "Mechones hasta 20 cm; ramas 50–150 µm diám.",
+            "segmentos": "Nudos verticilados con espinas (caducas), entrenudos con una capa de células corticantes rectangulares",
+            "fijacion": "Disco de fijación discoidal",
+            "habitat": "Rocas, cuerdas, raíces de mangle; intermareal a 5m de profundidad",
+            "clave_id": "Puntas en forma de pinza, bandas oscuras/claras en los segmentos"
+        }
+    },
+    "Bryothamnion triquetrum": {
+        "clase": "Rhodophyta",
+        "familia": "Rhodomelaceae",
+        "imagen": "Bryothamnion_triquetrum.png",
+        "caracteristicas": {
+            "talo": "Grueso, tenaz, arbustivo, rojo marrón oscuro; ramificación alterna irregular",
+            "tamaño_cm": "Hasta 25 alto",
+            "ramillas": "Rígidas, en tres filas verticales → sección triangular, a menudo torcidas",
+            "estructura": "7–9 células pericentrales, corticadas; ápices incurvados y bifurcados",
+            "fijacion": "Disco de fijación",
+            "habitat": "Rocas expuestas; 4–20m de profundidad",
+            "clave_id": "Sección transversal triangular con tres hileras de ramillas"
+        }
+    },
+    "Laurentia obtusa": {
+        "clase": "Rhodophyta",
+        "familia": "Rhodomelaceae",
+        "imagen": "Laurentia_obtusa.png",
+        "caracteristicas": {
+            "talo": "Compacto, verde oscuro a oliva con puntas granate; ramificación alterna, densa arriba",
+            "tamaño_cm": "8–15 (26) alto; ramas 0.7–1.8 mm diám. proximal",
+            "ramillas": "Espiraladas, claviformes, 0.5–0.8 mm diám., con depresión terminal y filamentos finos",
+            "especial": "Presencia de 'cuerpos en cereza' incoloros en fresco",
+            "habitat": "Someros batidos por oleaje, corrientes fuertes; hasta 8 m",
+            "clave_id": "Verde oliva con puntas granate, ramillas en maza, cuerpos en cereza"
+        }
+    },
+    "Laurentia papillosa": {
+        "clase": "Rhodophyta",
+        "familia": "Rhodomelaceae",
+        "imagen": "Laurentia_papillosa.png",
+        "caracteristicas": {
+            "talo": "Gregario, cartilaginoso, verde purpúreo a marrón oliva; ramificación alterna a irregular",
+            "tamaño_cm": "5–8 (20) alto; ramas 1–2 mm diám. abajo, cubiertas densamente por ramillas cortas verrucosas",
+            "ramillas": "Resistentes, nudosas, claviformes, 0.5–2.5 mm largo, con depresión terminal",
+            "estructura": "Médula 100–150 µm; corticales con paredes gruesas, conexiones de fovea",
+            "habitat": "Superficies duras, oleaje moderado; intermareal a 7 m",
+            "clave_id": "Aspecto verrugoso por ramillas densas, cortas y gruesas"
+        }
+    },
+    "Sargassum fluitans": {
+        "clase": "Phaeophyceae",
+        "familia": "Sargassaceae",
+        "imagen": "Sargassum_fluitans.png",
+        "caracteristicas": {
+            "talo": "Pelágico, libre, arbustivo, pardo dorado; ejes lisos sin eje dominante",
+            "tamaño_cm": "Hasta 1 m largo",
+            "hojas": "Estrechas, 3–8 mm ancho, márgenes dentados, nervadura central prominente",
+            "aerocistos": "Redondos a ovalados, 3–6 mm, sin espina terminal, 1‑2 en base de hoja",
+            "fijacion": "Ausente (pelágico); criptostomas escasos/ausentes",
+            "habitat": "Oceánico, forma balsas; arribazón en playas arenosas (Mar de los Sargazos)",
+            "clave_id": "Alga parda pelágica con hojas estrechas dentadas y ejes lisos"
+        }
+    },
+    "Sargassum natans": {
+        "clase": "Phaeophyceae",
+        "familia": "Sargassaceae",
+        "imagen": "Sargassum_natans.png",
+        "caracteristicas": {
+            "talo": "Pelágico, pequeños cúmulos hasta 50 cm; pardo, ejes alambreados, sin eje dominante",
+            "hojas": "Alargadas, 1–4 mm ancho, groseramente dentadas",
+            "aerocistos": "Esféricos, 3–6 mm, con pequeña espina apical o proyección foliácea, pedúnculos 3–5(10) mm",
+            "fijacion": "Ausente (pelágico); criptostomas ausentes",
+            "habitat": "Pelágico, arribazón (Mar de los Sargazos)",
+            "clave_id": "Pelágico, ejes alambreados, aerocistos con espina apical"
+        }
+    },
+    "Sargassum polyceratium": {
+        "clase": "Phaeophyceae",
+        "familia": "Sargassaceae",
+        "imagen": "Sargassum_polyceratium.png",
+        "caracteristicas": {
+            "talo": "Bentónico, apiñado, coriáceo, marrón; ejes rugosos con pequeñas espinas",
+            "tamaño_cm": "Hasta 1 m alto",
+            "hojas": "Muy apiñadas, 3–8 mm ancho, profundamente dentadas, nervadura visible",
+            "aerocistos": "Esféricos, 3–5 mm, cerca de la base foliar, pedúnculo corto",
+            "fijacion": "Fuerte disco de fijación; abundantes criptostomas",
+            "habitat": "Rocas detrás de la cresta arrecifal; intermareal bajo a 14 m",
+            "clave_id": "Bentónico, ejes rugosos, hojas muy apiñadas y dentadas"
+        }
+    },
+    "Dictyota cervicornis": {
+        "clase": "Phaeophyceae",
+        "familia": "Dictyotaceae",
+        "imagen": "Dictyota_cervicornis.png",
+        "caracteristicas": {
+            "talo": "Arbustivo, marrón oliva; ramificación cervicorne, ramas aplanadas",
+            "tamaño_cm": "Hasta 20 alto; ramas 1–2.5 mm ancho, 180–220 µm grosor",
+            "estructura": "Una capa medular, células rectangulares; una capa cortical pequeña",
+            "fijacion": "Disco fibroso en tapete; rizoides marginales comunes",
+            "habitat": "Aguas someras arenosas, fijado a rocas o conchas; hasta 3 m de profundidad",
+            "clave_id": "Arbustivo marrón oliva, ramificación cervicorne aplanada"
+        }
+    },
+    "Dictyota dichotoma": {
+        "clase": "Phaeophyceae",
+        "familia": "Dictyotaceae",
+        "imagen": "Dictyota_dichotoma.png",
+        "caracteristicas": {
+            "talo": "Erecto, flexible, cintas, pardo-amarillento a verde oliva; iridiscencia azul-verdosa en vivo",
+            "tamaño_cm": "10–25 alto; ramas 2–12 mm ancho, 100–150 µm grosor",
+            "ramificacion": "Dicotómica regular, 15–45°; ápices obtusos, bífidos",
+            "estructura": "Una capa medular (células gigantes visibles por transparencia); corticales pequeñas",
+            "fijacion": "Tapete fibroso de rizoides pluricelulares",
+            "habitat": "Charcos intermareales, infralitoral a 20 m; epilítico o epífito",
+            "clave_id": "Cintas flexibles pardo-amarillentas, ramificación dicotómica regular"
+        }
+    },
+    "Padina sanctae-crucis": {
+        "clase": "Phaeophyceae",
+        "familia": "Dictyotaceae",
+        "imagen": "Padina_sanctae_crucis.png",
+        "caracteristicas": {
+            "talo": "Abanico, foliáceo, hasta 15 cm; cara superior blanco tiza con bandas marrón claro, inferior no calcificada o ligeramente",
+            "tamaño_cm": "Láminas hasta 9 (25) cm ancho",
+            "estructura": "Dos capas celulares; márgenes involutos",
+            "pelos": "Bandas concéntricas de pelos en ambas superficies, separadas 2–3 mm",
+            "fijacion": "Base rizoidal fieltrada",
+            "habitat": "Planicies arrecifales, rocas, conchas, coral muerto; hasta 5 m",
+            "clave_id": "Forma de abanico, cara superior blanco tiza con bandas, márgenes involutos"
+        }
+    },
+    "Padina gymnospora": {
+        "clase": "Phaeophyceae",
+        "familia": "Dictyotaceae",
+        "imagen": "Padina_gymnospora.png",
+        "caracteristicas": {
+            "talo": "Abanico, listonado, pardo claro con bandas concéntricas notorias",
+            "calcificacion": "Ligeramente calcificado; márgenes involutos",
+            "fijacion": "Finos filamentos rizoidales entrelazados",
+            "habitat": "Sustrato rocoso plano, piedras calcáreas, fondos someros resguardados",
+            "clave_id": "Abanico pardo claro, bandas concéntricas notorias, ligeramente calcificado"
+        }
+    }
+}
