@@ -198,5 +198,11 @@ La combinación con **Keras + Ponderación Semántica** resolvió esto permitien
 
 ## 📚 Referencias Bibliográficas
 
+* **Alcolado, P. M. (2004)**. *Manual de capacitación para el monitoreo voluntario de alerta temprana en arrecifes coralinos*. Ministerio de Ciencia, Tecnología y Medio Ambiente; Instituto de Oceanología.
+* **Alcolado, P. M. (2014)**. Conocimientos básicos para un monitoreo voluntario rápido de alerta temprana en arrecifes coralinos. En A. C. Hernández-Zanuy & P. M. Alcolado (Eds.), *Métodos para el estudio de la biodiversidad en ecosistemas marinos tropicales de Iberoamérica para la adaptación al cambio climático* (pp. 122-185). Instituto de Oceanología.
+* **Pérez-Castresana, G., Villamizar, E., Varela, R., & Fuentes, Y. (2014)**. Descripción preliminar del fitoplancton en seis arrecifes coralinos del Parque Nacional Archipiélago de Los Roques. *Acta Biológica Venezuelica*, 34(2), 293-309.
+* **Prieto, M. A. (1972)**. *Los arrecifes coralinos del atolón Los Roques*. Centro Submarinista CESUSIBO; Universidad Simón Bolívar; Universidad Central de Venezuela.
+* **Villamizar, E., Yranzo, A., González, M., Herrera, A. T., Pérez, J., & Camissotti, H. (2014)**. Diversidad y condición de salud de corales pétreos en algunos arrecifes del Parque Nacional Archipiélago Los Roques, Venezuela. *Acta Biológica Venezuelica*, 34(2), 257-279.
 
 ### Como plus: portafolio personales de cada estudiante
+
