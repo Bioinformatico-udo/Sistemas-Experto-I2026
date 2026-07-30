@@ -61,18 +61,23 @@ El motor de inferencia está desarrollado en Python 3.11+ aplicando la metodolog
 ### Diagrama de Arquitectura del Sistema
 
 ```mermaid
-flowchart TD
-    subgraph Frontend["Interfaz Web (Vue.js 3 + Vite)"]
-        UI["HomeView / DiagnosisView"] -->|1. Selección de Hechos Morfológicos| STORE["Pinia Store (diagnosisStore)"]
-        STORE -->|2. Petición HTTP REST| API_CLIENT["Servicio API (api.js)"]
-        RESULT_VIEW["ResultView (Ficha + Explicabilidad)"] <--|5. Respuesta con Especie y Justificación| STORE
+graph TD
+    subgraph Frontend["Capa de Presentación - Frontend Vue.js 3"]
+        A["Vistas UI: HomeView / DiagnosisView / ResultView"] -->|1. Eventos del usuario| B["Estado Global Pinia: diagnosisStore"]
+        B -->|2. Peticiones HTTP| C["Servicios API: api.js / speciesApi.js"]
     end
 
-    subgraph Backend["Backend FastAPI (Arquitectura Hexagonal)"]
-        API_CLIENT -->|3. Controlador REST (Adapters)| CTRL["Inference Router"]
-        CTRL -->|4. Ejecución de Inferencia| ENGINE["Motor Forward Chaining (Domain)"]
-        ENGINE <-->|Consulta de Reglas y Especies| KB["Base de Conocimientos (JSON)"]
+    subgraph Backend["Capa de Aplicación - Backend FastAPI"]
+        C -->|3. Endpoint REST| D["Adaptadores Primarios: Controladores HTTP"]
+        D -->|4. Llamada a Puertos| E["Puertos de Dominio: InferencePort"]
+        E -->|5. Evaluación de Reglas| F["Motor de Inferencia: Forward Chaining Engine"]
+        F <-->|6. Consulta y Persistencia| G["Adaptadores Secundarios: JSON Repositories"]
+        G <-->|Lectura y Escritura| H["Base de Conocimientos: rules.json y species.json"]
     end
+
+    F -->|7. Diagnóstico y Explicabilidad| C
+    C -->|8. Actualización de Estado| B
+    B -->|9. Renderizado de Resultados| A
 ```
 
 ### Recursos Educativos
