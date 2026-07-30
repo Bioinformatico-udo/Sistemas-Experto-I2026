@@ -50,6 +50,19 @@ class BaseConocimiento:
         """Retorna la lista de todas las especies registradas."""
         return list(self.especies.values())
 
+    def existe_especie(self, esp_id_o_nombre):
+        """Verifica si una especie ya existe buscando por ID o nombre científico."""
+        if not esp_id_o_nombre:
+            return False
+        busqueda = str(esp_id_o_nombre).strip().lower().replace(" ", "_")
+        if busqueda in self.especies:
+            return True
+        for esp in self.especies.values():
+            nombre_c = esp.get("nombre_cientifico", "").strip().lower().replace(" ", "_")
+            if nombre_c == busqueda:
+                return True
+        return False
+
     def agregar_especie(self, especie_dict):
         """Agrega una nueva especie y guarda el archivo especies.json actualizado."""
         esp_id = especie_dict.get("id")

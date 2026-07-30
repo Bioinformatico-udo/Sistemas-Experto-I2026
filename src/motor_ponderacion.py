@@ -7,6 +7,7 @@ Unificado como único motor de ranking del sistema, con calibración de escala d
 """
 
 import json
+import math
 import re
 from pathlib import Path
 
@@ -431,12 +432,15 @@ class PonderadorCaracteristicas:
                 elif categoria == "GENERICO":
                     score += peso_acumulado * 0.005
 
+            score_norm = min(1.0, round(math.tanh(score / 1.2), 4)) if score > 0 else 0.0
+
             scores.append({
                 "id": especie.get("id"),
                 "nombre_cientifico": especie.get("nombre_cientifico"),
                 "nombre_comun": especie.get("nombre_comun"),
                 "familia": especie.get("familia"),
-                "score": round(score, 4),
+                "score": score_norm,
+                "raw_score": round(score, 4),
             })
 
         scores.sort(key=lambda x: x["score"], reverse=True)
@@ -447,9 +451,9 @@ class PonderadorCaracteristicas:
         especies = self.puntuar_especies(evidencias, max_resultados=5)
         score_top = especies[0]["score"] if especies else 0.0
 
-        if especies and score_top > 0.4:
+        if especies and score_top >= 0.65:
             confianza = "ALTA"
-        elif especies and score_top > 0.15:
+        elif especies and score_top >= 0.35:
             confianza = "MEDIA"
         else:
             confianza = "BAJA"

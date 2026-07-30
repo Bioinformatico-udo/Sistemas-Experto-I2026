@@ -721,19 +721,5 @@
       "numero_septos": 24,
       "tipo_esqueleto": "calcareo_compacto"
     }
-  },
-  {
-    "id": "acropora_test_species",
-    "nombre_cientifico": "Acropora test_species",
-    "nombre_comun": "Coral Test",
-    "familia": "Acroporidae",
-    "orden": "Scleractinia",
-    "tipo": "Escleractinio",
-    "descripcion": "Especie de prueba unitaria",
-    "habitat": "Los Roques Test",
-    "caracteristicas": {
-      "color": "marrón",
-      "forma": "ramificada"
-    }
   }
 ]

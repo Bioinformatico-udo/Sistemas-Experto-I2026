@@ -31,6 +31,7 @@ Su utilidad abarca tanto el ámbito científico/ecológico como el **educativo**
 - 📋 **Cuestionario Dicotómico Guiado (2 Columnas)**: Preguntas paso a paso con filtrado en tiempo real del listado de candidatos en pequeñas tarjetas horizontales y tarjeta de resultado final con recuadro fotográfico `110x110px`.
 - 🤖 **Diagnóstico por Lenguaje Natural con IA**: Procesamiento de descripciones con sugerencias de 1 sola línea (`+ marrón`, `+ ramificada`, etc.) y modal de **Explicabilidad Algorítmica (XAI)**.
 - 🪸 **Catálogo de Especies & Gestión CRUD**: Carga procedimental por lotes con esqueletos de carga (*shimmers*), modal detallado en 2 columnas montado via `createPortal` y formulario modal de **Alta de Nueva Especie** (`POST /api/especies`) con almacenamiento de imágenes.
+- 🔐 **Pantalla de Login con Diseño Liquid Glass**: Inicio de sesión con credenciales mockeadas, panel de branding animado y transición suave a la aplicación principal.
 
 ## 🏗️ Arquitectura del Sistema
 
@@ -131,6 +132,17 @@ python run_server.py
 * 📚 **Documentación API (Swagger UI)**: Consulta [http://localhost:8000/docs](http://localhost:8000/docs).
 
 ## 🕹️ Guía de Uso del Sistema
+
+### 🔐 Credenciales de Acceso
+
+Al abrir la plataforma web, se mostrará una pantalla de inicio de sesión. Utilice las siguientes credenciales:
+
+| Campo | Valor |
+|---|---|
+| **Usuario** | `admin` |
+| **Contraseña** | `admin123` |
+
+### Funcionalidades Principales
 
 1. **Diagnóstico por Cuestionario Guiado**:
 * Dirígete a la pestaña **Cuestionario**

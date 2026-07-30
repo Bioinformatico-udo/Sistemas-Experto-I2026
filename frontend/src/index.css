@@ -642,3 +642,121 @@ body::after {
     opacity: 0;
   }
 }
+
+/* ═══════════════════════════════════════════════════════
+   LOGIN SCREEN
+   ═══════════════════════════════════════════════════════ */
+
+.login-screen {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--bg-deep);
+  position: relative;
+  overflow: hidden;
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+}
+
+.login-fade-out {
+  opacity: 0;
+  transform: scale(0.98);
+  pointer-events: none;
+}
+
+/* ── Brand Panel (Left) ── */
+.login-brand-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 48px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(165deg, rgba(22, 27, 34, 0.95) 0%, rgba(13, 17, 23, 1) 100%);
+  border-right: 1px solid var(--liquid-border);
+}
+
+.login-brand-content {
+  position: relative;
+  z-index: 2;
+  max-width: 420px;
+}
+
+/* Ambient orbs for brand panel */
+.login-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.login-orb-1 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(62, 207, 180, 0.2) 0%, transparent 70%);
+  top: -15%;
+  left: -10%;
+  animation: floatOrb 18s ease-in-out infinite alternate;
+}
+
+.login-orb-2 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(91, 156, 246, 0.15) 0%, transparent 70%);
+  bottom: -10%;
+  right: -5%;
+  animation: floatOrb 22s ease-in-out infinite alternate-reverse;
+}
+
+.login-orb-3 {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(255, 107, 157, 0.1) 0%, transparent 70%);
+  top: 50%;
+  right: 15%;
+  animation: floatOrb 15s ease-in-out infinite alternate;
+}
+
+/* ── Form Panel (Right) ── */
+.login-form-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 48px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(195deg, rgba(22, 27, 34, 0.6) 0%, rgba(0, 0, 0, 0.95) 100%);
+}
+
+.login-form-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .login-screen {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .login-brand-panel {
+    padding: 36px 24px;
+    border-right: none;
+    border-bottom: 1px solid var(--liquid-border);
+  }
+
+  .login-brand-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login-form-panel {
+    padding: 36px 24px;
+  }
+}

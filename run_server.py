@@ -2,6 +2,12 @@ import uvicorn
 import os
 import sys
 
+if sys.platform.startswith('win'):
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
+
 if __name__ == "__main__":
     print("=" * 60)
     print("🪸 CORAL EXPERT SYSTEM - SERVIDOR UNIFICADO (FASTAPI + REACT)")

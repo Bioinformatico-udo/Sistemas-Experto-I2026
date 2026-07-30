@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import LoginScreen from './components/LoginScreen';
 import Cuestionario from './components/Cuestionario';
 import DiagnosticoIA from './components/DiagnosticoIA';
 import CatalogoEspecies from './components/CatalogoEspecies';
@@ -7,7 +8,7 @@ import logoImg from './assets/logo.png';
 import {
   Waves, Sparkles, ClipboardList, MessageSquareText,
   BookOpen, Compass, MapPin, Users, Shell,
-  Brain, GitFork, Cpu, Scale, ArrowRight, ChevronRight
+  Brain, GitFork, Cpu, Scale, ArrowRight, ChevronRight, LogOut
 } from 'lucide-react';
 
 const API_BASE = 'http://localhost:8000/api';
@@ -234,7 +235,13 @@ function PantallaInicio({ onNavigate }) {
 
 /* ─── App Principal ─── */
 export default function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [tabActiva, setTabActiva] = useState('inicio');
+
+  // Si no está logueado, mostrar la pantalla de Login
+  if (!isLoggedIn) {
+    return <LoginScreen onLoginSuccess={() => setIsLoggedIn(true)} />;
+  }
 
   const navItems = [
     { id: 'inicio', label: 'Inicio' },
@@ -301,6 +308,21 @@ export default function App() {
               </button>
             ))}
           </nav>
+
+          {/* Cerrar Sesión */}
+          <button
+            onClick={() => { setIsLoggedIn(false); setTabActiva('inicio'); }}
+            className="btn-outline"
+            style={{
+              padding: '8px 16px',
+              fontSize: '0.82rem',
+              gap: '6px',
+              color: 'var(--text-secondary)',
+              borderColor: 'rgba(255, 107, 157, 0.25)'
+            }}
+          >
+            <LogOut size={14} /> Cerrar Sesión
+          </button>
         </div>
       </header>
 

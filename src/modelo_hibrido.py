@@ -15,15 +15,25 @@ if __name__ == "__main__" and __package__ is None:
     __package__ = "src"
 
 import json
-import numpy as np
-import pandas as pd
-import pickle
 import os
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder
-import tensorflow as tf
-from tensorflow import keras
-from tensorflow.keras import layers
+import pickle
+
+try:
+    import numpy as np
+    import pandas as pd
+    from sklearn.model_selection import train_test_split
+    from sklearn.preprocessing import LabelEncoder
+    import tensorflow as tf
+    from tensorflow import keras
+    from tensorflow.keras import layers
+    HAS_TF = True
+except ImportError:
+    np = None
+    pd = None
+    tf = None
+    keras = None
+    HAS_TF = False
+
 from .motor_ponderacion import PonderadorCaracteristicas
 
 # ─── CONFIGURACIÓN ───
@@ -245,21 +255,31 @@ class PredictorCorales:
         self.label_encoders = {}
         self.ponderador = PonderadorCaracteristicas()
         
-        if os.path.exists(RUTA_MODELO):
-            self.modelo = keras.models.load_model(RUTA_MODELO)
+        if HAS_TF and os.path.exists(RUTA_MODELO):
+            try:
+                self.modelo = keras.models.load_model(RUTA_MODELO)
+            except Exception as e:
+                print(f"Advertencia al cargar modelo Keras: {e}")
+                self.modelo = None
         if os.path.exists(RUTA_TOKENIZER):
-            with open(RUTA_TOKENIZER, "rb") as f:
-                self.tokenizer = pickle.load(f)
+            try:
+                with open(RUTA_TOKENIZER, "rb") as f:
+                    self.tokenizer = pickle.load(f)
+            except Exception:
+                self.tokenizer = None
         if os.path.exists(RUTA_ENCODERS):
-            with open(RUTA_ENCODERS, "rb") as f:
-                self.label_encoders = pickle.load(f)
+            try:
+                with open(RUTA_ENCODERS, "rb") as f:
+                    self.label_encoders = pickle.load(f)
+            except Exception:
+                self.label_encoders = {}
     
     def esta_cargado(self):
-        return self.modelo is not None and self.tokenizer is not None
+        return HAS_TF and self.modelo is not None and self.tokenizer is not None
     
-    def predecir_caracteristicas(self, texto):
+    def predecir_caracteristicas(self, texto, min_confidence=0.55):
         if not self.esta_cargado():
-            return {"success": False, "error": "Modelo no cargado."}
+            return {"success": False, "error": "Modelo no cargado.", "respuestas": {}, "baja_confianza": True, "confianza_promedio": 0.0}
         
         secuencia = self.tokenizer.texts_to_sequences([texto])
         secuencia_padded = keras.preprocessing.sequence.pad_sequences(
@@ -280,19 +300,21 @@ class PredictorCorales:
                 conf = max(prob, 1.0 - prob)
                 valor_idx = int(prob > 0.5)
             else:
-                conf = np.max(pred)
+                conf = float(np.max(pred))
                 valor_idx = int(np.argmax(pred))
             
             valor = encoder.classes_[valor_idx]
             
-            if valor == "desconocido":
+            # Aplicar umbral de confianza para descartar adivinanzas con baja probabilidad
+            if valor == "desconocido" or conf < min_confidence:
                 confianzas.append(0.0)
             else:
                 confianzas.append(conf)
                 respuestas[pregunta_id] = valor
         
-        confianza_promedio = float(np.mean(confianzas)) if confianzas else 0.0
-        baja_confianza = (confianza_promedio < 0.5) or (len(respuestas) < 3)
+        confianzas_validas = [c for c in confianzas if c > 0]
+        confianza_promedio = float(np.mean(confianzas_validas)) if confianzas_validas else 0.0
+        baja_confianza = (confianza_promedio < min_confidence) or (len(respuestas) < 2)
         
         return {
             "success": True,
@@ -305,15 +327,15 @@ class PredictorCorales:
     def predecir_con_ponderacion(self, texto: str) -> dict:
         """
         Predicción combinada: red neuronal (características) + ponderación taxonómica (ranking).
+        Fórmula híbrida: Score = (Score Text NLP * 0.5) + (Score Coincidencia Red * 0.5)
         """
         resultado_red = self.predecir_caracteristicas(texto)
         respuestas_predichas = resultado_red.get("respuestas", {})
         
-        # Obtener las 5 especies sugeridas por el ponderador taxonómico unificado
+        # Obtener las especies sugeridas por el ponderador taxonómico unificado
         diagnostico = self.ponderador.diagnosticar(texto)
         top_especies = diagnostico.get("top_especies", [])
         
-        # Mapear cada elemento al formato que espera la interfaz Flet
         especies_db = self.ponderador.especies
         dict_especies = {e["id"]: e for e in especies_db}
         
@@ -332,34 +354,50 @@ class PredictorCorales:
             if not esp:
                 continue
                 
-            # Construir desglose de coincidencias para la UI
             respuestas_esp = {}
             if caracteristicas_a_respuestas:
                 respuestas_esp = caracteristicas_a_respuestas(esp_id, esp.get("caracteristicas", {}))
                 
             coincidencias = {}
+            matches_count = 0
+            total_evaluados = 0
             claves_ranking = ["p1", "p4", "p6", "p7", "p10", "p11", "p19", "p20", "p22", "p30"]
+            
             for k in claves_ranking:
                 v_usuario = respuestas_predichas.get(k)
                 if v_usuario and v_usuario != "desconocido":
                     v_esp = respuestas_esp.get(k)
                     is_match = (v_esp == v_usuario)
+                    if is_match:
+                        matches_count += 1
+                    total_evaluados += 1
                     coincidencias[k] = {
                         "match": is_match,
                         "predicho": v_usuario,
                         "especie": v_esp
                     }
-                    
+            
+            text_score = float(item.get("score", 0.0))
+            tax_score = (matches_count / total_evaluados) if total_evaluados > 0 else text_score
+            
+            # Score híbrido balanceado (50% NLP + 50% Red Neuronal)
+            if total_evaluados > 0:
+                score_hibrido = round(text_score * 0.5 + tax_score * 0.5, 4)
+            else:
+                score_hibrido = text_score
+
             ranking.append({
                 "especie": esp,
-                "score": item["score"],
-                "tax_score": item["score"],
-                "text_score": item["score"],
+                "score": min(1.0, score_hibrido),
+                "tax_score": round(tax_score, 4),
+                "text_score": round(text_score, 4),
                 "coincidencias": coincidencias
             })
             
+        ranking.sort(key=lambda x: x["score"], reverse=True)
+            
         return {
-            "success": resultado_red.get("success", False),
+            "success": True if ranking else resultado_red.get("success", False),
             "respuestas_red": respuestas_predichas,
             "baja_confianza": resultado_red.get("baja_confianza", True),
             "confianza_ponderacion": diagnostico.get("confianza", "BAJA"),

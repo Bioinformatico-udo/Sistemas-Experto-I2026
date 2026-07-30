@@ -123,7 +123,7 @@ def diagnostico_ia(req: DiagnosticoIARequest):
     
     for idx, item in enumerate(ranking_raw[:5]):
         esp_info = item.get("especie", {})
-        score = item.get("score", 0.0)
+        score_val = min(1.0, max(0.0, float(item.get("score", 0.0))))
         
         # Extraer coincidencias clave para la visualización UI
         coincidencias_dict = item.get("coincidencias", {})
@@ -137,9 +137,9 @@ def diagnostico_ia(req: DiagnosticoIARequest):
             nombre_comun=esp_info.get("nombre_comun", "Desconocido"),
             familia=esp_info.get("familia", "Desconocido"),
             orden=esp_info.get("orden", "Scleractinia"),
-            score_final=round(float(score), 4),
-            similitud_ponderada=round(float(score * 100), 2),
-            coincidencia_arbol=100.0 if (idx == 0 and resultado_inferencia.get("success")) else round(float(score * 80), 2),
+            score_final=round(score_val, 4),
+            similitud_ponderada=round(score_val * 100, 2),
+            coincidencia_arbol=100.0 if (idx == 0 and resultado_inferencia.get("success")) else round(score_val * 100, 2),
             coincidencias_clave=coincidencias_clave
         ))
         
@@ -185,9 +185,17 @@ def listar_especies():
 
 @app.post("/api/especies")
 def crear_especie(req: EspecieCreateRequest):
-    """Crea una nueva especie, la guarda en especies.json y guarda opcionalmente la imagen."""
+    """Crea una nueva especie, valida duplicados, la guarda en especies.json y recarga el Ponderador NLP."""
     try:
         esp_id = req.nombre_cientifico.strip().lower().replace(" ", "_")
+        
+        # Validación de duplicados
+        if base_conocimiento.existe_especie(esp_id):
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=f"La especie '{req.nombre_cientifico.strip()}' ya se encuentra registrada en el sistema."
+            )
+
         nueva_especie = {
             "id": esp_id,
             "nombre_cientifico": req.nombre_cientifico.strip(),
@@ -216,11 +224,18 @@ def crear_especie(req: EspecieCreateRequest):
                 print(f"Error guardando imagen de {esp_id}: {img_err}")
 
         especie_guardada = base_conocimiento.agregar_especie(nueva_especie)
+        
+        # Hot-reload del Ponderador NLP para actualizar la base de conocimientos en caliente
+        if hasattr(predictor_corales, 'ponderador') and predictor_corales.ponderador:
+            predictor_corales.ponderador._cargar_especies()
+
         return {
             "success": True,
             "mensaje": f"Especie '{nueva_especie['nombre_cientifico']}' agregada exitosamente.",
             "especie": especie_guardada
         }
+    except HTTPException:
+        raise
     except Exception as e:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
