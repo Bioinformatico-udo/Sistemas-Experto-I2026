@@ -15,6 +15,11 @@ class JSONKnowledgeRepository(BaseKnowledgeRepository):
         with open(filepath, 'r', encoding='utf-8') as f:
             return json.load(f)
 
+    def _save_json(self, filepath: str, data: Any) -> None:
+        os.makedirs(os.path.dirname(os.path.abspath(filepath)), exist_ok=True)
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+
     def get_rules(self) -> List[Rule]:
         data = self._load_json(self.rules_filepath)
         return [Rule(**r) for r in data.get("rules", [])]
@@ -26,3 +31,17 @@ class JSONKnowledgeRepository(BaseKnowledgeRepository):
     def get_facts_metadata(self) -> List[Dict[str, Any]]:
         data = self._load_json(self.rules_filepath)
         return data.get("questions", [])
+
+    def save_species(self, species_list: List[Species]) -> None:
+        data = [s.dict() for s in species_list]
+        self._save_json(self.species_filepath, data)
+
+    def save_facts_metadata(self, metadata: List[Dict[str, Any]]) -> None:
+        data = self._load_json(self.rules_filepath) if os.path.exists(self.rules_filepath) else {"questions": [], "rules": []}
+        data["questions"] = metadata
+        self._save_json(self.rules_filepath, data)
+
+    def save_rules(self, rules: List[Rule]) -> None:
+        data = self._load_json(self.rules_filepath) if os.path.exists(self.rules_filepath) else {"questions": [], "rules": []}
+        data["rules"] = [r.dict() for r in rules]
+        self._save_json(self.rules_filepath, data)

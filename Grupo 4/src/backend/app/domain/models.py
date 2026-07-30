@@ -49,11 +49,12 @@ class Rule(BaseModel):
 class Species(BaseModel):
     id: str
     name: str
-    description: str
-    habitat: str
+    description: str = ""
+    habitat: str = ""
     field_characteristics: List[str] = Field(default_factory=list)
-    image_url: str
+    image_url: str = ""
     attributes: Dict[str, Any] = Field(default_factory=dict)
+    taxonomy: Dict[str, str] = Field(default_factory=dict)
 
 class InferenceResult(BaseModel):
     working_memory: Dict[str, Any]

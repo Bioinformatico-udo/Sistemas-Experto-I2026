@@ -1,25 +1,6 @@
 {
   "questions": [
     {
-      "fact": "numero_antenas",
-      "question": "¿Cuántos pares de antenas tiene el organismo?",
-      "options": [
-        {
-          "label": "Sin antenas (0 pares)",
-          "value": 0
-        },
-        {
-          "label": "Un par (1 par)",
-          "value": 1
-        },
-        {
-          "label": "Dos pares (2 pares)",
-          "value": 2
-        }
-      ],
-      "category": "Morfología Básica"
-    },
-    {
       "fact": "segmento_antenal",
       "question": "¿Cómo es el segmento basal de la antena?",
       "options": [
@@ -30,6 +11,10 @@
         {
           "label": "Largo (alcanza el margen anterior del caparazón)",
           "value": "largo"
+        },
+        {
+          "label": "No aplica",
+          "value": "no_aplica"
         }
       ],
       "category": "Antenas"
@@ -45,6 +30,10 @@
         {
           "label": "Enteras (porciones posteriores completas)",
           "value": "enteras"
+        },
+        {
+          "label": "No aplica",
+          "value": "no_aplica"
         }
       ],
       "category": "Caparazón"
@@ -60,6 +49,10 @@
         {
           "label": "Mosaico de placas (paredes laterales formadas por placas separadas)",
           "value": "mosaico"
+        },
+        {
+          "label": "No aplica",
+          "value": "no_aplica"
         }
       ],
       "category": "Branquias"
@@ -79,6 +72,10 @@
         {
           "label": "Granulado redondeado (gránulos redondeados; setas abundantes en la palma)",
           "value": "redondeado"
+        },
+        {
+          "label": "No aplica",
+          "value": "no_aplica"
         }
       ],
       "category": "Quelípedos"
@@ -94,6 +91,10 @@
         {
           "label": "Robustos (quelípedos gruesos y desiguales; frente no prominente)",
           "value": "robusto_no"
+        },
+        {
+          "label": "No aplica",
+          "value": "no_aplica"
         }
       ],
       "category": "Quelípedos"
@@ -109,6 +110,10 @@
         {
           "label": "7 placas",
           "value": 7
+        },
+        {
+          "label": "No aplica",
+          "value": "no_aplica"
         }
       ],
       "category": "Telson"
@@ -124,6 +129,10 @@
         {
           "label": "Frente recta",
           "value": "recta"
+        },
+        {
+          "label": "No aplica",
+          "value": "no_aplica"
         }
       ],
       "category": "Frente y Carpo"
@@ -139,6 +148,10 @@
         {
           "label": "Tuberculado (con tubérculos dispuestos de forma irregular; frente recta)",
           "value": "tuberculado"
+        },
+        {
+          "label": "No aplica",
+          "value": "no_aplica"
         }
       ],
       "category": "Carpo"
@@ -154,6 +167,10 @@
         {
           "label": "Dentado (con dientes o lóbulos)",
           "value": "dentado"
+        },
+        {
+          "label": "No aplica",
+          "value": "no_aplica"
         }
       ],
       "category": "Carpo"
@@ -169,6 +186,10 @@
         {
           "label": "Sin diente lobuliforme (frente triangular; mero inflado)",
           "value": "sin_diente_lobuliforme"
+        },
+        {
+          "label": "No aplica",
+          "value": "no_aplica"
         }
       ],
       "category": "Patas y Órbitas"
@@ -184,6 +205,10 @@
         {
           "label": "7 piezas",
           "value": 7
+        },
+        {
+          "label": "No aplica",
+          "value": "no_aplica"
         }
       ],
       "category": "Telson"
@@ -199,6 +224,10 @@
         {
           "label": "Presente",
           "value": "presente"
+        },
+        {
+          "label": "No aplica",
+          "value": "no_aplica"
         }
       ],
       "category": "Caparazón"
@@ -214,6 +243,10 @@
         {
           "label": "Dientes fusionados (3 a 4 dientes desiguales proximales)",
           "value": "fusionados"
+        },
+        {
+          "label": "No aplica",
+          "value": "no_aplica"
         }
       ],
       "category": "Carpo"
@@ -229,6 +262,10 @@
         {
           "label": "4 dientes",
           "value": "cuatro"
+        },
+        {
+          "label": "No aplica",
+          "value": "no_aplica"
         }
       ],
       "category": "Carpo"
@@ -244,6 +281,10 @@
         {
           "label": "Liso (con pubescencia fina; pliegues solo posterolaterales)",
           "value": "liso"
+        },
+        {
+          "label": "No aplica",
+          "value": "no_aplica"
         }
       ],
       "category": "Caparazón"
@@ -259,6 +300,10 @@
         {
           "label": "Antenas normales",
           "value": "normal"
+        },
+        {
+          "label": "No aplica",
+          "value": "no_aplica"
         }
       ],
       "category": "Antenas"
@@ -274,6 +319,10 @@
         {
           "label": "Caparazón más ancho que largo (frente tridentada o trilobulada dorsal)",
           "value": "ancho_mas_largo"
+        },
+        {
+          "label": "No aplica",
+          "value": "no_aplica"
         }
       ],
       "category": "Caparazón"
@@ -289,6 +338,10 @@
         {
           "label": "7 placas",
           "value": 7
+        },
+        {
+          "label": "No aplica",
+          "value": "no_aplica"
         }
       ],
       "category": "Telson"
@@ -304,6 +357,10 @@
         {
           "label": "Áspero",
           "value": "aspero"
+        },
+        {
+          "label": "No aplica",
+          "value": "no_aplica"
         }
       ],
       "category": "Caparazón"
@@ -319,6 +376,10 @@
         {
           "label": "Setas escasas o ausentes",
           "value": "escasa"
+        },
+        {
+          "label": "No aplica",
+          "value": "no_aplica"
         }
       ],
       "category": "Caparazón"
@@ -334,6 +395,10 @@
         {
           "label": "Desarmados (márgenes sin espínulas; carpo con lóbulo proximal)",
           "value": "desarmados"
+        },
+        {
+          "label": "No aplica",
+          "value": "no_aplica"
         }
       ],
       "category": "Márgenes"
@@ -376,7 +441,7 @@
         },
         {
           "fact": "especie_detectada",
-          "value": "No Crustáceo"
+          "value": "No_Crustáceo"
         }
       ]
     },
@@ -519,7 +584,7 @@
       "consequents": [
         {
           "fact": "especie_detectada",
-          "value": "Neopisosoma cf. neglectum"
+          "value": "Neopisosoma_cf_neglectum"
         }
       ]
     },
@@ -542,7 +607,7 @@
       "consequents": [
         {
           "fact": "especie_detectada",
-          "value": "Neopisosoma angustifrons"
+          "value": "Neopisosoma_angustifrons"
         }
       ]
     },
@@ -565,7 +630,7 @@
       "consequents": [
         {
           "fact": "especie_detectada",
-          "value": "Neopisosoma orientale"
+          "value": "Neopisosoma_orientale"
         }
       ]
     },
@@ -588,7 +653,7 @@
       "consequents": [
         {
           "fact": "especie_detectada",
-          "value": "Clastotoechus nodosus"
+          "value": "Clastotoechus_nodosus"
         }
       ]
     },
@@ -634,7 +699,7 @@
       "consequents": [
         {
           "fact": "especie_detectada",
-          "value": "Pachycheles serratus"
+          "value": "Pachycheles_serratus"
         }
       ]
     },
@@ -680,7 +745,7 @@
       "consequents": [
         {
           "fact": "especie_detectada",
-          "value": "Pachycheles monilifer"
+          "value": "Pachycheles_monilifer"
         }
       ]
     },
@@ -726,7 +791,7 @@
       "consequents": [
         {
           "fact": "especie_detectada",
-          "value": "Pachycheles riseii"
+          "value": "Pachycheles_riseii"
         }
       ]
     },
@@ -749,7 +814,7 @@
       "consequents": [
         {
           "fact": "especie_detectada",
-          "value": "Pachycheles ackleianus"
+          "value": "Pachycheles_ackleianus"
         }
       ]
     },
@@ -818,7 +883,7 @@
       "consequents": [
         {
           "fact": "especie_detectada",
-          "value": "Petrolisthes tridentatus"
+          "value": "Petrolisthes_tridentatus"
         }
       ]
     },
@@ -841,7 +906,7 @@
       "consequents": [
         {
           "fact": "especie_detectada",
-          "value": "Petrolisthes tonsorius"
+          "value": "Petrolisthes_tonsorius"
         }
       ]
     },
@@ -864,7 +929,7 @@
       "consequents": [
         {
           "fact": "especie_detectada",
-          "value": "Petrolisthes jugosus"
+          "value": "Petrolisthes_jugosus"
         }
       ]
     },
@@ -956,7 +1021,7 @@
       "consequents": [
         {
           "fact": "especie_detectada",
-          "value": "Petrolisthes politus"
+          "value": "Petrolisthes_politus"
         }
       ]
     },
@@ -979,7 +1044,7 @@
       "consequents": [
         {
           "fact": "especie_detectada",
-          "value": "Petrolisthes lewisi"
+          "value": "Petrolisthes_lewisi"
         }
       ]
     },
@@ -1002,7 +1067,7 @@
       "consequents": [
         {
           "fact": "especie_detectada",
-          "value": "Petrolisthes armatus"
+          "value": "Petrolisthes_armatus"
         }
       ]
     },
@@ -1048,7 +1113,7 @@
       "consequents": [
         {
           "fact": "especie_detectada",
-          "value": "Petrolisthes galathinus"
+          "value": "Petrolisthes_galathinus"
         }
       ]
     },
@@ -1071,7 +1136,7 @@
       "consequents": [
         {
           "fact": "especie_detectada",
-          "value": "Petrolisthes marginatus"
+          "value": "Petrolisthes_marginatus"
         }
       ]
     },
@@ -1099,7 +1164,7 @@
       "consequents": [
         {
           "fact": "especie_detectada",
-          "value": "Minyocerus angustus"
+          "value": "Minyocerus_angustus"
         }
       ]
     },
@@ -1196,7 +1261,7 @@
       "consequents": [
         {
           "fact": "especie_detectada",
-          "value": "Megalobrachium soriatum"
+          "value": "Megalobrachium_soriatum"
         }
       ]
     },
@@ -1242,7 +1307,7 @@
       "consequents": [
         {
           "fact": "especie_detectada",
-          "value": "Megalobrachium mortenseni"
+          "value": "Megalobrachium_mortenseni"
         }
       ]
     },
@@ -1288,7 +1353,7 @@
       "consequents": [
         {
           "fact": "especie_detectada",
-          "value": "Megalobrachium poeyi"
+          "value": "Megalobrachium_poeyi"
         }
       ]
     },
@@ -1311,7 +1376,7 @@
       "consequents": [
         {
           "fact": "especie_detectada",
-          "value": "Megalobrachium roseum"
+          "value": "Megalobrachium_roseum"
         }
       ]
     },
@@ -1334,7 +1399,7 @@
       "consequents": [
         {
           "fact": "especie_detectada",
-          "value": "Pisidia brasiliensis"
+          "value": "Pisidia_brasiliensis"
         }
       ]
     },
@@ -1357,7 +1422,7 @@
       "consequents": [
         {
           "fact": "especie_detectada",
-          "value": "Porcellana sayana"
+          "value": "Porcellana_sayana"
         }
       ]
     },
@@ -1369,7 +1434,7 @@
       "consequents": [
         {
           "fact": "especie_detectada",
-          "value": "Especie no identificada"
+          "value": "Especie_no_identificada"
         }
       ]
     }

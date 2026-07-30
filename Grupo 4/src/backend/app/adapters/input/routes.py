@@ -5,7 +5,7 @@ from app.ports.services import InferenceService
 
 router = APIRouter()
 
-# This function will be overridden in main.py during dependency injection setup
+
 def get_inference_service() -> InferenceService:
     raise NotImplementedError()
 
