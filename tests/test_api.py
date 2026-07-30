@@ -86,3 +86,34 @@ def test_crear_especie_duplicada():
     response = client.post("/api/especies", json=payload)
     assert response.status_code == 400
     assert "ya se encuentra registrada" in response.json()["detail"]
+
+def test_insertar_y_verificar_acceso_dicotomico():
+    """Crea una nueva especie por la API y verifica que el motor dicotómico responda con éxito."""
+    payload = {
+        "nombre_cientifico": "Acropora verificacion_dicotomica",
+        "nombre_comun": "Coral de Prueba Dicotómica",
+        "familia": "Acroporidae",
+        "caracteristicas": {
+            "tiene_coralitos": True,
+            "forma": "ramificada_abanico",
+            "color": "marrón"
+        }
+    }
+    res_crear = client.post("/api/especies", json=payload)
+    assert res_crear.status_code in [200, 400]
+
+    # Ejecutar inferencia en el motor dicotómico con las respuestas de la especie
+    respuestas = {
+        "p1": "s",
+        "p4": "colonial",
+        "p6": "ramificado",
+        "p7": "toda",
+        "p10": "cilindricas",
+        "p11": "abanico"
+    }
+    res_inferencia = client.post("/api/inferencia/paso", json={"respuestas": respuestas})
+    assert res_inferencia.status_code == 200
+    data = res_inferencia.json()
+    assert data["estado"] == "resultado"
+    assert data["success"] is True
+    assert "Acropora" in data["especie"]

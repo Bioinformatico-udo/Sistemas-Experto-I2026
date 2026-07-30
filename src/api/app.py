@@ -229,6 +229,15 @@ def crear_especie(req: EspecieCreateRequest):
         if hasattr(predictor_corales, 'ponderador') and predictor_corales.ponderador:
             predictor_corales.ponderador._cargar_especies()
 
+        # Sintetizar regla dicotómica en caliente para el cuestionario guiado
+        try:
+            from src.generador_reglas import sintetizar_regla_especie
+            sintetizar_regla_especie(especie_guardada)
+            if hasattr(motor_inferencia, 'cargar_reglas_dinamicas'):
+                motor_inferencia.cargar_reglas_dinamicas()
+        except Exception as reg_err:
+            print(f"Error al sintetizar regla dicotómica: {reg_err}")
+
         return {
             "success": True,
             "mensaje": f"Especie '{nueva_especie['nombre_cientifico']}' agregada exitosamente.",

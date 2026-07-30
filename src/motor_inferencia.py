@@ -32,6 +32,20 @@ class MotorInferencia:
         self.respuestas = {}
         self.paso_actual = 1
         self.historial = []
+        self.reglas_dinamicas = {}
+        self.cargar_reglas_dinamicas()
+
+    def cargar_reglas_dinamicas(self):
+        """Carga las reglas dicotómicas sintetizadas dinámicamente desde el JSON."""
+        try:
+            from src.generador_reglas import cargar_reglas_dinamicas
+            self.reglas_dinamicas = cargar_reglas_dinamicas()
+        except ImportError:
+            try:
+                from .generador_reglas import cargar_reglas_dinamicas
+                self.reglas_dinamicas = cargar_reglas_dinamicas()
+            except ImportError:
+                self.reglas_dinamicas = {}
 
     def _get_respuesta(self, pregunta_id):
         val = self.respuestas.get(pregunta_id)
@@ -44,6 +58,17 @@ class MotorInferencia:
         self.respuestas = respuestas
         self.historial = []
         self.paso_actual = 1
+        
+        # Verificar coincidencia directa en reglas dinámicas sintetizadas
+        for esp_id, regla in self.reglas_dinamicas.items():
+            patron = regla.get("respuestas", {})
+            if patron and all(respuestas.get(k) == v for k, v in patron.items()):
+                return self._resultado(
+                    regla.get("nombre_cientifico", ""),
+                    regla.get("nombre_comun", ""),
+                    regla.get("familia", "")
+                )
+                
         try:
             return self._navegar(self.paso_actual)
         except NecesitaPregunta as e:

@@ -150,7 +150,7 @@ def caracteristicas_a_respuestas(especie_id: str, caract: dict) -> dict:
                 respuestas["p8"] = "pequenas"
         else:
             respuestas["p7"] = "toda"
-            if "cilindrica" in forma or "fusionada" in forma:
+            if "cilindrica" in forma or "fusionada" in forma or "abanico" in forma:
                 respuestas["p10"] = "cilindricas"
                 if "abanico" in forma:
                     respuestas["p11"] = "abanico"
