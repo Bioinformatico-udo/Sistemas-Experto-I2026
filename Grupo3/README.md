@@ -1,4 +1,4 @@
-# 🦀 SEDIO — Sistema Experto para la Identificación Taxonómica de Cangrejos Ermitaños (Familia Diogenidae)
+# SEDIO — Sistema Experto para la Identificación Taxonómica de Cangrejos Ermitaños (Familia Diogenidae)
 
 **Identificación morfológica asistida de las nueve especies de la familia Diogenidae
 (Crustacea: Decapoda: Anomura) registradas en el litoral de la Península de Macanao,
@@ -527,7 +527,7 @@ IDENTIFICACIÓN PROBABLE — hay caracteres en conflicto
 
   Calcinus tibicen (Herbst, 1791)
 
-  ⚠ Ninguna especie de la base de conocimientos es totalmente
+  (!) Ninguna especie de la base de conocimientos es totalmente
     consistente con las observaciones registradas. Revise el
     carácter en conflicto o considere que el ejemplar puede
     pertenecer a una especie no catalogada.
