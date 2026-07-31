@@ -17,7 +17,7 @@ Desarrollado para la asignatura de **Sistemas Expertos (I2026)** en la **Univers
   - 🌐 [Portafolio Personal](https://my-portafolio-weld.vercel.app/)
 
 * **Marxel Rodriguez** — *Lógica del Sistema & Investigador del proyecto*
-  - 🌐 [Portafolio Personal](https://portafoliomarxel.vercel.app/)
+  - 🌐 [Portafolio Personal](https://portafoliomarxel-informatica.vercel.app)
 
 ## 📖 Descripción General y Dominio de Conocimiento
 
