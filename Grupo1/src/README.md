@@ -231,7 +231,31 @@ En la sección **"GLOSARIO DE TÉRMINOS"** encontrará definiciones claras de to
 - **Contenedorización:** Docker, Docker Compose
 
 ---
+## Conclusiones y Trabajo Futuro
 
+### 📝 Conclusiones
+
+El desarrollo de **PorcellanSpark** ha sido una experiencia enriquecedora que nos permitió aplicar conocimientos en sistemas expertos, lógica difusa y programación en Python. A lo largo del proceso, logramos construir un prototipo funcional que integra un motor de inferencia híbrido, una interfaz gráfica amigable y una base de conocimientos detallada, facilitando la identificación taxonómica de crustáceos Porcellanidae.
+
+El sistema ha demostrado ser efectivo en la clasificación de especies a partir de características morfológicas tanto discretas como subjetivas, logrando un porcentaje de certeza ajustable mediante lógica difusa. La incorporación de un panel de administración y la capacidad de agregar nuevas especies fortalecen la escalabilidad del proyecto.
+
+### ⚠️ Desafíos y Soluciones
+
+Uno de los principales desafíos fue la formalización adecuada de las reglas difusas y la integración con el motor de inferencia proposicional. Para ello, se implementaron funciones de membresía triangulares y trapezoidales, y se diseñaron algoritmos que combinan ambos enfoques para obtener resultados precisos y confiables.
+
+Otra dificultad fue la estructuración de una interfaz intuitiva y moderna, lograda mediante el uso de CustomTkinter, que permite una experiencia de usuario mejorada.
+
+### 🚀 Trabajo Futuro
+
+En futuras versiones, se planea:
+
+- **Ampliar la base de conocimientos** incluyendo más especies y atributos, así como datos ecológicos y de distribución.
+- **Mejorar la lógica difusa** incorporando técnicas avanzadas de aprendizaje automático para ajustar automáticamente los parámetros de las funciones de membresía.
+- **Implementar un módulo de aprendizaje** que permita al sistema aprender de nuevas observaciones y mejorar sus reglas automáticamente.
+- **Desarrollar una versión web** para facilitar el acceso y uso desde diferentes plataformas.
+- **Integrar reconocimiento de imágenes** mediante técnicas de visión artificial para identificar especies a partir de fotografías en lugar de cuestionarios guiados.
+
+Este proyecto continúa en desarrollo, con la intención de convertirse en una herramienta confiable y accesible para biólogos, estudiantes y entusiastas de la taxonomía de crustáceos.
 ## 📚 Referencias
 
 1. **Lira, C. F. (1997).** _Crustáceos anomuros costeros de la Península de Macanao, Isla de Margarita, Venezuela._ Trabajo de grado, Universidad de Oriente, Núcleo Nueva Esparta.
@@ -241,7 +265,6 @@ En la sección **"GLOSARIO DE TÉRMINOS"** encontrará definiciones claras de to
 ---
 
 ## 💡 Notas Adicionales
-
 - Las imágenes de las especies deben colocarse en `src/frontend/assets/imagenes_especies/` con el formato `nombre_cientifico.jpg` (ejemplo: `neopisosoma_cf_neglectum.jpg`).
 - El archivo `especies_personalizadas.json` se genera y actualiza automáticamente al agregar la primera especie desde el panel de administración.
 - Si no desea utilizar Docker, basta con tener Python 3.8+ instalado en su sistema, ejecutar `pip install -r requirements.txt` y posteriormente `python main.py` desde la carpeta `src/`.
